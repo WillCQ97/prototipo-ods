@@ -5,11 +5,14 @@
         <l-tile-layer :url="url" :attribution="attribution"></l-tile-layer>
 
         <!--este marcador pode ser personalizado-->
-        <l-marker
-          :lat-lng="[-20.7614, -41.53588]"
-          title="Meu Marcador"
-        >
-          <l-icon icon-url="/logo-ods-big.png" :icon-size=[30,30]></l-icon>
+        <l-marker :lat-lng="[-20.7614, -41.53588]" title="Meu Marcador">
+          <l-icon :icon-url="iconUrl" :icon-size="iconSize"></l-icon>
+          <l-popup
+            ><div>
+              Popup aqui
+              <!--exibir informações do projeto-->
+            </div></l-popup
+          >
         </l-marker>
         <l-marker :lat-lng="[-20.76153, -41.53564]"></l-marker>
         <l-marker :lat-lng="[-20.76156, -41.5357]"></l-marker>
@@ -36,6 +39,8 @@ export default {
       show: true,
       fillColor: "#e4ce7f",
       enableTooltip: true,
+      iconUrl: "logo-ods-big.png",
+      iconSize: [30, 30],
     };
   },
   computed: {
