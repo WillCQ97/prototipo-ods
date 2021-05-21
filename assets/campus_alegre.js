@@ -1,4 +1,4 @@
-const alegre_geojson =
+const alegre =
 {
     "type": "FeatureCollection",
     "name": "alegre",
@@ -45,4 +45,4 @@ const alegre_geojson =
     ]
 };
 
-export default alegre_geojson;
+export default alegre;
