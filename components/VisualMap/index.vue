@@ -1,7 +1,7 @@
 <template>
-  <div id="map-wrap" style="height: 100vh">
+  <div id="map-wrap">
     <client-only>
-      <l-map :zoom="zoom" :center="center">
+      <l-map :zoom="zoom" :options="mapOptions" :center="center">
         <l-tile-layer :url="url" :attribution="attribution"></l-tile-layer>
 
         <l-marker
@@ -13,7 +13,7 @@
           <l-popup :content="show_popup(marker.idProj)"></l-popup>
         </l-marker>
 
-        <l-geo-json v-if="show" :geojson="geojson" :options="options" />
+        <l-geo-json v-if="show" :geojson="geojson" :options="jsonOptions" />
       </l-map>
     </client-only>
   </div>
@@ -42,6 +42,11 @@ export default {
     };
   },
   computed: {
+    mapOptions() {
+      return {
+        zoomControl: false,
+      };
+    },
     createProjectMarkers() {
       var markers = [];
 
@@ -54,7 +59,7 @@ export default {
 
       return markers;
     },
-    options() {
+    jsonOptions() {
       return {
         onEachFeature: this.onEachFeatureFunction,
       };
@@ -88,32 +93,45 @@ export default {
   },
   methods: {
     show_popup(idProject) {
-      let desc = "";
+      let desc;
       projects.forEach((project) => {
         if (idProject == project.id) {
           desc =
             '<div class="popup">' +
-            '<img src="/ods_icons/' +
+            '<img class="popup_img" src="/ods_icons/' +
             project.ods +
-            '.png" width="50" height="50"><br>' +
+            '.png"><br>' +
             '<div class="popup_text"><strong>Projeto:</strong> ' +
             project.nome +
             "<br><strong>Departamento: </strong>" +
             project.departamento +
             "<br><strong>Professor:</strong> " +
             project.responsavel +
+            "<br><strong><a target='_blank'>Saiba mais</a></strong>" +
             "</div></div>";
         }
       });
       return desc;
+    },
+    show_information() {
+      console.log("executei");
     },
   },
 };
 </script>
 
 <style>
+div#map-wrap {
+  height: 82vh;
+}
+
 div.popup {
   display: flex;
+}
+
+img.popup_img {
+  height: 65px;
+  width: 65px;
 }
 
 div.popup_text {
