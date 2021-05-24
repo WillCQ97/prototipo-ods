@@ -5,7 +5,7 @@
         <l-tile-layer :url="url" :attribution="attribution"></l-tile-layer>
 
         <l-marker
-          v-for="(marker, index) in createMarkers"
+          v-for="(marker, index) in createProjectMarkers"
           v-bind:lat-lng="marker.latlng"
           v-bind:key="index"
         >
@@ -36,29 +36,19 @@ export default {
       show: true,
       fillColor: "#e4ce7f",
       enableTooltip: true,
-      iconUrl: "logo-ods-big.png",
-      iconSize: [30, 30],
+      iconUrl: "logo-ods-small.png",
+      iconSize: [25, 25],
       markers: [],
     };
   },
   computed: {
-    createMarkers() {
+    createProjectMarkers() {
       var markers = [];
 
       projects.forEach((project) => {
-        alegre.features.forEach((feature) => {
-          if (project.idDepartamento == feature.properties.idd) {
-            let rand = Math.floor(
-              Math.random() * feature.geometry.coordinates[0].length
-            );
-            markers.push({
-              idProj: project.id,
-              latlng: [
-                feature.geometry.coordinates[0][rand][1],
-                feature.geometry.coordinates[0][rand][0],
-              ],
-            });
-          }
+        markers.push({
+          idProj: project.id,
+          latlng: project.coord,
         });
       });
 
@@ -102,12 +92,17 @@ export default {
       projects.forEach((project) => {
         if (idProject == project.id) {
           desc =
-            "<strong>Projeto:</strong> " +
+            '<div class="popup">' +
+            '<img src="/ods_icons/' +
+            project.ods +
+            '.png" width="50" height="50"><br>' +
+            '<div class="popup_text"><strong>Projeto:</strong> ' +
             project.nome +
             "<br><strong>Departamento: </strong>" +
             project.departamento +
             "<br><strong>Professor:</strong> " +
-            project.responsavel;
+            project.responsavel +
+            "</div></div>";
         }
       });
       return desc;
@@ -115,3 +110,13 @@ export default {
   },
 };
 </script>
+
+<style>
+div.popup {
+  display: flex;
+}
+
+div.popup_text {
+  padding-left: 5px;
+}
+</style>
