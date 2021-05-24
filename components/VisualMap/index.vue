@@ -4,18 +4,14 @@
       <l-map :zoom="zoom" :center="center">
         <l-tile-layer :url="url" :attribution="attribution"></l-tile-layer>
 
-        <!--este marcador pode ser personalizado-->
-        <l-marker :lat-lng="[-20.7614, -41.53588]" title="Meu Marcador">
+        <l-marker
+          v-for="(marker, index) in createMarkers"
+          v-bind:lat-lng="marker.latlng"
+          v-bind:key="index"
+        >
           <l-icon :icon-url="iconUrl" :icon-size="iconSize"></l-icon>
-          <l-popup
-            ><div>
-              Popup aqui
-              <!--exibir informações do projeto-->
-            </div></l-popup
-          >
+          <l-popup :content="show_popup(marker.idProj)"></l-popup>
         </l-marker>
-        <l-marker :lat-lng="[-20.76153, -41.53564]"></l-marker>
-        <l-marker :lat-lng="[-20.76156, -41.5357]"></l-marker>
 
         <l-geo-json v-if="show" :geojson="geojson" :options="options" />
       </l-map>
@@ -25,6 +21,7 @@
 
 <script>
 import alegre from "assets/campus_alegre";
+import projects from "assets/lista_projetos.json";
 
 export default {
   name: "VisualMap",
@@ -41,9 +38,32 @@ export default {
       enableTooltip: true,
       iconUrl: "logo-ods-big.png",
       iconSize: [30, 30],
+      markers: [],
     };
   },
   computed: {
+    createMarkers() {
+      var markers = [];
+
+      projects.forEach((project) => {
+        alegre.features.forEach((feature) => {
+          if (project.idDepartamento == feature.properties.idd) {
+            let rand = Math.floor(
+              Math.random() * feature.geometry.coordinates[0].length
+            );
+            markers.push({
+              idProj: project.id,
+              latlng: [
+                feature.geometry.coordinates[0][rand][1],
+                feature.geometry.coordinates[0][rand][0],
+              ],
+            });
+          }
+        });
+      });
+
+      return markers;
+    },
     options() {
       return {
         onEachFeature: this.onEachFeatureFunction,
@@ -70,14 +90,27 @@ export default {
           "<div>ID:" +
             feature.properties.idd +
             "</div><div>Nome: " +
-            feature.properties.primario +
-            "</div><div>Nº Projetos:" +
-            "n" + //funcão pra pegar a quantidade de projetos com base no id do prédio
-            "</div>" +
-            "<div>link para lista?</div>",
+            feature.properties.primario,
           { permanent: false, sticky: true }
         );
       };
+    },
+  },
+  methods: {
+    show_popup(idProject) {
+      let desc = "";
+      projects.forEach((project) => {
+        if (idProject == project.id) {
+          desc =
+            "<strong>Projeto:</strong> " +
+            project.nome +
+            "<br><strong>Departamento: </strong>" +
+            project.departamento +
+            "<br><strong>Professor:</strong> " +
+            project.responsavel;
+        }
+      });
+      return desc;
     },
   },
 };
