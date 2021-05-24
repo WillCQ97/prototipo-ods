@@ -1,20 +1,7 @@
-# prototipo-ods
+# Protótipo ODS
 
-## Build Setup
+- Proposta para monitoramento de projetos relacionados com os Objetivos de Desenvolvimento Sustentável na Universidade Federal do Espírito Santo.
 
-```bash
-# install dependencies
-$ yarn install
+- :construction: **Trabalho em progresso** :construction:.
 
-# serve with hot reload at localhost:3000
-$ yarn dev
-
-# build for production and launch server
-$ yarn build
-$ yarn start
-
-# generate static project
-$ yarn generate
-```
-
-For detailed explanation on how things work, check out [Nuxt.js docs](https://nuxtjs.org).
+- Saiba mais sobre os ODS e a Agenda 2030 [aqui](http://www.agenda2030.com.br/).
