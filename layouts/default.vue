@@ -41,7 +41,7 @@
       </v-container>
     </v-main>
 
-    <v-footer :absolute="!fixed" app>
+    <v-footer v-if="fixed" :absolute="!fixed" app>
       <span>&copy; {{ new Date().getFullYear() }}</span>
     </v-footer>
   </v-app>
@@ -51,9 +51,9 @@
 export default {
   data() {
     return {
-      clipped: true,
-      drawer: true,
-      fixed: true,
+      clipped: false,
+      drawer: false,
+      fixed: false,
       items: [
         {
           icon: "mdi-map",

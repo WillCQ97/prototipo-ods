@@ -1,21 +1,31 @@
 <template>
-  <div id="map-wrap">
-    <client-only>
-      <l-map :zoom="zoom" :options="mapOptions" :center="center">
-        <l-tile-layer :url="url" :attribution="attribution"></l-tile-layer>
+  <div>
+    <div id="map-wrap">
+      <client-only>
+        <l-map :zoom="zoom" :options="mapOptions" :center="center">
+          <l-tile-layer :url="url" :attribution="attribution"></l-tile-layer>
 
-        <l-marker
-          v-for="(marker, index) in createProjectMarkers"
-          v-bind:lat-lng="marker.latlng"
-          v-bind:key="index"
-        >
-          <l-icon :icon-url="iconUrl" :icon-size="iconSize"></l-icon>
-          <l-popup :content="show_popup(marker.idProj)"></l-popup>
-        </l-marker>
+          <l-marker
+            v-for="(marker, index) in createProjectMarkers"
+            v-bind:lat-lng="marker.latlng"
+            v-bind:key="index"
+            v-on:click="enableButton(marker.idProj)"
+          >
+            <l-icon :icon-url="iconUrl" :icon-size="iconSize"></l-icon>
+            <l-popup :content="show_popup(marker.idProj)"></l-popup>
+          </l-marker>
 
-        <l-geo-json v-if="show" :geojson="geojson" :options="jsonOptions" />
-      </l-map>
-    </client-only>
+          <l-control position="bottomleft">
+            <v-btn v-if="btnVisible" v-on:click="show_information">
+              Saiba mais
+            </v-btn>
+          </l-control>
+
+          <l-geo-json v-if="show" :geojson="geojson" :options="jsonOptions" />
+        </l-map>
+      </client-only>
+    </div>
+    <div><v-banner v-if="bannerVisible" v-html="bannerContent"></v-banner></div>
   </div>
 </template>
 
@@ -39,11 +49,16 @@ export default {
       iconUrl: "logo-ods-small.png",
       iconSize: [25, 25],
       markers: [],
+      btnVisible: false,
+      bannerVisible: false,
+      bannerContent: "",
+      idProjSelected: 0,
     };
   },
   computed: {
     mapOptions() {
       return {
+        minZoom: 18,
         zoomControl: false,
       };
     },
@@ -107,14 +122,46 @@ export default {
             project.departamento +
             "<br><strong>Professor:</strong> " +
             project.responsavel +
-            "<br><strong><a target='_blank'>Saiba mais</a></strong>" +
             "</div></div>";
         }
       });
       return desc;
     },
+    enableButton(idProject) {
+      this.btnVisible = true;
+      this.bannerVisible = false;
+      this.idProjSelected = idProject;
+    },
+    disableButton() {
+      this.btnVisible = false;
+    },
     show_information() {
-      console.log("executei");
+      this.disableButton();
+      this.bannerVisible = true;
+      
+      projects.forEach((project) => {
+        if (this.idProjSelected == project.id) {
+          this.bannerContent =
+            "<strong>Saiba mais sobre a ação</strong><br>" +
+            "<strong>Projeto:</strong> " +
+            project.nome +
+            "<br><strong>Descrição: </strong>" +
+            project.descricao +
+            "<br><strong>Objetivos: </strong>" +
+            project.objetivos +
+            "<br><strong>Público-alvo: </strong>" +
+            project.publico +
+            "<br><strong>Início: </strong>" +
+            project.inicio +
+            "<br><strong>Departamento: </strong>" +
+            project.departamento +
+            "<br><strong>Professor:</strong> " +
+            project.responsavel +
+            "<br><strong>Contatos: </strong>" +
+            project.contatos.email + ' / ' + project.contatos.telefone + 
+            "</div></div>";
+        }
+      });
     },
   },
 };
