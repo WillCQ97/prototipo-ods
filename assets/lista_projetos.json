@@ -13,7 +13,11 @@
         "contatos": {
             "email": "fulandodetal@ufes.br",
             "telefone": "(28) 3552-0000"
-        }
+        },
+        "coord": [
+            -20.7614,
+            -41.53588
+        ]
     },
     {
         "id": 2,
@@ -29,12 +33,16 @@
         "contatos": {
             "email": "fulandodetal2@ufes.br",
             "telefone": "(28) 3552-0000"
-        }
+        },
+        "coord": [
+            -20.76153,
+            -41.53564
+        ]
     },
     {
         "id": 3,
         "ods": 5,
-        "idDepartamento": 15,
+        "idDepartamento": 30,
         "nome": "Teste 02",
         "descricao": "Sobre o projeto teste",
         "objetivos": "Objetivos do projeto teste",
@@ -45,6 +53,10 @@
         "contatos": {
             "email": "fulandodetal2@ufes.br",
             "telefone": "(28) 3552-0000"
-        }
+        },
+        "coord": [
+            -20.76156,
+            -41.5357
+        ]
     }
 ]
