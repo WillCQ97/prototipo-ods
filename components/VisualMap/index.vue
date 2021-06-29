@@ -93,7 +93,7 @@ export default {
     },
     onEachFeatureFunction() {
       if (!this.enableTooltip) {
-        return () => {};
+        return;
       }
       return (feature, layer) => {
         layer.bindTooltip(
@@ -138,7 +138,7 @@ export default {
     show_information() {
       this.disableButton();
       this.bannerVisible = true;
-      
+
       projects.forEach((project) => {
         if (this.idProjSelected == project.id) {
           this.bannerContent =
@@ -158,7 +158,9 @@ export default {
             "<br><strong>Professor:</strong> " +
             project.responsavel +
             "<br><strong>Contatos: </strong>" +
-            project.contatos.email + ' / ' + project.contatos.telefone + 
+            project.contatos.email +
+            " / " +
+            project.contatos.telefone +
             "</div></div>";
         }
       });
