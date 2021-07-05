@@ -5,17 +5,19 @@
         <l-map :zoom="zoom" :options="mapOptions" :center="center">
           <l-tile-layer :url="url" :attribution="attribution"></l-tile-layer>
 
+          <!-- fixme: VERIFICAR A FUNÇÃO ENABLE BUTTON A SEGUIR, TALVEZ RETIRAR O BOTÃO DO MAPA -->
+          <!-- v-on:click="enableButton(marker.idProj)" -->
           <l-marker
-            v-for="(marker, index) in createProjectMarkers"
-            v-bind:lat-lng="marker.latlng"
-            v-bind:key="index"
-            v-on:click="enableButton(marker.idProj)"
+            v-for="marker in createProjectMarkers"
+            v-bind:key="marker.id"
+            v-bind:lat-lng="marker.coord"
           >
             <l-icon :icon-url="iconUrl" :icon-size="iconSize"></l-icon>
-            <l-popup :content="show_popup(marker.idProj)"></l-popup>
+            <l-popup :content="marker.popupContent" :options="popupOptions"></l-popup>
           </l-marker>
 
           <l-control position="bottomleft">
+            <!-- fixme: ATUALIZAR AQUI POSTERIORMENTE -->
             <v-btn v-if="btnVisible" v-on:click="show_information">
               Saiba mais
             </v-btn>
@@ -30,7 +32,7 @@
 </template>
 
 <script>
-import alegre from "assets/campus_alegre";
+import featuresAlegre from "assets/campus_alegre";
 import projects from "assets/lista_projetos.json";
 
 export default {
@@ -42,12 +44,12 @@ export default {
       center: [-20.76161, -41.536],
       attribution:
         '&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors',
-      geojson: alegre,
+      geojson: featuresAlegre,
       show: true,
       fillColor: "#e4ce7f",
       enableTooltip: true,
       iconUrl: "logo-ods-small.png",
-      iconSize: [25, 25],
+      iconSize: [20, 20],
       markers: [],
       btnVisible: false,
       bannerVisible: false,
@@ -62,13 +64,30 @@ export default {
         zoomControl: false,
       };
     },
+    popupOptions(){
+      return {
+        maxWidth: 315
+      }
+    },
     createProjectMarkers() {
       var markers = [];
 
       projects.forEach((project) => {
         markers.push({
-          idProj: project.id,
-          latlng: project.coord,
+          id: project.id,
+          coord: project.coord,
+          popupContent:
+            '<div class="popup">' +
+            '<img class="popup_img" src="/ods_icons/' +
+            project.meta_ods.split('.')[0] +
+            '.png"><br>' +
+            '<div class="popup_text"><strong>Ação:</strong> ' +
+            project.acao +
+            "<br><strong>Departamento: </strong>" +
+            project.local.departamento +
+            "<br><strong>Coordenador:</strong> " +
+            project.coordenador.nome +
+            "</div></div>",
         });
       });
 
@@ -107,26 +126,6 @@ export default {
     },
   },
   methods: {
-    show_popup(idProject) {
-      let desc;
-      projects.forEach((project) => {
-        if (idProject == project.id) {
-          desc =
-            '<div class="popup">' +
-            '<img class="popup_img" src="/ods_icons/' +
-            project.ods +
-            '.png"><br>' +
-            '<div class="popup_text"><strong>Projeto:</strong> ' +
-            project.nome +
-            "<br><strong>Departamento: </strong>" +
-            project.departamento +
-            "<br><strong>Professor:</strong> " +
-            project.responsavel +
-            "</div></div>";
-        }
-      });
-      return desc;
-    },
     enableButton(idProject) {
       this.btnVisible = true;
       this.bannerVisible = false;
@@ -136,6 +135,7 @@ export default {
       this.btnVisible = false;
     },
     show_information() {
+      //fixme: atualizar esta função
       this.disableButton();
       this.bannerVisible = true;
 
@@ -179,8 +179,8 @@ div.popup {
 }
 
 img.popup_img {
-  height: 65px;
-  width: 65px;
+  height: 75px;
+  width: 75px;
 }
 
 div.popup_text {
