@@ -2,19 +2,27 @@
   <div>
     <div id="map-wrap">
       <client-only>
-        <l-map :zoom="zoom" :options="mapOptions" :center="center">
+        <l-map
+          :zoom="zoom"
+          :options="mapOptions"
+          :center="center"
+          style="height: 525px; z-index: 1"
+        >
           <l-tile-layer :url="url" :attribution="attribution"></l-tile-layer>
 
           <!-- fixme: VERIFICAR A FUNÇÃO ENABLE BUTTON A SEGUIR, TALVEZ RETIRAR O BOTÃO DO MAPA -->
           <!-- v-on:click="enableButton(marker.idProj)" -->
-          <l-marker
+          <!--l-marker
             v-for="marker in createProjectMarkers"
             v-bind:key="marker.id"
             v-bind:lat-lng="marker.coord"
           >
             <l-icon :icon-url="iconUrl" :icon-size="iconSize"></l-icon>
-            <l-popup :content="marker.popupContent" :options="popupOptions"></l-popup>
-          </l-marker>
+            <l-popup
+              :content="marker.popupContent"
+              :options="popupOptions"
+            ></l-popup>
+          </l-marker-->
 
           <l-control position="bottomleft">
             <!-- fixme: ATUALIZAR AQUI POSTERIORMENTE -->
@@ -32,19 +40,19 @@
 </template>
 
 <script>
-import featuresAlegre from "assets/campus_alegre";
-import projects from "assets/lista_projetos.json";
-
 export default {
   name: "VisualMap",
+  props: {
+    center: Array,
+    geojson: Object,
+    projects: Array,
+  },
   data() {
     return {
       url: "http://{s}.tile.osm.org/{z}/{x}/{y}.png",
       zoom: 18,
-      center: [-20.76161, -41.536],
       attribution:
         '&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors',
-      geojson: featuresAlegre,
       show: true,
       fillColor: "#e4ce7f",
       enableTooltip: true,
@@ -62,13 +70,15 @@ export default {
       return {
         minZoom: 18,
         zoomControl: false,
+        scrollWheelZoom: false,
       };
     },
-    popupOptions(){
+    popupOptions() {
       return {
-        maxWidth: 315
-      }
+        maxWidth: 315,
+      };
     },
+    /*
     createProjectMarkers() {
       var markers = [];
 
@@ -79,7 +89,7 @@ export default {
           popupContent:
             '<div class="popup">' +
             '<img class="popup_img" src="/ods_icons/' +
-            project.meta_ods.split('.')[0] +
+            project.meta_ods.split(".")[0] +
             '.png"><br>' +
             '<div class="popup_text"><strong>Ação:</strong> ' +
             project.acao +
@@ -93,6 +103,7 @@ export default {
 
       return markers;
     },
+    */
     jsonOptions() {
       return {
         onEachFeature: this.onEachFeatureFunction,

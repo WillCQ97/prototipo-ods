@@ -1,13 +1,7 @@
 <template>
-  <VisualMap />
+  <h1>Página Inicial</h1>
 </template>
 
 <script>
-import VisualMap from "../components/VisualMap/index";
 
-export default {
-  components: {
-    VisualMap,
-  },
-};
 </script>
