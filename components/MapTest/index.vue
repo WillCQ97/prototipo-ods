@@ -9,33 +9,36 @@
           style="height: 525px; z-index: 1"
         >
           <l-tile-layer :url="url" :attribution="attribution"></l-tile-layer>
+          <l-geo-json
+            v-if="showGeoJson"
+            :geojson="geojson"
+            :options="jsonOptions"
+          />
 
-          <!-- fixme: VERIFICAR A FUNÇÃO ENABLE BUTTON A SEGUIR, TALVEZ RETIRAR O BOTÃO DO MAPA -->
-          <!-- v-on:click="enableButton(marker.idProj)" -->
-          <!--l-marker
+          <l-marker
             v-for="marker in createProjectMarkers"
             v-bind:key="marker.id"
             v-bind:lat-lng="marker.coord"
+            v-on:click="enableButton(marker.projectData)"
           >
-            <l-icon :icon-url="iconUrl" :icon-size="iconSize"></l-icon>
+            <l-icon
+              :icon-url="markerIconUrl"
+              :icon-size="merkerIconSize"
+            ></l-icon>
             <l-popup
               :content="marker.popupContent"
               :options="popupOptions"
             ></l-popup>
-          </l-marker-->
+          </l-marker>
 
           <l-control position="bottomleft">
-            <!-- fixme: ATUALIZAR AQUI POSTERIORMENTE -->
-            <v-btn v-if="btnVisible" v-on:click="show_information">
+            <v-btn v-if="btnVisible" v-on:click="showProjectInformation">
               Saiba mais
             </v-btn>
           </l-control>
-
-          <l-geo-json v-if="show" :geojson="geojson" :options="jsonOptions" />
         </l-map>
       </client-only>
     </div>
-    <div><v-banner v-if="bannerVisible" v-html="bannerContent"></v-banner></div>
   </div>
 </template>
 
@@ -43,9 +46,18 @@
 export default {
   name: "VisualMap",
   props: {
-    center: Array,
-    geojson: Object,
-    projects: Array,
+    center: {
+      type: Array,
+      required: true,
+    },
+    geojson: {
+      type: Object,
+      required: true,
+    },
+    projects: {
+      type: Array,
+      required: true,
+    },
   },
   data() {
     return {
@@ -53,19 +65,22 @@ export default {
       zoom: 18,
       attribution:
         '&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors',
-      show: true,
+      showGeoJson: true,
       fillColor: "#e4ce7f",
       enableTooltip: true,
-      iconUrl: "logo-ods-small.png",
-      iconSize: [20, 20],
+      markerIconUrl: "logo-ods-small.png",
+      merkerIconSize: [20, 20],
       markers: [],
       btnVisible: false,
-      bannerVisible: false,
-      bannerContent: "",
-      idProjSelected: 0,
+      projectSelected: {},
     };
   },
   computed: {
+    jsonOptions() {
+      return {
+        onEachFeature: this.onEachFeatureFunction,
+      };
+    },
     mapOptions() {
       return {
         minZoom: 18,
@@ -78,14 +93,15 @@ export default {
         maxWidth: 315,
       };
     },
-    /*
     createProjectMarkers() {
       var markers = [];
 
-      projects.forEach((project) => {
+      // fixme: verificar uso de uma função map
+      this.projects.forEach((project) => {
         markers.push({
           id: project.id,
           coord: project.coord,
+          projectData: project,
           popupContent:
             '<div class="popup">' +
             '<img class="popup_img" src="/ods_icons/' +
@@ -102,12 +118,6 @@ export default {
       });
 
       return markers;
-    },
-    */
-    jsonOptions() {
-      return {
-        onEachFeature: this.onEachFeatureFunction,
-      };
     },
     styleFunction() {
       const fillColor = this.fillColor;
@@ -137,43 +147,20 @@ export default {
     },
   },
   methods: {
-    enableButton(idProject) {
+    enableButton(project) {
       this.btnVisible = true;
-      this.bannerVisible = false;
-      this.idProjSelected = idProject;
+      this.projectSelected = project;
     },
-    disableButton() {
+    showProjectInformation() {
       this.btnVisible = false;
-    },
-    show_information() {
-      //fixme: atualizar esta função
-      this.disableButton();
-      this.bannerVisible = true;
-
-      projects.forEach((project) => {
-        if (this.idProjSelected == project.id) {
-          this.bannerContent =
-            "<strong>Saiba mais sobre a ação</strong><br>" +
-            "<strong>Projeto:</strong> " +
-            project.nome +
-            "<br><strong>Descrição: </strong>" +
-            project.descricao +
-            "<br><strong>Objetivos: </strong>" +
-            project.objetivos +
-            "<br><strong>Público-alvo: </strong>" +
-            project.publico +
-            "<br><strong>Início: </strong>" +
-            project.inicio +
-            "<br><strong>Departamento: </strong>" +
-            project.departamento +
-            "<br><strong>Professor:</strong> " +
-            project.responsavel +
-            "<br><strong>Contatos: </strong>" +
-            project.contatos.email +
-            " / " +
-            project.contatos.telefone +
-            "</div></div>";
-        }
+      this.$emit("project-selected", {
+        name: this.projectSelected.nome,
+        metaods: this.projectSelected.meta_ods,
+        description: this.projectSelected.descricao,
+        departament: this.projectSelected.local.departamento,
+        coordinator: this.projectSelected.coordenador.nome,
+        role: this.projectSelected.coordenador.vinculo,
+        email: this.projectSelected.coordenador.email,
       });
     },
   },

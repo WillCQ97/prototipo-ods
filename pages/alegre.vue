@@ -3,15 +3,20 @@
     <div>
       <h1><em>Campus</em> de Alegre - Sede</h1>
       <h2>Mapa interativo</h2>
-      <MapTest :center="mapCenter" :geojson="geojson" :projects="projects" />
+      <MapTest
+        :center="mapCenter"
+        :geojson="geojson"
+        :projects="projects"
+        v-on:project-selected="showProjectInformation"
+      />
     </div>
     <div>
       <h2>Saiba mais sobre a ação</h2>
-      <p v-if="selected">
+      <p v-if="!selected">
         Selecione algum projeto no mapa para visualizar suas informações
         detalhadas.
       </p>
-      <div v-if="!selected">
+      <div v-if="selected">
         <!--Carregar a imagem, o título e o subtítulo da ODS-->
         <strong>Ação:</strong> {{ project.name }} <br />
         <strong>Meta ODS relacionada: </strong> {{ project.metaods }} <br />
@@ -33,21 +38,18 @@ export default {
   name: "Alegre",
   data() {
     return {
-      selected: true,
+      selected: false,
       mapCenter: [-20.76161, -41.536],
       geojson: featuresAlegre,
       projects: projectsAlegre,
-      project: {
-        name: "Nome da ação de teste.",
-        metaods: 2.2,
-        description:
-          "Descrição relativamente grande do projeto e seus objetivos",
-        departament: "Departamento correspondente do projeto.",
-        coordinator: "Fulano de tal.",
-        role: "Professor.",
-        email: "fulanodetal@gmail.com",
-      },
+      project: {},
     };
+  },
+  methods: {
+    showProjectInformation(data) {
+      this.project = data;
+      this.selected = true;
+    },
   },
 };
 </script>
