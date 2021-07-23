@@ -81,6 +81,8 @@ export default {
         onEachFeature: this.onEachFeatureFunction,
       };
     },
+    
+    // fixme: adicionar um range, para que o usuário não mova muito o mapa
     mapOptions() {
       return {
         minZoom: 18,
@@ -94,30 +96,32 @@ export default {
       };
     },
     createProjectMarkers() {
-      var markers = [];
-
-      // fixme: verificar uso de uma função map
-      this.projects.forEach((project) => {
-        markers.push({
-          id: project.id,
-          coord: project.coord,
-          projectData: project,
-          popupContent:
-            '<div class="popup">' +
-            '<img class="popup_img" src="/ods_icons/' +
-            project.meta_ods.split(".")[0] +
-            '.png"><br>' +
-            '<div class="popup_text"><strong>Ação:</strong> ' +
-            project.acao +
-            "<br><strong>Departamento: </strong>" +
-            project.local.departamento +
-            "<br><strong>Coordenador:</strong> " +
-            project.coordenador.nome +
-            "</div></div>",
-        });
-      });
-
-      return markers;
+      return this.projects.map((project) => ({
+        ...project,
+        id: project.id,
+        coord: project.coord,
+        projectData: {
+          name: project.acao,
+          metaods: project.meta_ods,
+          description: project.descricao,
+          departament: project.local.departamento,
+          coordinator: project.coordenador.nome,
+          role: project.coordenador.vinculo,
+          email: project.coordenador.email,
+        },
+        popupContent:
+          '<div class="popup">' +
+          '<img class="popup_img" src="/ods_icons/' +
+          project.meta_ods.split(".")[0] +
+          '.png"><br>' +
+          '<div class="popup_text"><strong>Ação:</strong> ' +
+          project.acao +
+          "<br><strong>Departamento: </strong>" +
+          project.local.departamento +
+          "<br><strong>Coordenador:</strong> " +
+          project.coordenador.nome +
+          "</div></div>",
+      }));
     },
     styleFunction() {
       const fillColor = this.fillColor;
@@ -153,15 +157,7 @@ export default {
     },
     showProjectInformation() {
       this.btnVisible = false;
-      this.$emit("project-selected", {
-        name: this.projectSelected.nome,
-        metaods: this.projectSelected.meta_ods,
-        description: this.projectSelected.descricao,
-        departament: this.projectSelected.local.departamento,
-        coordinator: this.projectSelected.coordenador.nome,
-        role: this.projectSelected.coordenador.vinculo,
-        email: this.projectSelected.coordenador.email,
-      });
+      this.$emit("project-selected", this.projectSelected);
     },
   },
 };

@@ -3,7 +3,7 @@
     <div>
       <h1><em>Campus</em> de Alegre - Sede</h1>
       <h2>Mapa interativo</h2>
-      <MapTest
+      <VisualMap
         :center="mapCenter"
         :geojson="geojson"
         :projects="projects"
@@ -17,7 +17,7 @@
         detalhadas.
       </p>
       <div v-if="selected">
-        <!--Carregar a imagem, o título e o subtítulo da ODS-->
+        <!-- fixme: Carregar a imagem, o título e o subtítulo da ODS-->
         <strong>Ação:</strong> {{ project.name }} <br />
         <strong>Meta ODS relacionada: </strong> {{ project.metaods }} <br />
         <strong>Descrição/Objetivo: </strong> {{ project.description }} <br />
@@ -46,8 +46,8 @@ export default {
     };
   },
   methods: {
-    showProjectInformation(data) {
-      this.project = data;
+    showProjectInformation(projectData) {
+      this.project = projectData;
       this.selected = true;
     },
   },
