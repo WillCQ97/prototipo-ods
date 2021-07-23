@@ -81,8 +81,6 @@ export default {
         onEachFeature: this.onEachFeatureFunction,
       };
     },
-    
-    // fixme: adicionar um range, para que o usuário não mova muito o mapa
     mapOptions() {
       return {
         minZoom: 18,

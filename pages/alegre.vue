@@ -17,7 +17,6 @@
         detalhadas.
       </p>
       <div v-if="selected">
-        <!-- fixme: Carregar a imagem, o título e o subtítulo da ODS-->
         <strong>Ação:</strong> {{ project.name }} <br />
         <strong>Meta ODS relacionada: </strong> {{ project.metaods }} <br />
         <strong>Descrição/Objetivo: </strong> {{ project.description }} <br />
