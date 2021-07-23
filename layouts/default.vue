@@ -56,9 +56,14 @@ export default {
       fixed: false,
       items: [
         {
+          icon: "mdi-home",
+          title: "Página inicial",
+          to: "/",
+        },
+        {
           icon: "mdi-map",
           title: "Campus de Alegre",
-          to: "/",
+          to: "/alegre",
         },
         {
           icon: "mdi-text",
