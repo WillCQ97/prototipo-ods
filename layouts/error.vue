@@ -26,7 +26,7 @@ export default {
   },
   data() {
     return {
-      pageNotFound: "404 Não Encontrado",
+      pageNotFound: "404 Conteúdo Não Encontrado",
       otherError: "Ocorreu um problema.",
     };
   },

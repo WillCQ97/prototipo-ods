@@ -1,4 +1,4 @@
-const alegre =
+const featuresAlegre =
 {
     "type": "FeatureCollection",
     "name": "alegre",
@@ -45,4 +45,4 @@ const alegre =
     ]
 };
 
-export default alegre;
+export default featuresAlegre;

@@ -1,0 +1,66 @@
+[
+  {
+    "id": 1,
+    "acao": "GESAN – Grupo de Estudos em Segurança Alimentar e Nutricional Professor Pedro Kitoko",
+    "meta_ods": "2.2",
+    "descricao": "Desenvolver programas e projetos no campo da segurança alimentar e nutricional e do direito humano à alimentação.",
+    "local": {
+      "centro": "Centro de Ciências Exatas, Naturais e da Saúde – CCENS",
+      "departamento": "Farmácia e Nutrição"
+    },
+    "coordenador": {
+      "nome": "Alcemi Almeida de Barros",
+      "vinculo": "Professor",
+      "email": "fulandodetal@ufes.br"
+    },
+    "coord": [-20.76233, -41.53548]
+  },
+  {
+    "id": 2,
+    "acao": "Promovendo a Comercialização Solidária dos Agricultores Familiares de Alegre",
+    "meta_ods": "2.3",
+    "descricao": "Apoiar os agricultores familiares, visando melhorar sua inserção nos mercados locais de alimentos, com base nos princípios da economia solidária e da agroecologia; incentivar a transição agroecológica na produção familiar e contribuir com a formação profissional dos estudantes universitários.",
+    "local": {
+      "centro": "Centro de Ciências Agrárias e Engenharias – CCAE",
+      "departamento": "Medicina Veterinária"
+    },
+    "coordenador": {
+      "nome": "Haloysio Miguel de Siqueira",
+      "vinculo": "Professor",
+      "email": "fulandodetal@ufes.br"
+    },
+    "coord": [-20.76241, -41.53553]
+  },
+  {
+    "id": 3,
+    "acao": "Laboratório de Solos Raphael M. Bloise",
+    "meta_ods": "2.4",
+    "descricao": "Realizar análises de fertilidade dos solos com menor custo e alta qualidade, visando à recomendação das doses de adubação e calagem para os produtores rurais.",
+    "local": {
+      "centro": "Centro de Ciências Agrárias e Engenharias – CCAE",
+      "departamento": "Agronomia"
+    },
+    "coordenador": {
+      "nome": "Diego Lang Burak",
+      "vinculo": "Professor",
+      "email": "fulandodetal@ufes.br"
+    },
+    "coord": [-20.76214, -41.53536]
+  },
+  {
+    "id": 4,
+    "acao": "Soluções de Baixo Custo para Construção de Vias de Drenagem na Comunidade do Morro do Querosene",
+    "meta_ods": "11.1",
+    "descricao": "Realizar um estudo detalhado das cavas realizadas pela comunidade, o que permitiu indicar os pontos mais críticos para o plantio do capim que deverá conter significativamente a enxurrada que corre para as casas da comunidade.",
+    "local": {
+      "centro": "Centro de Ciências Exatas, Naturais e da Saúde – CCENS",
+      "departamento": "Geologia"
+    },
+    "coordenador": {
+      "nome": "Eder Carlos Moreira",
+      "vinculo": "Professor",
+      "email": "fulandodetal@ufes.br"
+    },
+    "coord": [-20.76046, -41.53663]
+  }
+]

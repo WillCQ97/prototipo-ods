@@ -27,11 +27,11 @@
 
     <v-app-bar :clipped-left="clipped" fixed app>
       <v-app-bar-nav-icon @click.stop="drawer = !drawer" />
-      
+
       <v-btn icon @click.stop="miniVariant = !miniVariant">
         <v-icon>mdi-{{ `chevron-${miniVariant ? "right" : "left"}` }}</v-icon>
       </v-btn>
-      
+
       <v-toolbar-title v-text="title" />
     </v-app-bar>
 
@@ -52,13 +52,18 @@ export default {
   data() {
     return {
       clipped: false,
-      drawer: false,
+      drawer: true,
       fixed: false,
       items: [
         {
+          icon: "mdi-home",
+          title: "Página inicial",
+          to: "/",
+        },
+        {
           icon: "mdi-map",
           title: "Campus de Alegre",
-          to: "/",
+          to: "/alegre",
         },
         {
           icon: "mdi-text",
