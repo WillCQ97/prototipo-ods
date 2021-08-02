@@ -64,7 +64,7 @@
     <p>
       <v-dialog v-model="dialog" width="200">
         <template v-slot:activator="{ on, attrs }">
-          <v-btn v-bind="attrs" v-on="on">Enviar projeto</v-btn>
+          <v-btn v-bind="attrs" v-on="on"> Enviar projeto </v-btn>
         </template>
 
         <v-card>
@@ -72,6 +72,7 @@
           <v-card-text>Dados enviados</v-card-text>
         </v-card>
       </v-dialog>
+      <v-btn v-on:click="hideForm"> Voltar </v-btn>
     </p>
   </div>
 </template>
@@ -94,6 +95,10 @@ export default {
       ],
     };
   },
-  methods: {},
+  methods: {
+    hideForm() {
+      this.$emit("hide-form");
+    },
+  },
 };
 </script>

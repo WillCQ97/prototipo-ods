@@ -14,7 +14,6 @@
             :geojson="geojson"
             :options="jsonOptions"
           />
-
           <l-marker
             v-for="marker in createProjectMarkers"
             v-bind:key="marker.id"
@@ -31,10 +30,14 @@
             ></l-popup>
           </l-marker>
 
-          <l-control position="bottomleft">
-            <v-btn v-if="btnVisible" v-on:click="showProjectInformation">
+          <l-control position="topright">
+            <v-btn v-if="btnInfoVisible" v-on:click="showProjectInformation">
               Saiba mais
             </v-btn>
+          </l-control>
+
+          <l-control position="topleft">
+            <v-btn v-on:click="emitShowProjectForm"> Adicionar Projeto </v-btn>
           </l-control>
         </l-map>
       </client-only>
@@ -71,7 +74,8 @@ export default {
       markerIconUrl: "logo-ods-small.png",
       merkerIconSize: [20, 20],
       markers: [],
-      btnVisible: false,
+      position: { lat: -20.76233, lng: -41.53548 },
+      btnInfoVisible: false,
       projectSelected: {},
     };
   },
@@ -150,12 +154,15 @@ export default {
   },
   methods: {
     enableButton(project) {
-      this.btnVisible = true;
+      this.btnInfoVisible = true;
       this.projectSelected = project;
     },
     showProjectInformation() {
-      this.btnVisible = false;
+      this.btnInfoVisible = false;
       this.$emit("project-selected", this.projectSelected);
+    },
+    emitShowProjectForm() {
+      this.$emit("show-form");
     },
   },
 };
