@@ -39,7 +39,9 @@
       <v-spacer></v-spacer>
 
       <v-toolbar-title>
-        <strong>{{ title }}</strong>
+        <h2 id="title-bar">
+          <strong>{{ title }}</strong>
+        </h2>
       </v-toolbar-title>
 
       <v-spacer></v-spacer>
@@ -106,10 +108,12 @@ export default {
 <style>
 #app {
   background-color: #d2dce8;
-  color: black;
 }
 #menu {
   background-color: #c2cbdb;
-  color: black;
+}
+#title-bar {
+  color: white;
+  text-shadow: 2px 2px rgba(1, 1, 1, 0.5);
 }
 </style>

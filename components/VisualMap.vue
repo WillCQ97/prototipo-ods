@@ -18,7 +18,7 @@
             v-for="marker in createProjectMarkers"
             v-bind:key="marker.id"
             v-bind:lat-lng="marker.coord"
-            v-on:click="enableButton(marker.projectData)"
+            v-on:click="enableInfoButton(marker.projectData)"
           >
             <l-icon
               :icon-url="markerIconUrl"
@@ -29,18 +29,20 @@
               :options="popupOptions"
             ></l-popup>
           </l-marker>
-
-          <l-control position="topright">
-            <v-btn v-if="btnInfoVisible" v-on:click="showProjectInformation">
-              Saiba mais
-            </v-btn>
-          </l-control>
-
-          <l-control position="topleft">
-            <v-btn v-on:click="emitShowProjectForm"> Adicionar Projeto </v-btn>
-          </l-control>
         </l-map>
       </client-only>
+    </div>
+    <div id="botoes">
+      <v-btn class="btn" v-on:click="emitShowProjectForm">
+        Adicionar Projeto
+      </v-btn>
+      <v-btn
+        class="btn"
+        v-on:click="showProjectInformation"
+        :disabled="btnInfoDisabled"
+      >
+        Saiba mais
+      </v-btn>
     </div>
   </div>
 </template>
@@ -75,7 +77,7 @@ export default {
       merkerIconSize: [20, 20],
       markers: [],
       position: { lat: -20.76233, lng: -41.53548 },
-      btnInfoVisible: false,
+      btnInfoDisabled: true,
       projectSelected: {},
     };
   },
@@ -153,15 +155,16 @@ export default {
     },
   },
   methods: {
-    enableButton(project) {
-      this.btnInfoVisible = true;
+    enableInfoButton(project) {
+      this.btnInfoDisabled = false;
       this.projectSelected = project;
     },
     showProjectInformation() {
-      this.btnInfoVisible = false;
+      this.btnInfoDisabled = true;
       this.$emit("project-selected", this.projectSelected);
     },
     emitShowProjectForm() {
+      this.btnInfoDisabled = true;
       this.$emit("show-form");
     },
   },
@@ -169,6 +172,16 @@ export default {
 </script>
 
 <style>
+.btn {
+  margin-left: 10px;
+  margin-right: 10px;
+}
+
+div#botoes {
+  display: flex;
+  justify-content: center;
+}
+
 div#map-wrap {
   height: 82vh;
 }

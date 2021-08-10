@@ -17,19 +17,16 @@
         <h2>Sugerir uma ação</h2>
         <p>
           Se você deseja sugerir um projeto para ser adicionado ao mapa, clique
-          no botão superior esquerdo e preencha o formulário com as informações
-          necessárias. Sua requisição será a avaliada e poderá ser adicionada ao
-          mapa.
+          no botão <strong>ADICIONAR PROJETO</strong> e preencha o formulário
+          com as informações necessárias. Sua requisição será a avaliada e
+          poderá ser adicionada ao mapa.
         </p>
         <h2>Saiba mais sobre a ação</h2>
         <p>
           Para visualizar as informações essenciais acerca de algum projeto,
-          basta clicar no ícone do ODS marcado no mapa.
-        </p>
-        <p>
-          Para informações mais detalhadas, selecione algum projeto no mapa e
-          então clique no botão
-          <strong>SAIBA MAIS</strong> que surgir no canto superior direito.
+          basta clicar no ícone do ODS marcado no mapa. Para informações mais
+          detalhadas, selecione algum projeto no mapa e então clique no botão
+          <strong>SAIBA MAIS</strong> que se habilitará.
         </p>
       </div>
 
@@ -54,7 +51,7 @@
         v-on:hide-form="btnVoltarAction"
       />
     </div>
-    <div>
+    <div id="ods-ufes-logo">
       <v-img src="/ods-ufes-logo.png" max-width="300"></v-img>
     </div>
   </div>
@@ -100,5 +97,10 @@ export default {
 <style>
 h2#suggestion-title {
   padding-top: 15px;
+}
+
+div#ods-ufes-logo {
+  display: flex;
+  justify-content: center;
 }
 </style>
