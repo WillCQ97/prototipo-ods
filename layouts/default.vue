@@ -1,5 +1,5 @@
 <template>
-  <v-app id="app">
+  <v-app id="app" light>
     <v-navigation-drawer
       id="menu"
       v-model="drawer"
@@ -86,7 +86,7 @@ export default {
         },
         {
           icon: "mdi-text",
-          title: "Sobre",
+          title: "Sobre o mapa",
           to: "/about",
         },
       ],

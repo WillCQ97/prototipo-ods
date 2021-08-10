@@ -1,8 +1,8 @@
 <template>
   <div>
     <div>
+      <h1>Mapa Colaborativo</h1>
       <h1><em>Campus</em> de Alegre - Sede</h1>
-      <h2>Mapa interativo</h2>
       <VisualMap
         :center="mapCenter"
         :geojson="geojson"
@@ -14,6 +14,13 @@
 
     <div>
       <div id="pageDescription" v-if="pageDescriptionVisible">
+        <h2>Sugerir uma ação</h2>
+        <p>
+          Se você deseja sugerir um projeto para ser adicionado ao mapa, clique
+          no botão superior esquerdo e preencha o formulário com as informações
+          necessárias. Sua requisição será a avaliada e poderá ser adicionada ao
+          mapa.
+        </p>
         <h2>Saiba mais sobre a ação</h2>
         <p>
           Para visualizar as informações essenciais acerca de algum projeto,
@@ -23,13 +30,6 @@
           Para informações mais detalhadas, selecione algum projeto no mapa e
           então clique no botão
           <strong>SAIBA MAIS</strong> que surgir no canto superior direito.
-        </p>
-        <h2>Sugerir uma ação</h2>
-        <p>
-          Se você deseja sugerir um projeto para ser adicionado ao mapa, clique
-          no botão superior esquerdo e preencha o formulário com as informações
-          necessárias. Sua requisição será a avaliada e poderá ser adicionada ao
-          mapa.
         </p>
       </div>
 
@@ -53,6 +53,9 @@
         v-if="submissionFormVisible"
         v-on:hide-form="btnVoltarAction"
       />
+    </div>
+    <div>
+      <v-img src="/ods-ufes-logo.png" max-width="300"></v-img>
     </div>
   </div>
 </template>
