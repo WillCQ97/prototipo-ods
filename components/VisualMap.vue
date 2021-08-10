@@ -104,7 +104,8 @@ export default {
         coord: project.coord,
         projectData: {
           name: project.acao,
-          metaods: project.meta_ods,
+          ods: project.meta_ods.split(".")[0],
+          meta_ods: project.meta_ods,
           description: project.descricao,
           departament: project.local.departamento,
           coordinator: project.coordenador.nome,

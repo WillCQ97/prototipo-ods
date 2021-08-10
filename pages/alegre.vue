@@ -30,9 +30,22 @@
     <div v-if="projectInfoVisible">
       <h2>Saiba mais sobre a ação</h2>
 
+      <div id="metaods-projeto">
+        <div>
+          <v-img contain :src="projectImage" height="100" width="100"></v-img>
+        </div>
+        <p id="metaods-projeto-texto">
+          <strong>
+            ODS {{ project.ods }}: {{ projectODS[0].toUpperCase() }}
+            <br />
+            {{ projectODS[1] }}
+          </strong>
+        </p>
+      </div>
+
       <p>
         <strong>Ação:</strong> {{ project.name }} <br />
-        <strong>Meta ODS relacionada: </strong> {{ project.metaods }} <br />
+        <strong>Meta ODS relacionada: </strong> {{ project.meta_ods }} <br />
         <strong>Descrição/Objetivo: </strong> {{ project.description }} <br />
         <strong>Departamento: </strong> {{ project.departament }} <br />
         <strong>Coordenador:</strong> {{ project.coordinator }} <br />
@@ -58,6 +71,7 @@
 <script>
 import featuresAlegre from "assets/features_alegre.js";
 import projectsAlegre from "assets/projects_alegre.json";
+import metasODS from "assets/metas_ods.json";
 
 export default {
   name: "Alegre",
@@ -70,13 +84,26 @@ export default {
       geojson: featuresAlegre,
       projects: projectsAlegre,
       project: {},
+      projectImage: "",
+      projectODS: [],
+      objectives: metasODS.objetivos,
+      submetas: metasODS.submetas,
     };
   },
   methods: {
+    getODS(ods_number) {
+      for (let objetivo of this.objectives) {
+        if (objetivo.id == ods_number) {
+          return [objetivo.nome, objetivo.descricao];
+        }
+      }
+    },
     showProjectInformation(projectData) {
       this.pageDescriptionVisible = false;
       this.project = projectData;
       this.projectInfoVisible = true;
+      this.projectImage = "/ods_icons/" + projectData.ods + ".png";
+      this.projectODS = this.getODS(projectData.ods);
     },
     showSubmissionForm() {
       this.pageDescriptionVisible = false;
@@ -96,7 +123,13 @@ export default {
 h2#suggestion-title {
   padding-top: 15px;
 }
-
+div#metaods-projeto {
+  display: flex;
+}
+p#metaods-projeto-texto {
+  padding-left: 5px;
+  align-self: center;
+}
 div#ods-ufes-logo {
   display: flex;
   justify-content: center;
