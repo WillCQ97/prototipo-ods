@@ -25,14 +25,29 @@
       </v-list>
     </v-navigation-drawer>
 
-    <v-app-bar :clipped-left="clipped" fixed app>
+    <v-app-bar :color="barColor" :clipped-left="clipped" fixed app>
       <v-app-bar-nav-icon @click.stop="drawer = !drawer" />
 
       <v-btn icon @click.stop="miniVariant = !miniVariant">
         <v-icon>mdi-{{ `chevron-${miniVariant ? "right" : "left"}` }}</v-icon>
       </v-btn>
 
-      <v-toolbar-title v-text="title" />
+      <v-spacer></v-spacer>
+
+      <v-toolbar-title>
+        <strong>{{ title }}</strong>
+      </v-toolbar-title>
+
+      <v-spacer></v-spacer>
+
+      <v-btn icon left disabled>
+        <v-img
+          :src="srcIcon"
+          :height="iconHeight"
+          :width="iconWidth"
+          contain
+        ></v-img>
+      </v-btn>
     </v-app-bar>
 
     <v-main>
@@ -74,8 +89,15 @@ export default {
       miniVariant: false,
       right: true,
       rightDrawer: false,
-      title: "Protótipo ODS",
+      title: "Protótipo Mapa Colaborativo",
+      srcIcon: "/ods-na-ufes-selo.png",
+      iconHeight: 40,
+      iconWidth: 40,
+      barColor: "#4870a1",
     };
   },
 };
 </script>
+
+<style>
+</style>
