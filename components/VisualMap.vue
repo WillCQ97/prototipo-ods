@@ -1,40 +1,38 @@
 <template>
-  <div>
-    <div id="map-wrap">
-      <client-only>
-        <l-map
-          :zoom="zoom"
-          :options="mapOptions"
-          :center="center"
-          style="height: 525px; z-index: 1"
+  <div id="map-wrap">
+    <client-only>
+      <l-map
+        :zoom="zoom"
+        :options="mapOptions"
+        :center="center"
+        style="height: 525px; z-index: 1"
+      >
+        <l-tile-layer :url="url" :attribution="attribution"></l-tile-layer>
+        <l-geo-json
+          v-if="showGeoJson"
+          :geojson="geojson"
+          :options="jsonOptions"
+        />
+        <l-marker
+          v-for="marker in createProjectMarkers"
+          v-bind:key="marker.id"
+          v-bind:lat-lng="marker.coord"
+          v-on:click="enableInfoButton(marker.projectData)"
         >
-          <l-tile-layer :url="url" :attribution="attribution"></l-tile-layer>
-          <l-geo-json
-            v-if="showGeoJson"
-            :geojson="geojson"
-            :options="jsonOptions"
-          />
-          <l-marker
-            v-for="marker in createProjectMarkers"
-            v-bind:key="marker.id"
-            v-bind:lat-lng="marker.coord"
-            v-on:click="enableInfoButton(marker.projectData)"
-          >
-            <l-icon
-              :icon-url="markerIconUrl"
-              :icon-size="merkerIconSize"
-            ></l-icon>
-            <l-popup
-              :content="marker.popupContent"
-              :options="popupOptions"
-            ></l-popup>
-          </l-marker>
-        </l-map>
-      </client-only>
-    </div>
+          <l-icon
+            :icon-url="markerIconUrl"
+            :icon-size="merkerIconSize"
+          ></l-icon>
+          <l-popup
+            :content="marker.popupContent"
+            :options="popupOptions"
+          ></l-popup>
+        </l-marker>
+      </l-map>
+    </client-only>
     <div id="botoes">
       <v-btn class="btn" v-on:click="emitShowProjectForm">
-        Adicionar Projeto
+        Adicionar Ação
       </v-btn>
       <v-btn
         class="btn"
@@ -180,6 +178,7 @@ export default {
 div#botoes {
   display: flex;
   justify-content: center;
+  padding-top: 10px;
 }
 
 div#map-wrap {
