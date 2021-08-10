@@ -1,11 +1,13 @@
 <template>
   <v-app id="app">
     <v-navigation-drawer
+      id="menu"
       v-model="drawer"
       :mini-variant="miniVariant"
       :clipped="clipped"
       fixed
       app
+      light
     >
       <v-list>
         <v-list-item
@@ -19,7 +21,9 @@
             <v-icon>{{ item.icon }}</v-icon>
           </v-list-item-action>
           <v-list-item-content>
-            <v-list-item-title v-text="item.title" />
+            <v-list-item-title>
+              <strong>{{ item.title }}</strong>
+            </v-list-item-title>
           </v-list-item-content>
         </v-list-item>
       </v-list>
@@ -77,7 +81,7 @@ export default {
         },
         {
           icon: "mdi-map",
-          title: "Campus de Alegre",
+          title: "Ações campus Alegre",
           to: "/alegre",
         },
         {
@@ -100,8 +104,12 @@ export default {
 </script>
 
 <style>
-#app{
+#app {
   background-color: #d2dce8;
+  color: black;
+}
+#menu {
+  background-color: #c2cbdb;
   color: black;
 }
 </style>
