@@ -21,7 +21,7 @@
       áreas. Em 2020, teve início o projeto institucional de integração dos ODS
       da Agenda 2030 na Ufes, visando dar transparência às ações de
       sustentabilidade realizadas pela instituição. Veja mais
-      <a href="http://www.agenda2030.com.br/sobre/" target="_blank">aqui</a>.
+      <a href="https://ods.ufes.br/" target="_blank">aqui</a>.
     </p>
 
     <h1>Cadastre sua contribuição</h1>
