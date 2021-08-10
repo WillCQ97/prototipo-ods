@@ -1,7 +1,7 @@
 <template>
   <div>
-    <div>
-      <v-img src="/ods-ufes-logo.png" max-height="200" max-width="800"></v-img>
+    <div id="ods-ufes-logo">
+      <v-img src="/ods-ufes-logo.png" max-height="200" max-width="600"></v-img>
     </div>
 
     <h1>Objetivos de Desenvolvimento Sustentável (ODS)</h1>
@@ -41,4 +41,8 @@
 </script>
 
 <style>
+div#ods-ufes-logo{
+  display: flex;
+  justify-content: center;
+}
 </style>
