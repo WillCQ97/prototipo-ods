@@ -1,11 +1,13 @@
 <template>
-  <v-app dark>
+  <v-app id="app" light>
     <v-navigation-drawer
+      id="menu"
       v-model="drawer"
       :mini-variant="miniVariant"
       :clipped="clipped"
       fixed
       app
+      light
     >
       <v-list>
         <v-list-item
@@ -19,20 +21,37 @@
             <v-icon>{{ item.icon }}</v-icon>
           </v-list-item-action>
           <v-list-item-content>
-            <v-list-item-title v-text="item.title" />
+            <v-list-item-title>
+              <strong>{{ item.title }}</strong>
+            </v-list-item-title>
           </v-list-item-content>
         </v-list-item>
       </v-list>
     </v-navigation-drawer>
 
-    <v-app-bar :clipped-left="clipped" fixed app>
+    <v-app-bar :color="barColor" :clipped-left="clipped" fixed app>
       <v-app-bar-nav-icon @click.stop="drawer = !drawer" />
 
       <v-btn icon @click.stop="miniVariant = !miniVariant">
         <v-icon>mdi-{{ `chevron-${miniVariant ? "right" : "left"}` }}</v-icon>
       </v-btn>
 
-      <v-toolbar-title v-text="title" />
+      <v-spacer></v-spacer>
+
+      <v-toolbar-title>
+        <strong>{{ title }}</strong>
+      </v-toolbar-title>
+
+      <v-spacer></v-spacer>
+
+      <v-btn icon left disabled>
+        <v-img
+          :src="srcIcon"
+          :height="iconHeight"
+          :width="iconWidth"
+          contain
+        ></v-img>
+      </v-btn>
     </v-app-bar>
 
     <v-main>
@@ -62,20 +81,35 @@ export default {
         },
         {
           icon: "mdi-map",
-          title: "Campus de Alegre",
+          title: "Ações campus Alegre",
           to: "/alegre",
         },
         {
           icon: "mdi-text",
-          title: "Sobre",
+          title: "Sobre o mapa",
           to: "/about",
         },
       ],
       miniVariant: false,
       right: true,
       rightDrawer: false,
-      title: "Protótipo ODS",
+      title: "Protótipo Mapa Colaborativo",
+      srcIcon: "/ods-na-ufes-selo.png",
+      iconHeight: 40,
+      iconWidth: 40,
+      barColor: "#4870a1",
     };
   },
 };
 </script>
+
+<style>
+#app {
+  background-color: #d2dce8;
+  color: black;
+}
+#menu {
+  background-color: #c2cbdb;
+  color: black;
+}
+</style>
