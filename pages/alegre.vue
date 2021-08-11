@@ -30,11 +30,11 @@
     <div v-if="projectInfoVisible">
       <h2>Saiba mais sobre a ação</h2>
 
-      <div id="metaods-projeto">
+      <div id="metaods-project">
         <div>
           <v-img contain :src="projectImage" height="100" width="100"></v-img>
         </div>
-        <p id="metaods-projeto-texto">
+        <p id="metaods-project-text">
           <strong>
             ODS {{ project.ods }}: {{ projectODS[0].toUpperCase() }}
             <br />
@@ -122,10 +122,10 @@ export default {
 h2#suggestion-title {
   padding-top: 15px;
 }
-div#metaods-projeto {
+div#metaods-project {
   display: flex;
 }
-p#metaods-projeto-texto {
+p#metaods-project-text {
   padding-left: 5px;
   align-self: center;
 }
