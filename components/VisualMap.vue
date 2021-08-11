@@ -61,6 +61,10 @@ export default {
       type: Array,
       required: true,
     },
+    bounds: {
+      type: Array,
+      required: true,
+    }
   },
   data() {
     return {
@@ -74,7 +78,6 @@ export default {
       markerIconUrl: "/img/logo-ods-small.png",
       merkerIconSize: [20, 20],
       markers: [],
-      position: { lat: -20.76233, lng: -41.53548 },
       btnInfoDisabled: true,
       projectSelected: {},
     };
@@ -90,6 +93,7 @@ export default {
         minZoom: 18,
         zoomControl: false,
         scrollWheelZoom: false,
+        maxBounds: this.bounds,
       };
     },
     popupOptions() {

@@ -6,6 +6,7 @@
       :center="mapCenter"
       :geojson="geojson"
       :projects="projects"
+      :bounds="bounds"
       v-on:project-selected="showProjectInformation"
       v-on:show-form="showSubmissionForm"
     />
@@ -81,6 +82,10 @@ export default {
       submissionFormVisible: false,
       projectInfoVisible: false,
       mapCenter: [-20.76161, -41.536],
+      bounds: [
+        [-20.75885, -41.5391],
+        [-20.76464, -41.53211],
+      ],
       geojson: featuresAlegre,
       projects: projectsAlegre,
       project: {},
