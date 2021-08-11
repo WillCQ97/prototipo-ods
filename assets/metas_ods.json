@@ -1,0 +1,966 @@
+{
+  "objetivos": [
+    {
+      "id": 1,
+      "nome": "Erradicação da pobreza",
+      "descricao": "Acabar com a pobreza em todas as suas formas, em todos os lugares"
+    },
+    {
+      "id": 2,
+      "nome": "Fome zero e agricultura sustentável",
+      "descricao": "Acabar com a fome, alcançar a segurança alimentar e melhoria da nutrição e promover a agricultura sustentável"
+    },
+    {
+      "id": 3,
+      "nome": "Saúde e bem-estar",
+      "descricao": "Assegurar uma vida saudável e promover o bem-estar para todos, em todas as idades"
+    },
+    {
+      "id": 4,
+      "nome": "Educação de Qualidade",
+      "descricao": "Assegurar a educação inclusiva e equitativa e de qualidade, e promover oportunidades de aprendizagem ao longo da vida para todos"
+    },
+    {
+      "id": 5,
+      "nome": "Igualdade de gênero",
+      "descricao": "Alcançar a igualdade de gênero e empoderar todas as mulheres e meninas"
+    },
+    {
+      "id": 6,
+      "nome": "Água potável e saneamento",
+      "descricao": "Garantir disponibilidade e manejo sustentável da água e saneamento para todos"
+    },
+    {
+      "id": 7,
+      "nome": "Energia limpa e acessível",
+      "descricao": "Garantir acesso à energia barata, confiável, sustentável e renovável para todos"
+    },
+    {
+      "id": 8,
+      "nome": "Trabalho decente e crescimento econômico",
+      "descricao": "Promover o crescimento econômico sustentado, inclusivo e sustentável, emprego pleno e produtivo, e trabalho decente para todos"
+    },
+    {
+      "id": 9,
+      "nome": "Indústria, inovação e infraestrutura",
+      "descricao": "Construir infraestrutura resiliente, promover a industrialização inclusiva e sustentável, e fomentar a inovação"
+    },
+    {
+      "id": 10,
+      "nome": "Redução das desigualdades",
+      "descricao": "Reduzir a desigualdade dentro dos países e entre eles"
+    },
+    {
+      "id": 11,
+      "nome": "Cidades e comunidades sustentáveis",
+      "descricao": "Tornar as cidades e os assentamentos humanos inclusivos, seguros, resilientes e sustentáveis"
+    },
+    {
+      "id": 12,
+      "nome": "Consumo e produção responsáveis",
+      "descricao": "Assegurar padrões de produção e de consumo sustentáveis"
+    },
+    {
+      "id": 13,
+      "nome": "Ação contra a ação global do clima",
+      "descricao": "Tomar medidas urgentes para combater a mudança do clima e seus impactos"
+    },
+    {
+      "id": 14,
+      "nome": "Vida na água",
+      "descricao": "Conservação e uso sustentável dos oceanos, dos mares e dos recursos marinhos para o desenvolvimento sustentável"
+    },
+    {
+      "id": 15,
+      "nome": "Vida terrestre",
+      "descricao": "Proteger, recuperar e promover o uso sustentável dos ecossistemas terrestres, gerir de forma sustentável as florestas, combater a desertificação, deter e reverter a degradação da terra e deter a perda de biodiversidade"
+    },
+    {
+      "id": 16,
+      "nome": "Paz, justiça e instituições eficazes",
+      "descricao": "Promover sociedades pacíficas e inclusivas para o desenvolvimento sustentável, proporcionar o acesso à justiça para todos e construir instituições eficazes, responsáveis e inclusivas em todos os níveis"
+    },
+    {
+      "id": 17,
+      "nome": "Parcerias e meios de implementação",
+      "descricao": "Fortalecer os meios de implementação e revitalizar a parceria global para o desenvolvimento sustentável"
+    }
+  ],
+  "submetas": [
+    {
+      "id": 1,
+      "meta": "1.1",
+      "descricao": "Até 2030, erradicar a pobreza extrema para todas as pessoas em todos os lugares, medida como pessoas vivendo com menos de PPC$3,20 per capita por dia."
+    },
+    {
+      "id": 2,
+      "meta": "1.2",
+      "descricao": "Até 2030, reduzir à metade a proporção de homens, mulheres e crianças, de todas as idades, que vivem na pobreza monetária e não monetária, de acordo com as definições nacionais."
+    },
+    {
+      "id": 3,
+      "meta": "1.3",
+      "descricao": "Assegurar para todos, em nível nacional, até 2030, o acesso ao sistema de proteção social, garantindo a cobertura integral dos pobres e das pessoas em situação de vulnerabilidade."
+    },
+    {
+      "id": 4,
+      "meta": "1.4",
+      "descricao": "Até 2030, garantir que todos os homens e mulheres, particularmente os pobres e as pessoas em situação de vulnerabilidade, tenham acesso a serviços sociais, infraestrutura básica, novas tecnologias e meios para produção, tecnologias de informação e comunicação, serviços financeiros e segurança no acesso equitativo à terra e aos recursos naturais."
+    },
+    {
+      "id": 5,
+      "meta": "1.5",
+      "descricao": "Até 2030, construir a resiliência dos pobres e daqueles em situação de vulnerabilidade, e reduzir a exposição e vulnerabilidade destes a eventos extremos relacionados com o clima e outros choques e desastres econômicos, sociais e ambientais."
+    },
+    {
+      "id": 6,
+      "meta": "1.a",
+      "descricao": "Garantir recursos para implementar programas e políticas para erradicar a pobreza extrema e combater a pobreza."
+    },
+    {
+      "id": 7,
+      "meta": "1.b",
+      "descricao": "Fortalecer marcos políticos e institucionais para garantir a efetividade e a sustentabilidade das ações de erradicação da pobreza."
+    },
+    {
+      "id": 8,
+      "meta": "2.1",
+      "descricao": "Até 2030, erradicar a fome e garantir o acesso de todas as pessoas, em particular os pobres e pessoas em situações vulneráveis, incluindo crianças e idosos, a alimentos seguros, culturalmente adequados, saudáveis e suficientes durante todo o ano."
+    },
+    {
+      "id": 9,
+      "meta": "2.2",
+      "descricao": "Até 2030, erradicar as formas de má-nutrição relacionadas à desnutrição, reduzir as formas de má-nutrição relacionadas ao sobrepeso ou à obesidade, prevendo o alcance até 2025 das metas acordadas internacionalmente sobre desnutrição crônica e desnutrição aguda em crianças menores de cinco anos de idade, e garantir a segurança alimentar e nutricional de meninas adolescentes, mulheres grávidas e lactantes, pessoas idosas e povos e comunidades tradicionais."
+    },
+    {
+      "id": 10,
+      "meta": "2.3",
+      "descricao": "Até 2030, aumentar a produtividade agrícola e a renda dos pequenos produtores de alimentos, particularmente de mulheres, agricultores familiares, povos e comunidades tradicionais, visando tanto à produção de autoconsumo e garantia da reprodução social dessas populações quanto ao seu desenvolvimento socioeconômico, por meio do acesso seguro e equitativo: i) à terra e aos territórios tradicionalmente ocupados; ii) à assistência técnica e extensão rural, respeitando-se as práticas e saberes culturalmente transmitidos; iii) a linhas de crédito específicas; iv) aos mercados locais e institucionais, inclusive políticas de compra pública; v) ao estímulo ao associativismo e cooperativismo; e vi) a oportunidades de agregação de valor e emprego não-agrícola."
+    },
+    {
+      "id": 11,
+      "meta": "2.4",
+      "descricao": "Até 2030, garantir sistemas sustentáveis de produção de alimentos, por meio de políticas de pesquisa, de assistência técnica e extensão rural, entre outras, visando implementar práticas agrícolas resilientes que aumentem a produção e a produtividade e, ao mesmo tempo, ajudem a proteger, recuperar e conservar os serviços ecossistêmicos, fortalecendo a capacidade de adaptação às mudanças do clima, às condições meteorológicas extremas, secas, inundações e outros desastres, melhorando progressivamente a qualidade da terra, do solo, da água e do ar."
+    },
+    {
+      "id": 12,
+      "meta": "2.5.1",
+      "descricao": "Até 2020, garantir a conservação da diversidade genética de espécies nativas e domesticadas de plantas, animais e microrganismos importantes para a alimentação e agricultura, adotando estratégias de conservação ex situ, in situ e on farm, incluindo bancos de germoplasma, casas ou bancos comunitários de sementes e núcleos de criação e outras formas de conservação adequadamente geridos em nível local, regional e internacional."
+    },
+    {
+      "id": 13,
+      "meta": "2.5.2",
+      "descricao": "Até 2020, garantir a repartição justa e equitativa dos benefícios decorrentes da utilização dos recursos genéticos e conhecimentos tradicionais associados, conforme acordado internacionalmente, assegurando a soberania alimentar e segurança alimentar e nutricional."
+    },
+    {
+      "id": 14,
+      "meta": "2.a",
+      "descricao": "Aumentar o investimento, inclusive por meio do reforço da cooperação internacional, em infraestrutura, pesquisa e assistência técnica e extensão rural, no desenvolvimento de tecnologias e no estoque e disponibilização de recursos genéticos de plantas, animais e microrganismos, incluindo variedades crioulas e parentes silvestres, de maneira a aumentar a capacidade de produção agrícola ambientalmente sustentável, priorizando povos e comunidades tradicionais, agricultores familiares, pequenos e médios produtores, adaptando novas tecnologias aos sistemas de produção tradicional e considerando as diferenças regionais e socioculturais."
+    },
+    {
+      "id": 15,
+      "meta": "2.b",
+      "descricao": "Corrigir e prevenir as restrições ao comércio e distorções nos mercados agrícolas mundiais, inclusive por meio da eliminação paralela de todas as formas de subsídios à exportação e todas as medidas de exportação com efeito equivalente, de acordo com o mandato da Rodada de Desenvolvimento de Doha e atendendo, em nível nacional, ao princípio da soberania alimentar e segurança alimentar e nutricional."
+    },
+    {
+      "id": 16,
+      "meta": "2.c",
+      "descricao": "Adotar medidas para garantir o funcionamento adequado dos mercados de alimentos e seus derivados, facilitar o acesso oportuno à informação de mercado, promover o fortalecimento de políticas públicas de estoque e abastecimento, incluindo investimento em logística e distribuição, a fim de ajudar a limitar a volatilidade extrema dos preços dos alimentos e garantir, em nível nacional, a soberania alimentar e segurança alimentar e nutricional."
+    },
+    {
+      "id": 17,
+      "meta": "3.1",
+      "descricao": "Até 2030, reduzir a razão de mortalidade materna para no máximo 30 mortes por 100.000 nascidos vivos."
+    },
+    {
+      "id": 18,
+      "meta": "3.2",
+      "descricao": "Até 2030, enfrentar as mortes evitáveis de recém-nascidos e crianças menores de 5 anos, objetivando reduzir a mortalidade neonatal para no máximo 5 por mil nascidos vivos e a mortalidade de crianças menores de 5 anos para no máximo 8 por mil nascidos vivos."
+    },
+    {
+      "id": 19,
+      "meta": "3.3",
+      "descricao": "Até 2030 acabar, como problema de saúde pública, com as epidemias de AIDS, tuberculose, malária, hepatites virais, doenças negligenciadas, doenças transmitidas pela água, arboviroses transmitidas pelo aedes aegypti e outras doenças transmissíveis."
+    },
+    {
+      "id": 20,
+      "meta": "3.4",
+      "descricao": "Até 2030, reduzir em um terço a mortalidade prematura por doenças não transmissíveis via prevenção e tratamento, promover a saúde mental e o bem-estar, a saúde do trabalhador e da trabalhadora, e prevenir o suicídio, alterando significativamente a tendência de aumento."
+    },
+    {
+      "id": 21,
+      "meta": "3.5",
+      "descricao": "Reforçar a prevenção e o tratamento dos problemas decorrentes do uso de substâncias, incluindo o abuso de drogas entorpecentes e uso nocivo do álcool."
+    },
+    {
+      "id": 22,
+      "meta": "3.6",
+      "descricao": "Até 2030, reduzir pela metade as mortes e lesões por acidentes no trânsito."
+    },
+    {
+      "id": 23,
+      "meta": "3.7",
+      "descricao": "Até 2030, assegurar o acesso universal aos serviços e insumos de saúde sexual e reprodutiva, incluindo o planejamento reprodutivo, à informação e educação, bem como a integração da saúde reprodutiva em estratégias e programas nacionais."
+    },
+    {
+      "id": 24,
+      "meta": "3.8",
+      "descricao": "Assegurar, por meio do Sistema Único de Saúde (SUS), a cobertura universal de saúde, o acesso a serviços essenciais de saúde de qualidade em todos os níveis de atenção e o acesso a medicamentos e vacinas essenciais seguros, eficazes e de qualidade que estejam incorporados ao rol de produtos oferecidos pelo SUS."
+    },
+    {
+      "id": 25,
+      "meta": "3.9",
+      "descricao": "Até 2030, reduzir substancialmente o número de mortes e doenças por produtos químicos perigosos, contaminação e poluição do ar e água do solo."
+    },
+    {
+      "id": 26,
+      "meta": "3.a",
+      "descricao": "Fortalecer a implementação da Convenção-Quadro para o Controle do Tabaco no Brasil."
+    },
+    {
+      "id": 27,
+      "meta": "3.b",
+      "descricao": "Apoiar a pesquisa e o desenvolvimento de tecnologias e inovações em saúde para as doenças transmissíveis e não transmissíveis, proporcionar o acesso a essas tecnologias e inovações incorporadas ao SUS, incluindo medicamentos e vacinas, a toda a população."
+    },
+    {
+      "id": 28,
+      "meta": "3.c",
+      "descricao": "Aumentar substancialmente o financiamento da saúde e o recrutamento, desenvolvimento, formação e retenção do pessoal de saúde, especialmente nos territórios mais vulneráveis."
+    },
+    {
+      "id": 29,
+      "meta": "3.d",
+      "descricao": "Reforçar as capacidades locais para o alerta precoce, redução e gerenciamento de emergências e riscos nacionais e globais de saúde."
+    },
+    {
+      "id": 30,
+      "meta": "4.1",
+      "descricao": "Até 2030, garantir que todas as meninas e meninos completem o ensino fundamental e médio, equitativo e de qualidade, na idade adequada, assegurando a oferta gratuita na rede pública e que conduza a resultados de aprendizagem satisfatórios e relevantes."
+    },
+    {
+      "id": 31,
+      "meta": "4.2",
+      "descricao": "Até 2030, assegurar a todas as meninas e meninos o desenvolvimento integral na primeira infância, acesso a cuidados e à educação infantil de qualidade, de modo que estejam preparados para o ensino fundamental."
+    },
+    {
+      "id": 32,
+      "meta": "4.3",
+      "descricao": "Até 2030, assegurar a equidade (gênero, raça, renda, território e outros) de acesso e permanência à educação profissional e à educação superior de qualidade, de forma gratuita ou a preços acessíveis."
+    },
+    {
+      "id": 33,
+      "meta": "4.4",
+      "descricao": "Até 2030, aumentar substancialmente o número de jovens e adultos que tenham as competências necessárias, sobretudo técnicas e profissionais, para o emprego, trabalho decente e empreendedorismo."
+    },
+    {
+      "id": 34,
+      "meta": "4.5",
+      "descricao": "Até 2030, eliminar as desigualdades de gênero e raça na educação e garantir a equidade de acesso, permanência e êxito em todos os níveis, etapas e modalidades de ensino para os grupos em situação de vulnerabilidade, sobretudo as pessoas com deficiência, populações do campo, populações itinerantes, comunidades indígenas e tradicionais, adolescentes e jovens em cumprimento de medidas socioeducativas e população em situação de rua ou em privação de liberdade."
+    },
+    {
+      "id": 35,
+      "meta": "4.6",
+      "descricao": "Até 2030, garantir que todos os jovens e adultos estejam alfabetizados, tendo adquirido os conhecimentos básicos em leitura, escrita e matemática."
+    },
+    {
+      "id": 36,
+      "meta": "4.7",
+      "descricao": "Até 2030, garantir que todos os alunos adquiram conhecimentos e habilidades necessárias para promover o desenvolvimento sustentável, inclusive, entre outros, por meio da educação para o desenvolvimento sustentável e estilos de vida sustentáveis, direitos humanos, igualdade de gênero, promoção de uma cultura de paz e não violência, cidadania global e valorização da diversidade cultural e da contribuição da cultura para o desenvolvimento sustentável."
+    },
+    {
+      "id": 37,
+      "meta": "4.a",
+      "descricao": "Ofertar infraestrutura física escolar adequada às necessidades da criança, acessível às pessoas com deficiências e sensível ao gênero, que garanta a existência de ambientes de aprendizagem seguros, não violentos, inclusivos e eficazes para todos."
+    },
+    {
+      "id": 38,
+      "meta": "4.b",
+      "descricao": "Até 2020, ampliar em 50% o número de vagas efetivamente preenchidas por alunos dos países em desenvolvimento, em particular os países de menor desenvolvimento relativo, tais como os países africanos de língua portuguesa e países latino-americanos, para o ensino superior, incluindo programas de formação profissional, de tecnologia da informação e da comunicação, programas técnicos, de engenharia e científicos no Brasil."
+    },
+    {
+      "id": 39,
+      "meta": "4.c",
+      "descricao": "Até 2030, assegurar que todos os professores da educação básica tenham formação específica na área de conhecimento em que atuam, promovendo a oferta de formação continuada, em regime de colaboração entre União, estados e municípios, inclusive por meio de cooperação internacional."
+    },
+    {
+      "id": 40,
+      "meta": "5.1",
+      "descricao": "Eliminar todas as formas de discriminação de gênero, nas suas intersecções com raça, etnia, idade, deficiência, orientação sexual, identidade de gênero, territorialidade, cultura, religião e nacionalidade, em especial para as meninas e mulheres do campo, da floresta, das águas e das periferias urbanas"
+    },
+    {
+      "id": 41,
+      "meta": "5.2",
+      "descricao": "Eliminar todas as formas de violência de gênero nas esferas pública e privada, destacando a violência sexual, o tráfico de pessoas e os homicídios, nas suas intersecções com raça, etnia, idade, deficiência, orientação sexual, identidade de gênero, territorialidade, cultura, religião e nacionalidade, em especial para as mulheres do campo, da floresta, das águas e das periferias urbanas."
+    },
+    {
+      "id": 42,
+      "meta": "5.3",
+      "descricao": "Eliminar todas as práticas nocivas, como os casamentos e uniões precoces, forçados e de crianças e jovens, nas suas intersecções com raça, etnia, idade, deficiência, orientação sexual, identidade de gênero, territorialidade, cultura, religião e nacionalidade, em especial para as mulheres do campo, da floresta, das águas e das periferias urbanas."
+    },
+    {
+      "id": 43,
+      "meta": "5.4",
+      "descricao": "Eliminar a desigualdade na divisão sexual do trabalho remunerado e não remunerado, inclusive no trabalho doméstico e de cuidados, promovendo maior autonomia de todas as mulheres, nas suas intersecções com raça, etnia, idade, deficiência, orientação sexual, identidade de gênero, territorialidade, cultura, religião e nacionalidade, em especial para as mulheres do campo, da floresta, das águas e das periferias urbanas, por meio de políticas públicas e da promoção da responsabilidade compartilhada dentro das família"
+    },
+    {
+      "id": 44,
+      "meta": "5.5",
+      "descricao": "Garantir a participação plena e efetiva das mulheres e a igualdade de oportunidades para a liderança em todos os níveis de tomada de decisão na esfera pública, em suas dimensões política e econômica, considerando as intersecções com raça, etnia, idade, deficiência, orientação sexual, identidade de gênero, territorialidade, cultura, religião e nacionalidade, em especial para as mulheres do campo, da floresta, das águas e das periferias urbanas."
+    },
+    {
+      "id": 45,
+      "meta": "5.6",
+      "descricao": "Promover, proteger e garantir a saúde sexual e reprodutiva, os direitos sexuais e direitos reprodutivos, em consonância com o Programa de Ação da Conferência Internacional sobre População e Desenvolvimento e com a Plataforma de Ação de Pequim e os documentos resultantes de suas conferências de revisão, considerando as intersecções de gênero com raça, etnia, idade, deficiência, orientação sexual, identidade de gênero, territorialidade, cultura, religião e nacionalidade, em especial para as mulheres do campo, da floresta, das águas e das periferias urbanas"
+    },
+    {
+      "id": 46,
+      "meta": "5.a",
+      "descricao": "Garantir igualdade de direitos, de acesso e de controle dos recursos econômicos, da terra e de outras formas de propriedade, de serviços financeiros, de herança e de recursos naturais de forma sustentável, por meio de políticas de crédito, capacitação, assistência técnica, reforma agrária e habitação, entre outras, em especial para as mulheres do campo, da floresta, das águas e das periferias urbanas."
+    },
+    {
+      "id": 47,
+      "meta": "5.b.1",
+      "descricao": "Garantir a igualdade de gênero no acesso, habilidades de uso e produção das tecnologias de informação e comunicação, considerando as intersecções com raça, etnia, idade, deficiência, orientação sexual, identidade de gênero, territorialidade, cultura, religião e nacionalidade, em especial para as mulheres do campo, da floresta, das águas e das periferias urbanas."
+    },
+    {
+      "id": 48,
+      "meta": "5.b.2",
+      "descricao": "Garantir a igualdade de gênero no acesso e produção do conhecimento científico em todas as áreas do conhecimento e promover a perspectiva de gênero na produção do conhecimento, considerando as intersecções com raça, etnia, idade, deficiência, orientação sexual, identidade de gênero, territorialidade, cultura, religião e nacionalidade, em especial para as mulheres do campo, da floresta, das águas e das periferias urbanas."
+    },
+    {
+      "id": 49,
+      "meta": "5.b.3",
+      "descricao": "Garantir a igualdade de gênero no acesso e produção da informação, conteúdos de comunicação e mídias, considerando as intersecções com raça, etnia, idade, deficiência, orientação sexual, identidade de gênero, territorialidade, cultura, religião e nacionalidade, em especial para as mulheres do campo, da floresta, das águas e das periferias urbanas."
+    },
+    {
+      "id": 50,
+      "meta": "5.c",
+      "descricao": "Adotar e fortalecer políticas públicas e legislação que visem à promoção da igualdade de gênero e ao empoderamento de todas as mulheres e meninas, bem como promover mecanismos para sua efetivação – em todos os níveis federativos – nas suas intersecções com raça, etnia, idade, deficiência, orientação sexual, identidade de gênero, territorialidade, cultura, religião e nacionalidade, em especial para as mulheres do campo, da floresta, das águas e das periferias urbanas."
+    },
+    {
+      "id": 51,
+      "meta": "6.1",
+      "descricao": "Até 2030, alcançar o acesso universal e equitativo à água para consumo humano, segura e acessível para todas e todos."
+    },
+    {
+      "id": 52,
+      "meta": "6.2",
+      "descricao": "Até 2030, alcançar o acesso a saneamento e higiene adequados e equitativos para todos, e acabar com a defecação a céu aberto, com especial atenção para as necessidades das mulheres e meninas e daqueles em situação de vulnerabilidade."
+    },
+    {
+      "id": 53,
+      "meta": "6.3",
+      "descricao": "Até 2030, melhorar a qualidade da água nos corpos hídricos, reduzindo a poluição, eliminando despejos e minimizando o lançamento de materiais e substâncias perigosas, reduzindo pela metade a proporção do lançamento de efluentes não tratados e aumentando substancialmente o reciclo e reuso seguro localmente."
+    },
+    {
+      "id": 54,
+      "meta": "6.4",
+      "descricao": "Até 2030, aumentar substancialmente a eficiência do uso da água em todos os setores, assegurando retiradas sustentáveis e o abastecimento de água doce para reduzir substancialmente o número de pessoas que sofrem com a escassez"
+    },
+    {
+      "id": 55,
+      "meta": "6.5",
+      "descricao": "  Até 2030, implementar a gestão integrada dos recursos hídricos em todos os níveis de governo, inclusive via cooperação transfronteiriça."
+    },
+    {
+      "id": 56,
+      "meta": "6.6",
+      "descricao": "Até 2020, proteger e restaurar ecossistemas relacionados com a água, incluindo montanhas, florestas, zonas úmidas, rios, aquíferos e lagos, reduzindo os impactos da ação humana"
+    },
+    {
+      "id": 57,
+      "meta": "6.a",
+      "descricao": "Até 2030, ampliar a cooperação internacional e o apoio ao desenvolvimento de capacidades para os países em desenvolvimento em atividades e programas relacionados à água e ao saneamento, incluindo, entre outros, a gestão de recursos hídricos, a coleta de água, a dessalinização, a eficiência no uso da água, o tratamento de efluentes, a reciclagem e as tecnologias de reuso."
+    },
+    {
+      "id": 58,
+      "meta": "6.b",
+      "descricao": "Apoiar e fortalecer a participação das comunidades locais, priorizando o controle social para melhorar a gestão da água e do saneamento."
+    },
+    {
+      "id": 59,
+      "meta": "7.1",
+      "descricao": "Até 2030, assegurar o acesso universal, confiável, moderno e a preços acessíveis a serviços de energia."
+    },
+    {
+      "id": 60,
+      "meta": "7.2",
+      "descricao": "Até 2030, manter elevada a participação de energias renováveis na matriz energética nacional."
+    },
+    {
+      "id": 61,
+      "meta": "7.3",
+      "descricao": "Até 2030, aumentar a taxa de melhoria da eficiência energética da economia brasileira."
+    },
+    {
+      "id": 62,
+      "meta": "7.a",
+      "descricao": "Até 2030, reforçar a cooperação internacional para facilitar o acesso a pesquisa e tecnologias de energia limpa, incluindo energias renováveis, eficiência energética e tecnologias de combustíveis fósseis avançadas e mais limpas, e promover o investimento em infraestrutura de energia e em tecnologias de energia limpa."
+    },
+    {
+      "id": 63,
+      "meta": "7.b",
+      "descricao": "Até 2030, expandir a infraestrutura e aprimorar a tecnologia para o fornecimento de serviços de energia modernos e sustentáveis para todos."
+    },
+    {
+      "id": 64,
+      "meta": "8.1",
+      "descricao": "Registrar um crescimento econômico per capita anual médio de 1,6% entre 2016 e 2018; e de 2,55% entre 2019 e 2030."
+    },
+    {
+      "id": 65,
+      "meta": "8.2",
+      "descricao": "Atingir níveis mais elevados de produtividade, por meio da diversificação e com agregação de valor, modernização tecnológica, inovação, gestão, e qualificação do trabalhador; com foco em setores intensivos em mão-de-obra."
+    },
+    {
+      "id": 66,
+      "meta": "8.3",
+      "descricao": "Promover o desenvolvimento com a geração de trabalho digno; a formalização; o crescimento das micro, pequenas e médias empresas; o empreendedorismo e a inovação."
+    },
+    {
+      "id": 67,
+      "meta": "8.4",
+      "descricao": "Ampliar a eficiência da utilização de recursos globais no consumo e na produção, e empenhar-se para dissociar o crescimento econômico da degradação ambiental, de acordo com o Plano de Ação para Produção e Consumo Sustentáveis (PPCS)."
+    },
+    {
+      "id": 68,
+      "meta": "8.a",
+      "descricao": "Até 2030, reduzir em 40% a taxa de desemprego e outras formas de subutilização da força de trabalho, garantindo o trabalho digno, com ênfase na igualdade de remuneração para trabalho de igual valor."
+    },
+    {
+      "id": 69,
+      "meta": "8.6",
+      "descricao": "Alcançar uma redução de 3 pontos percentuais até 2020 e de 10 pontos percentuais até 2030 na proporção de jovens que não estejam ocupados, nem estudando ou em formação profissional."
+    },
+    {
+      "id": 70,
+      "meta": "8.7",
+      "descricao": "Até 2025 erradicar o trabalho em condições análogas às de escravo, o tráfico de pessoas e o trabalho infantil, principalmente nas suas piores formas."
+    },
+    {
+      "id": 71,
+      "meta": "8.8",
+      "descricao": "Reduzir o grau de descumprimento da legislação trabalhista, no que diz respeito ao registro, às condições de trabalho, às normas de saúde e segurança no trabalho, com ênfase nos trabalhadores em situação de vulnerabilidade."
+    },
+    {
+      "id": 72,
+      "meta": "8.9",
+      "descricao": "Até 2030, conceber e implementar políticas para promover o turismo sustentável e responsável, acessível a todos; e que gere emprego e trabalho digno, melhore a distribuição de renda e promova a cultura e os produtos locais."
+    },
+    {
+      "id": 73,
+      "meta": "8.10",
+      "descricao": "Expandir de forma sustentável o acesso aos serviços bancários e financeiros para todos."
+    },
+    {
+      "id": 74,
+      "meta": "8.b",
+      "descricao": "Até 2020, desenvolver e operacionalizar um plano nacional de promoção de trabalho digno para juventude, tendo como marcos referenciais: i) a Agenda Nacional de Trabalho Decente para a juventude; ii) o Plano Nacional de Emprego e Trabalho Decente; e iii) o Pacto Mundial para o Emprego da Organização Internacional do Trabalho (OIT)."
+    },
+    {
+      "id": 75,
+      "meta": "9.1",
+      "descricao": "Aprimorar o sistema viário do País, com foco em sustentabilidade e segurança no trânsito e transporte, equalizando as desigualdades regionais, promovendo a integração regional e transfronteiriça, na busca de menor custo, para o transporte de passageiros e de cargas, evitando perdas, com maior participação dos modos de alta capacidade como ferroviário, aquaviário e dutoviário, tornando-o acessível e proporcionando bem-estar a todos."
+    },
+    {
+      "id": 76,
+      "meta": "9.2",
+      "descricao": "Até 2030, promover a atividade econômica inclusiva e sustentável e a atividade de alta complexidade tecnológica, com foco na elevação da produtividade, do emprego e do PIB, e com melhora nas condições de trabalho e na apropriação dos ganhos de produtividade advindos."
+    },
+    {
+      "id": 77,
+      "meta": "9.3",
+      "descricao": "Aumentar e desburocratizar o acesso das micro e pequenas empresas a todos os serviços financeiros, garantindo crédito em condições adequadas à realidade dessas empresas, inclusive por meio de soluções tecnológicas inovadoras, para propiciar sua integração em cadeias de valor e mercados."
+    },
+    {
+      "id": 78,
+      "meta": "9.4",
+      "descricao": "Até 2030, modernizar a infraestrutura e reabilitar as atividades econômicas para torná-las sustentáveis, com foco no uso de recursos renováveis e maior adoção de tecnologias e processos industriais limpos e ambientalmente adequados. +"
+    },
+    {
+      "id": 79,
+      "meta": "9.5",
+      "descricao": "Fortalecer a pesquisa científica e melhorar as capacidades tecnológicas das empresas, incentivando, até 2030, a inovação, visando aumentar o emprego do conhecimento científico e tecnológico nos desafios socioeconômicos nacionais e nas tecnologias socioambientalmente inclusivas; e aumentar a produtividade agregada da economia. a) Aumentar para 3.000 o número de trabalhadores de pesquisa e desenvolvimento por milhão de habitantes; b) Aumentar para 120.000 o número de técnicos e pesquisadores ocupados em P&D nas empresas; e c) Aumentar para 2,00% os gastos público e privado em pesquisa e desenvolvimento em relação ao PIB."
+    },
+    {
+      "id": 80,
+      "meta": "9.a",
+      "descricao": "Facilitar o desenvolvimento de infraestrutura sustentável e resiliente em países em desenvolvimento, por meio de maior apoio financeiro, tecnológico e técnico aos países africanos, aos países de menor desenvolvimento relativo, aos países em desenvolvimento sem litoral e aos pequenos Estados insulares em desenvolvimento."
+    },
+    {
+      "id": 81,
+      "meta": "9.b",
+      "descricao": "Apoiar o desenvolvimento tecnológico, a pesquisa e a inovação nacionais, por meio de políticas públicas que assegurem um ambiente institucional e normativo favorável para, entre outras coisas, promover a diversificação industrial e a agregação de valor às commodities."
+    },
+    {
+      "id": 82,
+      "meta": "9.c",
+      "descricao": "Aumentar significativamente o acesso às tecnologias de informação e comunicação e empenhar-se para oferecer acesso universal e a preços acessíveis à internet, até 2020, buscando garantir a qualidade, a privacidade, a proteção de dados e a segurança cibernética."
+    },
+    {
+      "id": 83,
+      "meta": "10.1",
+      "descricao": "Até 2030, progressivamente alcançar e sustentar o crescimento da renda dos 40% da população mais pobre a uma taxa maior que a renda média dos 10% mais ricos."
+    },
+    {
+      "id": 84,
+      "meta": "10.2",
+      "descricao": "Até 2030, empoderar e promover a inclusão social, econômica e política de todos, de forma a reduzir as desigualdades, independentemente da idade, gênero, deficiência, raça, etnia, nacionalidade, religião, condição econômica ou outra."
+    },
+    {
+      "id": 85,
+      "meta": "10.3",
+      "descricao": "Garantir a igualdade de oportunidades e reduzir as desigualdades de resultados, inclusive por meio da eliminação de leis, políticas e práticas discriminatórias e da promoção de legislação, políticas e ações adequadas a este respeito."
+    },
+    {
+      "id": 86,
+      "meta": "10.4",
+      "descricao": "Reduzir desigualdades através da adoção de políticas fiscal, tributária, salarial e de proteção social."
+    },
+    {
+      "id": 87,
+      "meta": "10.5",
+      "descricao": "Melhorar a regulamentação e monitoramento dos mercados e instituições financeiras globais e fortalecer a implementação de tais regulamentações."
+    },
+    {
+      "id": 88,
+      "meta": "10.6",
+      "descricao": "Assegurar uma representação e voz mais forte dos países em desenvolvimento em tomadas de decisão nas instituições econômicas e financeiras internacionais globais, a fim de produzir instituições mais eficazes, críveis, responsáveis e legítimas."
+    },
+    {
+      "id": 89,
+      "meta": "10.7",
+      "descricao": "Facilitar a migração e promover a integração de migrantes e refugiados à sociedade brasileira."
+    },
+    {
+      "id": 90,
+      "meta": "10.a",
+      "descricao": "Implementar o princípio do tratamento especial e diferenciado para países em desenvolvimento, em particular os países menos desenvolvidos, em conformidade com os acordos da OMC."
+    },
+    {
+      "id": 91,
+      "meta": "10.b",
+      "descricao": "Incentivar cooperação internacional para o desenvolvimento, incluindo o investimento externo direto, para os Estados onde a necessidade é maior, em particular os países de menor desenvolvimento relativo, os países africanos, os pequenos Estados insulares em desenvolvimento e os países em desenvolvimento sem litoral, de acordo com seus planos e programas nacionais."
+    },
+    {
+      "id": 92,
+      "meta": "10.c",
+      "descricao": "Até 2030, reduzir para menos de 3% os custos de transação de remessas dos migrantes e eliminar os corredores de remessas com custos superiores a 5%."
+    },
+    {
+      "id": 93,
+      "meta": "11.1",
+      "descricao": "Até 2030, garantir o acesso de todos a moradia digna, adequada e a preço acessível; aos serviços básicos e urbanizar os assentamentos precários de acordo com as metas assumidas no Plano Nacional de Habitação, com especial atenção para grupos em situação de vulnerabilidade."
+    },
+    {
+      "id": 94,
+      "meta": "11.2",
+      "descricao": "Até 2030, melhorar a segurança viária e o acesso à cidade por meio de sistemas de mobilidade urbana mais sustentáveis, inclusivos, eficientes e justos, priorizando o transporte público de massa e o transporte ativo, com especial atenção para as necessidades das pessoas em situação de vulnerabilidade, como aquelas com deficiência e com mobilidade reduzida, mulheres, crianças e pessoas idosas."
+    },
+    {
+      "id": 95,
+      "meta": "11.3",
+      "descricao": "Até 2030, aumentar a urbanização inclusiva e sustentável, aprimorar as capacidades para o planejamento, para o controle social e para a gestão participativa, integrada e sustentável dos assentamentos humanos, em todas as unidades da federação."
+    },
+    {
+      "id": 96,
+      "meta": "11.4",
+      "descricao": "Fortalecer as iniciativas para proteger e salvaguardar o patrimônio natural e cultural do Brasil, incluindo seu patrimônio material e imaterial."
+    },
+    {
+      "id": 97,
+      "meta": "11.5",
+      "descricao": "Até 2030, reduzir significativamente o número de mortes e o número de pessoas afetadas por desastres naturais de origem hidrometeorológica e climatológica, bem como diminuir substancialmente o número de pessoas residentes em áreas de risco e as perdas econômicas diretas causadas por esses desastres em relação ao produto interno bruto, com especial atenção na proteção de pessoas de baixa renda e em situação de vulnerabilidade."
+    },
+    {
+      "id": 98,
+      "meta": "11.6",
+      "descricao": "Até 2030, reduzir o impacto ambiental negativo per capita das cidades, melhorando os índices de qualidade do ar e a gestão de resíduos sólidos; e garantir que todas as cidades com acima de 500 mil habitantes tenham implementado sistemas de monitoramento de qualidade do ar e planos de gerenciamento de resíduos sólidos."
+    },
+    {
+      "id": 99,
+      "meta": "11.7",
+      "descricao": "Até 2030, proporcionar o acesso universal a espaços públicos seguros, inclusivos, acessíveis e verdes, em particular para as mulheres, crianças e adolescentes, pessoas idosas e pessoas com deficiência, e demais grupos em situação de vulnerabilidade."
+    },
+    {
+      "id": 100,
+      "meta": "11.a",
+      "descricao": "Apoiar a integração econômica, social e ambiental em áreas metropolitanas e entre áreas urbanas, periurbanas, rurais e cidades gêmeas, considerando territórios de povos e comunidades tradicionais, por meio da cooperação interfederativa, reforçando o planejamento nacional, regional e local de desenvolvimento."
+    },
+    {
+      "id": 101,
+      "meta": "11.b",
+      "descricao": "Até 2030, aumentar significativamente o número de cidades que possuem políticas e planos desenvolvidos e implementados para mitigação, adaptação e resiliência a mudanças climáticas e gestão integrada de riscos de desastres de acordo com o Marco de SENDAI."
+    },
+    {
+      "id": 102,
+      "meta": "11.c",
+      "descricao": "Apoiar os países menos desenvolvidos, inclusive por meio de assistência técnica e financeira, para construções sustentáveis e robustas, priorizando recursos locais."
+    },
+    {
+      "id": 103,
+      "meta": "12.1",
+      "descricao": "Implementar o Plano de Ação para Produção e Consumo Sustentáveis, em articulação com entes federados."
+    },
+    {
+      "id": 104,
+      "meta": "12.2",
+      "descricao": "Até 2030, alcançar a gestão sustentável e o uso eficiente dos recursos naturais."
+    },
+    {
+      "id": 105,
+      "meta": "12.3.1",
+      "descricao": "Até 2030, reduzir o desperdício de alimentos per capita nacional, em nível de varejo e do consumidor, e reduzir as perdas de alimentos ao longo das cadeias de produção e abastecimento, incluindo as perdas pós-colheita."
+    },
+    {
+      "id": 106,
+      "meta": "12.3.2",
+      "descricao": "Estabelecer marco regulatório para a redução do desperdício de alimentos no Brasil."
+    },
+    {
+      "id": 107,
+      "meta": "12.4",
+      "descricao": "Até 2020, alcançar o manejo ambientalmente saudável dos produtos químicos e todos os resíduos, ao longo de todo o ciclo de vida destes, de acordo com os marcos internacionais acordados, e reduzir significativamente a liberação destes para o ar, água e solo, para minimizar seus impactos negativos sobre a saúde humana e o meio ambiente."
+    },
+    {
+      "id": 108,
+      "meta": "12.5",
+      "descricao": "Até 2030, reduzir substancialmente a geração de resíduos por meio da Economia Circular e suas ações de prevenção, redução, reciclagem e reúso de resíduos. +"
+    },
+    {
+      "id": 109,
+      "meta": "12.6",
+      "descricao": "Incentivar as empresas, especialmente as empresas grandes e transnacionais, a adotar parâmetros e práticas de responsabilidade socioambiental e a integrar informações acerca dessas práticas em seus sistemas, bancos de dados e ciclo de relatórios."
+    },
+    {
+      "id": 110,
+      "meta": "12.7",
+      "descricao": "Promover práticas de contratações e gestão públicas com base em critérios de sustentabilidade, de acordo com as políticas e prioridades nacionais."
+    },
+    {
+      "id": 111,
+      "meta": "12.8",
+      "descricao": "Até 2030, garantir que as pessoas, em todos os lugares, tenham informação relevante e conscientização sobre o desenvolvimento sustentável e estilos de vida em harmonia com a natureza, em consonância com o Programa Nacional de Educação Ambiental (PRONEA)."
+    },
+    {
+      "id": 112,
+      "meta": "12.a",
+      "descricao": "Apoiar países em desenvolvimento a fortalecer suas capacidades científicas e tecnológicas para mudar para padrões mais sustentáveis de produção e consumo."
+    },
+    {
+      "id": 113,
+      "meta": "12.b",
+      "descricao": "Desenvolver e implementar ferramentas para monitorar os impactos do desenvolvimento sustentável para o turismo, acessível a todos, que gera emprego e trabalho digno, melhora a distribuição de renda e promove a cultura e os produtos locais."
+    },
+    {
+      "id": 114,
+      "meta": "12.c",
+      "descricao": "Racionalizar subsídios ineficientes aos combustíveis fósseis, que encorajam o consumo exagerado, eliminando as distorções de mercado, de acordo com as circunstâncias nacionais, inclusive por meio da reestruturação fiscal e a eliminação gradual desses subsídios prejudiciais, caso existam, para refletir os seus impactos ambientais, tendo plenamente em conta as necessidades específicas e condições dos países em desenvolvimento e minimizando os possíveis impactos adversos sobre o seu desenvolvimento de uma forma que proteja os pobres e as comunidades afetadas."
+    },
+    {
+      "id": 115,
+      "meta": "13.1",
+      "descricao": "Ampliar a resiliência e a capacidade adaptativa a riscos e impactos resultantes da mudança do clima e a desastres naturais."
+    },
+    {
+      "id": 116,
+      "meta": "13.2",
+      "descricao": "Integrar a Política Nacional sobre Mudança do Clima (PNMC) às políticas, estratégias e planejamentos nacionais."
+    },
+    {
+      "id": 117,
+      "meta": "13.3",
+      "descricao": "Melhorar a educação, aumentar a conscientização e a capacidade humana e institucional sobre mudança do clima, seus riscos, mitigação, adaptação, impactos, e alerta precoce."
+    },
+    {
+      "id": 118,
+      "meta": "13.b",
+      "descricao": "Estimular a ampliação da cooperação internacional em suas dimensões tecnológica e educacional objetivando fortalecer capacidades para o planejamento relacionado à mudança do clima e à gestão eficaz, nos países menos desenvolvidos, inclusive com foco em mulheres, jovens, comunidades locais e marginalizadas."
+    },
+    {
+      "id": 119,
+      "meta": "14.1",
+      "descricao": "Conservação e uso sustentável dos oceanos, dos mares e dos recursos marinhos para o desenvolvimento sustentável."
+    },
+    {
+      "id": 120,
+      "meta": "14.2",
+      "descricao": "Até 2020, gerir de forma sustentável e proteger os ecossistemas marinhos e costeiros para evitar impactos adversos significativos, inclusive por meio do reforço da sua capacidade de resiliência, e tomar medidas para a sua restauração, a fim de assegurar oceanos saudáveis e produtivos."
+    },
+    {
+      "id": 121,
+      "meta": "14.3",
+      "descricao": "Minimizar e enfrentar os impactos da acidificação dos oceanos, inclusive por meio do reforço da cooperação científica em todos os níveis."
+    },
+    {
+      "id": 122,
+      "meta": "14.4",
+      "descricao": "Até 2020, efetivamente regular a coleta, e acabar com a sobrepesca, ilegal, não reportada e não regulamentada e as práticas de pesca destrutivas, e implementar planos de gestão com base científica, para restaurar populações de peixes no menor tempo possível, pelo menos a níveis que possam produzir rendimento máximo sustentável, como determinado por suas características biológicas."
+    },
+    {
+      "id": 123,
+      "meta": "14.5",
+      "descricao": "Até 2020, conservar pelo menos 25% das zonas costeiras e marinhas, principalmente áreas de especial importância para a biodiversidade e serviços ecossistêmicos, assegurada e respeitada a demarcação, regularização e a gestão efetiva e equitativa, visando garantir a interligação, integração e representação ecológica em paisagens marinhas mais amplas, de acordo com a legislação nacional e internacional, e com base na melhor informação científica disponível."
+    },
+    {
+      "id": 124,
+      "meta": "14.6",
+      "descricao": "Até 2020, avaliar certas formas de subsídios à pesca, que contribuem para a sobrecapacidade e a sobrepesca, considerando a eliminação dos subsídios que contribuam para a pesca INN, e abstendo-se de introduzir novos subsídios como estes, reconhecendo que o tratamento especial e diferenciado adequado e eficaz para os países em desenvolvimento e os países menos desenvolvidos deve ser parte integrante da negociação sobre subsídios à pesca da OMC."
+    },
+    {
+      "id": 125,
+      "meta": "14.7",
+      "descricao": "Até 2030, aumentar os benefícios econômicos para todos os países, em especial os pequenos Estados insulares em desenvolvimento e os países menos desenvolvidos, a partir da gestão sustentável dos recursos marinhos, inclusive a pesca, aquicultura e turismo."
+    },
+    {
+      "id": 126,
+      "meta": "14.a",
+      "descricao": "Aumentar o conhecimento científico, desenvolver capacidades de pesquisa e transferir tecnologia marinha, tendo em conta os critérios e orientações sobre a Transferência de Tecnologia Marinha da Comissão Oceanográfica Intergovernamental, a fim de melhorar a saúde dos oceanos e aumentar a contribuição da biodiversidade marinha para o desenvolvimento dos países em desenvolvimento, em particular os pequenos Estados insulares em desenvolvimento e os países menos desenvolvidos."
+    },
+    {
+      "id": 127,
+      "meta": "14.b",
+      "descricao": "Proporcionar o acesso dos pescadores artesanais de pequena escala aos recursos marinhos e mercados."
+    },
+    {
+      "id": 128,
+      "meta": "14.c",
+      "descricao": "Assegurar a conservação e o uso sustentável dos oceanos e seus recursos pela implementação do direito internacional, como refletido na UNCLOS [Convenção das Nações Unidas sobre o Direito do Mar], que provê o arcabouço legal para a conservação e utilização sustentável dos oceanos e dos seus recursos, conforme registrado no parágrafo 158 do \"Futuro Que Queremos\"."
+    },
+    {
+      "id": 129,
+      "meta": "15.1.1",
+      "descricao": "Até 2020, serão conservadas, por meio de sistemas de unidades de conservação previstas na Lei do Sistema Nacional de Unidades de Conservação (SNUC), e outras categorias de áreas oficialmente protegidas como Áreas de Preservação Permanente (APPs), Reservas Legais (RLs) e terras indígenas com vegetação nativa, pelo menos 30% da Amazônia, 17% de cada um dos demais biomas terrestres e 10% de áreas marinhas e costeiras, principalmente áreas de especial importância para biodiversidade e serviços ecossistêmicos, assegurada e respeitada a demarcação, regularização e a gestão efetiva e equitativa, visando garantir a interligação, integração e representação ecológica em paisagens terrestres e marinhas mais amplas."
+    },
+    {
+      "id": 130,
+      "meta": "15.1.2",
+      "descricao": "Até 2030, assegurar a conservação dos ecossistemas aquáticos continentais e de sua biodiversidade, e fortalecer a pesca sustentável nestes ambientes, eliminando a sobrepesca e a pesca ilegal, não reportada e não regulamentada (INN) e eliminando subsídios que contribuem para a pesca INN."
+    },
+    {
+      "id": 131,
+      "meta": "15.2",
+      "descricao": "Até 2030, zerar o desmatamento ilegal em todos os biomas brasileiros, ampliar a área de florestas sob manejo ambiental sustentável e recuperar 12 milhões de hectares de florestas e demais formas de vegetação nativa degradadas, em todos os biomas e preferencialmente em Áreas de Preservação Permanente (APPs) e Reservas Legais (RLs) e, em áreas de uso alternativo do solo, ampliar em 1,4 milhão de hectares a área de florestas plantadas."
+    },
+    {
+      "id": 132,
+      "meta": "15.3",
+      "descricao": "Até 2030, combater a desertificação, restaurar a terra e o solo degradado, incluindo terrenos afetados pela desertificação, secas e inundações, e lutar para alcançar um mundo neutro em termos de degradação do solo."
+    },
+    {
+      "id": 133,
+      "meta": "15.4",
+      "descricao": "Até 2030, assegurar a conservação dos ecossistemas de montanha, incluindo a sua biodiversidade, para melhorar a sua capacidade de proporcionar benefícios que são essenciais para o desenvolvimento sustentável."
+    },
+    {
+      "id": 134,
+      "meta": "15.5.1",
+      "descricao": "Até 2020, a taxa de perda de habitats naturais será reduzida em 50% (em relação às taxas de 2009) e a degradação e fragmentação em todos os biomas será reduzida significativamente."
+    },
+    {
+      "id": 135,
+      "meta": "15.5.2",
+      "descricao": "Até 2020, o risco de extinção de espécies ameaçadas será reduzido significativamente, tendendo a zero, e sua situação de conservação, em especial daquelas sofrendo maior declínio, terá sido melhorada."
+    },
+    {
+      "id": 136,
+      "meta": "15.5.3",
+      "descricao": "Até 2020, a diversidade genética de microrganismos, de plantas cultivadas, de animais criados e domesticados e de variedades silvestres, inclusive de espécies de valor socioeconômico e/ou cultural, terá sido mantida e estratégias terão sido elaboradas e implementadas para minimizar a perda de variabilidade genética."
+    },
+    {
+      "id": 137,
+      "meta": "15.6.1",
+      "descricao": "Garantir uma repartição justa e equitativa dos benefícios derivados da utilização dos recursos genéticos e conhecimentos tradicionais associados, e promover o acesso adequado aos recursos genéticos e conhecimentos tradicionais associados."
+    },
+    {
+      "id": 138,
+      "meta": "15.6.2",
+      "descricao": "Até 2030, os conhecimentos tradicionais, inovações e práticas de povos indígenas, agricultores familiares e comunidades tradicionais relevantes à conservação e uso sustentável da biodiversidade, e a utilização consuetudinária de recursos biológicos terão sido respeitados, de acordo com seus usos, costumes e tradições, a legislação nacional e os compromissos internacionais relevantes, e plenamente integrados e refletidos na implementação da CDB com a participação plena e efetiva de povos indígenas, agricultores familiares e comunidades tradicionais em todos os níveis relevantes."
+    },
+    {
+      "id": 139,
+      "meta": "15.7",
+      "descricao": "Tomar medidas urgentes para acabar com a caça e pesca ilegais e o tráfico de espécies da flora e fauna protegidas, incluindo recursos pesqueiros de águas continentais e abordar tanto a demanda quanto a oferta de produtos ilegais da vida silvestre."
+    },
+    {
+      "id": 140,
+      "meta": "15.8",
+      "descricao": "Até 2020, implementar medidas para evitar a introdução e reduzir significativamente o impacto de espécies exóticas invasoras em ecossistemas terrestres e aquáticos, e controlar ou erradicar as espécies prioritárias."
+    },
+    {
+      "id": 141,
+      "meta": "15.9",
+      "descricao": "Até 2020, os valores da biodiversidade, geodiversidade e sociodiversidade serão integrados em estratégias nacionais e locais de desenvolvimento e erradicação da pobreza e redução da desigualdade, sendo incorporado em contas nacionais, conforme o caso, e em procedimentos de planejamento e sistemas de relatoria."
+    },
+    {
+      "id": 142,
+      "meta": "15.a",
+      "descricao": "Mobilizar e aumentar significativamente, a partir de todas as fontes, os recursos financeiros para a conservação e o uso sustentável da biodiversidade e dos ecossistemas, para viabilizar a implementação dos compromissos nacionais e internacionais relacionados com a biodiversidade."
+    },
+    {
+      "id": 143,
+      "meta": "15.b",
+      "descricao": "Mobilizar significativamente os recursos de todas as fontes e em todos os níveis, para financiar e proporcionar incentivos adequados ao manejo florestal sustentável, inclusive para a conservação e o reflorestamento."
+    },
+    {
+      "id": 144,
+      "meta": "15.c",
+      "descricao": "Reforçar o apoio global e a cooperação federativa no combate à caça e pesca ilegais e ao tráfico de espécies protegidas, inclusive por meio do aumento da capacidade das comunidades locais para buscar oportunidades de subsistência sustentável, e proporcionar o acesso de pescadores artesanais de pequena escala aos recursos naturais."
+    },
+    {
+      "id": 145,
+      "meta": "16.1",
+      "descricao": "Reduzir significativamente todas as formas de violência e as taxas de mortalidade relacionadas, em todos os lugares, inclusive com a redução de 1/3 das taxas de feminicídio e de homicídios de crianças, adolescentes, jovens, negros, indígenas, mulheres e LGBT."
+    },
+    {
+      "id": 146,
+      "meta": "16.2",
+      "descricao": "Proteger todas as crianças e adolescentes do abuso, exploração, tráfico, tortura e todas as outras formas de violência."
+    },
+    {
+      "id": 147,
+      "meta": "16.3",
+      "descricao": "Fortalecer o Estado de Direito e garantir acesso à justiça a todos, especialmente aos que se encontram em situação de vulnerabilidade."
+    },
+    {
+      "id": 148,
+      "meta": "16.4",
+      "descricao": "Até 2030, reduzir significativamente os fluxos financeiros e de armas ilegais, reforçar a recuperação e devolução de recursos roubados e combater todas as formas de crime organizado."
+    },
+    {
+      "id": 149,
+      "meta": "16.5",
+      "descricao": "Reduzir substancialmente a sonegação fiscal, a corrupção e o suborno em todas as suas formas."
+    },
+    {
+      "id": 150,
+      "meta": "16.6",
+      "descricao": "Ampliar a transparência, a accountability e a efetividade das instituições, em todos os níveis."
+    },
+    {
+      "id": 151,
+      "meta": "16.7",
+      "descricao": "Garantir a tomada de decisão responsiva, inclusiva, participativa e representativa em todos os níveis."
+    },
+    {
+      "id": 152,
+      "meta": "16.8",
+      "descricao": "Ampliar e fortalecer a participação brasileira nas instituições de governança global."
+    },
+    {
+      "id": 153,
+      "meta": "16.9",
+      "descricao": "Até 2030, fornecer identidade civil para todos, incluindo o registro de nascimento, em especial para os povos ciganos, as comunidades quilombolas, os povos indígenas, os povos e comunidades tradicionais de matriz africana e de terreiros, as populações ribeirinhas e extrativistas, além de grupos populacionais como mulheres trabalhadoras rurais, a população em situação de rua, a população em situação de privação de liberdade e a população LGBT."
+    },
+    {
+      "id": 154,
+      "meta": "16.10",
+      "descricao": "Assegurar o acesso público à informação e proteger as liberdades fundamentais, em conformidade com a legislação nacional e os acordos internacionais."
+    },
+    {
+      "id": 155,
+      "meta": "16.a",
+      "descricao": "Fortalecer as instituições relevantes, inclusive por meio da cooperação internacional, para a construção de capacidades em todos os níveis, em particular nos países em desenvolvimento, para a prevenção da violência, do crime e da violação dos direitos humanos."
+    },
+    {
+      "id": 156,
+      "meta": "16.b",
+      "descricao": "Promover e fazer cumprir leis e políticas não discriminatórias e afirmativas."
+    },
+    {
+      "id": 157,
+      "meta": "17.1",
+      "descricao": "Fortalecer a mobilização de recursos internos, inclusive por meio do apoio internacional aos países em desenvolvimento, para melhorar a capacidade nacional para arrecadação de impostos e outras receitas."
+    },
+    {
+      "id": 158,
+      "meta": "17.2",
+      "descricao": "Países desenvolvidos implementarem plenamente os seus compromissos em matéria de assistência oficial ao desenvolvimento [AOD], inclusive fornecer 0,7% da renda nacional bruta [RNB] em AOD aos países em desenvolvimento, dos quais 0,15% a 0,20% para os países menos desenvolvidos; provedores de AOD são encorajados a considerar a definir uma meta para fornecer pelo menos 0,20% da renda nacional bruta em AOD para os países menos desenvolvidos."
+    },
+    {
+      "id": 159,
+      "meta": "17.3",
+      "descricao": "Mobilizar recursos adicionais para os países em desenvolvimento a partir de múltiplas fontes."
+    },
+    {
+      "id": 160,
+      "meta": "17.4",
+      "descricao": "Ajudar os países em desenvolvimento a alcançar a sustentabilidade da dívida de longo prazo por meio de políticas coordenadas destinadas a promover o financiamento, a redução e a reestruturação da dívida, conforme apropriado, e tratar da dívida externa dos países pobres altamente endividados para reduzir o superendividamento."
+    },
+    {
+      "id": 161,
+      "meta": "17.5",
+      "descricao": "Adotar e implementar regimes de promoção de investimentos para os países de menor desenvolvimento relativo."
+    },
+    {
+      "id": 162,
+      "meta": "17.6",
+      "descricao": "Melhorar a cooperação Norte-Sul, Sul-Sul e triangular regional e internacional e o acesso à ciência, tecnologia e inovação, e aumentar o compartilhamento de conhecimentos em termos mutuamente acordados, inclusive por meio de uma melhor coordenação entre os mecanismos existentes, particularmente no nível das Nações Unidas, e por meio de um mecanismo de facilitação de tecnologia global."
+    },
+    {
+      "id": 163,
+      "meta": "17.7",
+      "descricao": "Promover o desenvolvimento, a transferência, a disseminação e a difusão de tecnologias ambientalmente corretas para os países em desenvolvimento, em condições favoráveis, inclusive em condições concessionais e preferenciais, conforme mutuamente acordado."
+    },
+    {
+      "id": 164,
+      "meta": "17.8",
+      "descricao": "Até 2030, operacionalizar plenamente o Banco de Tecnologia e o mecanismo de desenvolvimento de capacidades em ciência, tecnologia e inovação para os países de menor desenvolvimento relativo até 2017, e aumentar o uso de tecnologias de capacitação."
+    },
+    {
+      "id": 165,
+      "meta": "17.9",
+      "descricao": "Reforçar o apoio internacional para a implementação eficaz e orientada da capacitação em países em desenvolvimento, a fim de apoiar os planos nacionais para implementar todos os objetivos de desenvolvimento sustentável, inclusive por meio da cooperação Norte-Sul, Sul-Sul e triangular."
+    },
+    {
+      "id": 166,
+      "meta": "17.10",
+      "descricao": "Promover um sistema multilateral de comércio universal, baseado em regras, aberto, não discriminatório e equitativo no âmbito da Organização Mundial do Comércio, inclusive por meio da conclusão das negociações no âmbito de sua Agenda de Desenvolvimento de Doha."
+    },
+    {
+      "id": 167,
+      "meta": "17.11",
+      "descricao": "Aumentar significativamente as exportações dos países em desenvolvimento, em particular com o objetivo de duplicar a participação dos países de menor desenvolvimento relativo nas exportações globais até 2020."
+    },
+    {
+      "id": 168,
+      "meta": "17.12",
+      "descricao": "Concretizar a implementação oportuna de acesso a mercados livres de cotas e taxas, de forma duradoura, para todos os países de menor desenvolvimento relativo, de acordo com as decisões da OMC, inclusive por meio de garantias de que as regras de origem preferenciais aplicáveis às importações provenientes de países de menor desenvolvimento relativo sejam transparentes e simples, e contribuam para facilitar o acesso ao mercado."
+    },
+    {
+      "id": 169,
+      "meta": "17.13",
+      "descricao": "Aumentar a estabilidade macroeconômica global, inclusive por meio da coordenação e da coerência de políticas."
+    },
+    {
+      "id": 170,
+      "meta": "17.14",
+      "descricao": "Aumentar a coerência das políticas para o desenvolvimento sustentável."
+    },
+    {
+      "id": 171,
+      "meta": "17.15",
+      "descricao": "Respeitar o espaço político e a liderança de cada país para estabelecer e implementar políticas para a erradicação da pobreza e o desenvolvimento sustentável."
+    },
+    {
+      "id": 172,
+      "meta": "17.16",
+      "descricao": "Reforçar a parceria global para o desenvolvimento sustentável, complementada por parcerias multissetoriais que mobilizem e compartilhem conhecimento, expertise, tecnologia e recursos financeiros, para apoiar a realização dos objetivos do desenvolvimento sustentável em todos os países, particularmente nos países em desenvolvimento."
+    },
+    {
+      "id": 173,
+      "meta": "17.17",
+      "descricao": "Incentivar e promover parcerias eficazes nos âmbitos públicos, público-privados, privados e da sociedade civil, a partir da experiência das estratégias de mobilização de recursos dessas parcerias."
+    },
+    {
+      "id": 174,
+      "meta": "17.18",
+      "descricao": "Reforçar o apoio à desagregação de dados, a integração, disponibilização e compartilhamento de registros administrativos e de bases de dados estatísticos e geocientíficos relevantes ao cumprimento das metas e mensuração dos indicadores do desenvolvimento sustentável, respeitando a legislação quanto à segurança da informação."
+    },
+    {
+      "id": 175,
+      "meta": "17.19",
+      "descricao": "Até 2030, valer-se de iniciativas existentes, para desenvolver métricas do progresso do desenvolvimento sustentável que complementem o produto interno bruto e apoiar o desenvolvimento de capacidades em estatística nos países em desenvolvimento."
+    }
+  ]
+}
