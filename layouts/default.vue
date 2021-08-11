@@ -96,7 +96,7 @@ export default {
       right: true,
       rightDrawer: false,
       title: "Protótipo Mapa Colaborativo",
-      srcIcon: "/ods-na-ufes-selo.png",
+      srcIcon: "/img/ods-na-ufes-selo.png",
       iconHeight: 40,
       iconWidth: 40,
       barColor: "#4870a1",

@@ -61,6 +61,10 @@ export default {
       type: Array,
       required: true,
     },
+    bounds: {
+      type: Array,
+      required: true,
+    }
   },
   data() {
     return {
@@ -71,10 +75,9 @@ export default {
       showGeoJson: true,
       fillColor: "#e4ce7f",
       enableTooltip: true,
-      markerIconUrl: "logo-ods-small.png",
+      markerIconUrl: "/img/logo-ods-small.png",
       merkerIconSize: [20, 20],
       markers: [],
-      position: { lat: -20.76233, lng: -41.53548 },
       btnInfoDisabled: true,
       projectSelected: {},
     };
@@ -90,6 +93,7 @@ export default {
         minZoom: 18,
         zoomControl: false,
         scrollWheelZoom: false,
+        maxBounds: this.bounds,
       };
     },
     popupOptions() {
@@ -114,7 +118,7 @@ export default {
         },
         popupContent:
           '<div class="popup">' +
-          '<img class="popup_img" src="/ods_icons/' +
+          '<img class="popup_img" src="/img/ods_icons/' +
           project.meta_ods.split(".")[0] +
           '.png"><br>' +
           '<div class="popup_text"><strong>Ação:</strong> ' +
@@ -180,10 +184,6 @@ div#botoes {
   display: flex;
   justify-content: center;
   padding-top: 10px;
-}
-
-div#map-wrap {
-  height: 82vh;
 }
 
 div.popup {

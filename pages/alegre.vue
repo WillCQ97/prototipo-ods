@@ -6,6 +6,7 @@
       :center="mapCenter"
       :geojson="geojson"
       :projects="projects"
+      :bounds="bounds"
       v-on:project-selected="showProjectInformation"
       v-on:show-form="showSubmissionForm"
     />
@@ -30,11 +31,11 @@
     <div v-if="projectInfoVisible">
       <h2>Saiba mais sobre a ação</h2>
 
-      <div id="metaods-projeto">
+      <div id="metaods-project">
         <div>
           <v-img contain :src="projectImage" height="100" width="100"></v-img>
         </div>
-        <p id="metaods-projeto-texto">
+        <p id="metaods-project-text" :style="getBackgroundColor(projectODS[2])">
           <strong>
             ODS {{ project.ods }}: {{ projectODS[0].toUpperCase() }}
             <br />
@@ -63,7 +64,7 @@
     </div>
 
     <div id="ods-ufes-logo">
-      <v-img src="/ods-ufes-logo.png" max-width="300"></v-img>
+      <v-img src="/img/ods-ufes-logo.png" max-width="300"></v-img>
     </div>
   </div>
 </template>
@@ -81,6 +82,10 @@ export default {
       submissionFormVisible: false,
       projectInfoVisible: false,
       mapCenter: [-20.76161, -41.536],
+      bounds: [
+        [-20.75885, -41.5391],
+        [-20.76464, -41.53211],
+      ],
       geojson: featuresAlegre,
       projects: projectsAlegre,
       project: {},
@@ -90,10 +95,13 @@ export default {
     };
   },
   methods: {
+    getBackgroundColor(color_code) {
+      return "backgroundColor: " + color_code + ";";
+    },
     getODS(ods_number) {
       for (let objetivo of this.objectives) {
         if (objetivo.id == ods_number) {
-          return [objetivo.nome, objetivo.descricao];
+          return [objetivo.nome, objetivo.descricao, objetivo.cor];
         }
       }
     },
@@ -101,7 +109,7 @@ export default {
       this.pageDescriptionVisible = false;
       this.project = projectData;
       this.projectInfoVisible = true;
-      this.projectImage = "/ods_icons/" + projectData.ods + ".png";
+      this.projectImage = "/img/ods_icons/" + projectData.ods + ".png";
       this.projectODS = this.getODS(projectData.ods);
     },
     showSubmissionForm() {
@@ -122,11 +130,12 @@ export default {
 h2#suggestion-title {
   padding-top: 15px;
 }
-div#metaods-projeto {
+div#metaods-project {
   display: flex;
 }
-p#metaods-projeto-texto {
-  padding-left: 5px;
+p#metaods-project-text {
+  padding: 10px;
+  margin-left: 10px;
   align-self: center;
 }
 div#ods-ufes-logo {

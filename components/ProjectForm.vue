@@ -32,6 +32,19 @@
     <p v-if="odsSelected == null" style="color: #60646a">
       Clique em uma ODS para exibição das metas relacionadas.
     </p>
+    <div v-if="odsSelected != null" id="ods-selected">
+      <div>
+        <v-img
+          :src="getODSImage(odsSelected + 1)"
+          width="50px"
+          height="50px"
+          contain
+        ></v-img>
+      </div>
+      <p id="ods-selected-text">
+        <strong>{{ getODS(odsSelected + 1) }}</strong>
+      </p>
+    </div>
 
     <v-list-item-group v-if="odsSelected != null">
       <v-list-item
@@ -139,7 +152,14 @@ export default {
       this.$emit("hide-form");
     },
     getODSImage(ods_number) {
-      return "/ods_icons/" + ods_number + ".png";
+      return "/img/ods_icons/" + ods_number + ".png";
+    },
+    getODS(ods_number) {
+      for (let objetivo of this.objectives) {
+        if (objetivo.id == ods_number) {
+          return objetivo.descricao;
+        }
+      }
     },
     getMetas(ods_number) {
       if (ods_number == null) {
@@ -162,5 +182,12 @@ export default {
 #ods-btn-toggle {
   display: flex;
   flex-wrap: wrap;
+}
+#ods-selected {
+  display: flex;
+}
+#ods-selected-text {
+  padding-left: 5px;
+  align-self: center;
 }
 </style>
