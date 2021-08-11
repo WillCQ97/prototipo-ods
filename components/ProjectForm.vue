@@ -29,16 +29,30 @@
     </p>
 
     <p><strong>Metas Nacionais por ODS: </strong></p>
-    <p v-if="odsSelected == null" style="color: #60646a;">
+    <p v-if="odsSelected == null" style="color: #60646a">
       Clique em uma ODS para exibição das metas relacionadas.
     </p>
 
-    <div v-if="odsSelected != null">
-      <p v-for="item in getMetas(odsSelected)" v-bind:key="item.meta">
-        <strong>Meta {{ item.meta }} </strong>
-        - {{ item.descricao }}
-      </p>
-    </div>
+    <v-list-item-group v-if="odsSelected != null">
+      <v-list-item
+        two-line
+        v-for="item in getMetas(odsSelected)"
+        v-bind:key="item.meta"
+      >
+        <template v-slot:default="{ active }">
+          <v-list-item-action>
+            <v-checkbox :input-value="active"></v-checkbox>
+          </v-list-item-action>
+
+          <v-list-item-content>
+            <v-list-item-title>
+              <strong>Meta {{ item.meta }} </strong>
+            </v-list-item-title>
+            <v-list-item-subtitle>{{ item.descricao }}</v-list-item-subtitle>
+          </v-list-item-content>
+        </template>
+      </v-list-item>
+    </v-list-item-group>
 
     <p>
       <strong>Descrição/Objetivo: </strong>
@@ -91,6 +105,7 @@
           <v-card-text>Dados enviados !!!</v-card-text>
         </v-card>
       </v-dialog>
+
       <v-btn v-on:click="hideForm"> Voltar </v-btn>
     </p>
   </div>
