@@ -34,7 +34,7 @@
         <div>
           <v-img contain :src="projectImage" height="100" width="100"></v-img>
         </div>
-        <p id="metaods-project-text">
+        <p id="metaods-project-text" :style="getBackgroundColor(projectODS[2])">
           <strong>
             ODS {{ project.ods }}: {{ projectODS[0].toUpperCase() }}
             <br />
@@ -90,10 +90,13 @@ export default {
     };
   },
   methods: {
+    getBackgroundColor(color_code) {
+      return "backgroundColor: " + color_code + ";";
+    },
     getODS(ods_number) {
       for (let objetivo of this.objectives) {
         if (objetivo.id == ods_number) {
-          return [objetivo.nome, objetivo.descricao];
+          return [objetivo.nome, objetivo.descricao, objetivo.cor];
         }
       }
     },
@@ -126,7 +129,8 @@ div#metaods-project {
   display: flex;
 }
 p#metaods-project-text {
-  padding-left: 5px;
+  padding: 10px;
+  margin-left: 10px;
   align-self: center;
 }
 div#ods-ufes-logo {

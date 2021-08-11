@@ -3,87 +3,104 @@
     {
       "id": 1,
       "nome": "Erradicação da pobreza",
-      "descricao": "Acabar com a pobreza em todas as suas formas, em todos os lugares"
+      "descricao": "Acabar com a pobreza em todas as suas formas, em todos os lugares",
+      "cor": "#e5233d"
     },
     {
       "id": 2,
       "nome": "Fome zero e agricultura sustentável",
-      "descricao": "Acabar com a fome, alcançar a segurança alimentar e melhoria da nutrição e promover a agricultura sustentável"
+      "descricao": "Acabar com a fome, alcançar a segurança alimentar e melhoria da nutrição e promover a agricultura sustentável",
+      "cor": "#dda73a"
     },
     {
       "id": 3,
       "nome": "Saúde e bem-estar",
-      "descricao": "Assegurar uma vida saudável e promover o bem-estar para todos, em todas as idades"
+      "descricao": "Assegurar uma vida saudável e promover o bem-estar para todos, em todas as idades",
+      "cor": "#4ca146"
     },
     {
       "id": 4,
       "nome": "Educação de Qualidade",
-      "descricao": "Assegurar a educação inclusiva e equitativa e de qualidade, e promover oportunidades de aprendizagem ao longo da vida para todos"
+      "descricao": "Assegurar a educação inclusiva e equitativa e de qualidade, e promover oportunidades de aprendizagem ao longo da vida para todos",
+      "cor": "#c7212f"
     },
     {
       "id": 5,
       "nome": "Igualdade de gênero",
-      "descricao": "Alcançar a igualdade de gênero e empoderar todas as mulheres e meninas"
+      "descricao": "Alcançar a igualdade de gênero e empoderar todas as mulheres e meninas",
+      "cor": "#ef402d"
     },
     {
       "id": 6,
       "nome": "Água potável e saneamento",
-      "descricao": "Garantir disponibilidade e manejo sustentável da água e saneamento para todos"
+      "descricao": "Garantir disponibilidade e manejo sustentável da água e saneamento para todos",
+      "cor": "#27bfe6"
     },
     {
       "id": 7,
       "nome": "Energia limpa e acessível",
-      "descricao": "Garantir acesso à energia barata, confiável, sustentável e renovável para todos"
+      "descricao": "Garantir acesso à energia barata, confiável, sustentável e renovável para todos",
+      "cor": "#fbc412"
     },
     {
       "id": 8,
       "nome": "Trabalho decente e crescimento econômico",
-      "descricao": "Promover o crescimento econômico sustentado, inclusivo e sustentável, emprego pleno e produtivo, e trabalho decente para todos"
+      "descricao": "Promover o crescimento econômico sustentado, inclusivo e sustentável, emprego pleno e produtivo, e trabalho decente para todos",
+      "cor": "#a31c44"
     },
     {
       "id": 9,
       "nome": "Indústria, inovação e infraestrutura",
-      "descricao": "Construir infraestrutura resiliente, promover a industrialização inclusiva e sustentável, e fomentar a inovação"
+      "descricao": "Construir infraestrutura resiliente, promover a industrialização inclusiva e sustentável, e fomentar a inovação",
+      "cor": "#f26a2e"
     },
     {
       "id": 10,
       "nome": "Redução das desigualdades",
-      "descricao": "Reduzir a desigualdade dentro dos países e entre eles"
+      "descricao": "Reduzir a desigualdade dentro dos países e entre eles",
+      "cor": "#de1768"
     },
     {
       "id": 11,
       "nome": "Cidades e comunidades sustentáveis",
-      "descricao": "Tornar as cidades e os assentamentos humanos inclusivos, seguros, resilientes e sustentáveis"
+      "descricao": "Tornar as cidades e os assentamentos humanos inclusivos, seguros, resilientes e sustentáveis",
+      "cor": "#f89d2a"
     },
     {
       "id": 12,
       "nome": "Consumo e produção responsáveis",
-      "descricao": "Assegurar padrões de produção e de consumo sustentáveis"
+      "descricao": "Assegurar padrões de produção e de consumo sustentáveis",
+      "cor": "#bf8d2c"
     },
     {
       "id": 13,
       "nome": "Ação contra a ação global do clima",
-      "descricao": "Tomar medidas urgentes para combater a mudança do clima e seus impactos"
+      "descricao": "Tomar medidas urgentes para combater a mudança do clima e seus impactos",
+      "cor": "#407f46"
     },
     {
       "id": 14,
       "nome": "Vida na água",
-      "descricao": "Conservação e uso sustentável dos oceanos, dos mares e dos recursos marinhos para o desenvolvimento sustentável"
+      "descricao": "Conservação e uso sustentável dos oceanos, dos mares e dos recursos marinhos para o desenvolvimento sustentável",
+      "cor": "#1f97d4"
     },
     {
       "id": 15,
       "nome": "Vida terrestre",
-      "descricao": "Proteger, recuperar e promover o uso sustentável dos ecossistemas terrestres, gerir de forma sustentável as florestas, combater a desertificação, deter e reverter a degradação da terra e deter a perda de biodiversidade"
+      "descricao": "Proteger, recuperar e promover o uso sustentável dos ecossistemas terrestres, gerir de forma sustentável as florestas, combater a desertificação, deter e reverter a degradação da terra e deter a perda de biodiversidade",
+      "cor": "#59ba47"
     },
     {
       "id": 16,
       "nome": "Paz, justiça e instituições eficazes",
-      "descricao": "Promover sociedades pacíficas e inclusivas para o desenvolvimento sustentável, proporcionar o acesso à justiça para todos e construir instituições eficazes, responsáveis e inclusivas em todos os níveis"
+      "descricao": "Promover sociedades pacíficas e inclusivas para o desenvolvimento sustentável, proporcionar o acesso à justiça para todos e construir instituições eficazes, responsáveis e inclusivas em todos os níveis",
+      "cor": "#136a9f"
     },
     {
       "id": 17,
       "nome": "Parcerias e meios de implementação",
-      "descricao": "Fortalecer os meios de implementação e revitalizar a parceria global para o desenvolvimento sustentável"
+      "descricao": "Fortalecer os meios de implementação e revitalizar a parceria global para o desenvolvimento sustentável",
+      "cor": "#14496b"
     }
   ],
   "submetas": [
