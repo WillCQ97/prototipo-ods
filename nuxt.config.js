@@ -6,10 +6,10 @@ export default {
 
   // Global page headers: https://go.nuxtjs.dev/config-head
   head: {
-    titleTemplate: '%s - prototipo-ods',
-    title: 'prototipo-ods',
+    titleTemplate: '%s',
+    title: 'Protótipo Mapa Colaborativo',
     htmlAttrs: {
-      lang: 'en'
+      lang: 'pt-br'
     },
     meta: [
       { charset: 'utf-8' },
@@ -17,7 +17,7 @@ export default {
       { hid: 'description', name: 'description', content: '' }
     ],
     link: [
-      { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }
+      { rel: 'icon', type: 'image/x-icon', href: '/ods-na-ufes-selo.png' }
     ]
   },
 
