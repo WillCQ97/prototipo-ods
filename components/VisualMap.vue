@@ -182,10 +182,6 @@ div#botoes {
   padding-top: 10px;
 }
 
-div#map-wrap {
-  height: 82vh;
-}
-
 div.popup {
   display: flex;
 }
