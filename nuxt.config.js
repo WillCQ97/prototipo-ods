@@ -17,7 +17,7 @@ export default {
       { hid: 'description', name: 'description', content: '' }
     ],
     link: [
-      { rel: 'icon', type: 'image/x-icon', href: '/ods-na-ufes-selo.png' }
+      { rel: 'icon', type: 'image/x-icon', href: '/img/ods-na-ufes-selo.png' }
     ]
   },
 

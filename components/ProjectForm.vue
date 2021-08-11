@@ -139,7 +139,7 @@ export default {
       this.$emit("hide-form");
     },
     getODSImage(ods_number) {
-      return "/ods_icons/" + ods_number + ".png";
+      return "/img/ods_icons/" + ods_number + ".png";
     },
     getMetas(ods_number) {
       if (ods_number == null) {

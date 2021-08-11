@@ -63,7 +63,7 @@
     </div>
 
     <div id="ods-ufes-logo">
-      <v-img src="/ods-ufes-logo.png" max-width="300"></v-img>
+      <v-img src="/img/ods-ufes-logo.png" max-width="300"></v-img>
     </div>
   </div>
 </template>
@@ -101,7 +101,7 @@ export default {
       this.pageDescriptionVisible = false;
       this.project = projectData;
       this.projectInfoVisible = true;
-      this.projectImage = "/ods_icons/" + projectData.ods + ".png";
+      this.projectImage = "/img/ods_icons/" + projectData.ods + ".png";
       this.projectODS = this.getODS(projectData.ods);
     },
     showSubmissionForm() {
