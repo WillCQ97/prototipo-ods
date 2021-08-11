@@ -2,7 +2,8 @@
   <div>
     <h1>Cadastro de ação</h1>
     <p>
-      Informe os campos a seguir para submeter uma ação e, após apreciação da comissão, ela poderá ser incluída no mapa.
+      Informe os campos a seguir para submeter uma ação e, após apreciação da
+      comissão, ela poderá ser incluída no mapa.
     </p>
     <p>
       <strong>Ação: </strong>
@@ -14,12 +15,31 @@
     </p>
     <p>
       <strong>ODS relacionado: </strong>
-      <v-text-field
-        label="Número da meta de ODS como, por exemplo, 2.3 ou 11.5"
-        :rules="rules"
-        v-model="meta"
-      ></v-text-field>
+
+      <v-btn-toggle group id="ods-btn-toggle" v-model="odsSelected">
+        <v-btn
+          v-for="ods in objectives"
+          v-bind:key="ods.id"
+          height="100px"
+          width="100px"
+        >
+          <v-img :src="getODSImage(ods.id)"></v-img>
+        </v-btn>
+      </v-btn-toggle>
     </p>
+
+    <p><strong>Metas Nacionais por ODS: </strong></p>
+    <p v-if="odsSelected == null" style="color: #60646a;">
+      Clique em uma ODS para exibição das metas relacionadas.
+    </p>
+
+    <div v-if="odsSelected != null">
+      <p v-for="item in getMetas(odsSelected)" v-bind:key="item.meta">
+        <strong>Meta {{ item.meta }} </strong>
+        - {{ item.descricao }}
+      </p>
+    </div>
+
     <p>
       <strong>Descrição/Objetivo: </strong>
       <v-textarea
@@ -77,6 +97,8 @@
 </template>
 
 <script>
+import metasODS from "assets/metas_ods.json";
+
 export default {
   data() {
     return {
@@ -92,12 +114,38 @@ export default {
         //fixme: validar as entradas informadas
         (value) => !!value || "Este campo é obrigatório.",
       ],
+      objectives: metasODS.objetivos,
+      submetas: metasODS.submetas,
+      odsSelected: null,
     };
   },
   methods: {
     hideForm() {
       this.$emit("hide-form");
     },
+    getODSImage(ods_number) {
+      return "/ods_icons/" + ods_number + ".png";
+    },
+    getMetas(ods_number) {
+      if (ods_number == null) {
+        return;
+      }
+
+      let metas = [];
+      for (let item of this.submetas) {
+        if (item.meta.split(".")[0] == ods_number + 1) {
+          metas.push(item);
+        }
+      }
+      return metas;
+    },
   },
 };
 </script>
+
+<style>
+#ods-btn-toggle {
+  display: flex;
+  flex-wrap: wrap;
+}
+</style>

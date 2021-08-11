@@ -87,7 +87,6 @@ export default {
       projectImage: "",
       projectODS: [],
       objectives: metasODS.objetivos,
-      submetas: metasODS.submetas,
     };
   },
   methods: {
