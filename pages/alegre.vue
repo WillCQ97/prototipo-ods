@@ -107,6 +107,7 @@ export default {
     },
     showProjectInformation(projectData) {
       this.pageDescriptionVisible = false;
+      this.submissionFormVisible = false;
       this.project = projectData;
       this.projectInfoVisible = true;
       this.projectImage = "/img/ods_icons/" + projectData.ods + ".png";
