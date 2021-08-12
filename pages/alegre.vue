@@ -12,19 +12,18 @@
     />
 
     <div id="pageDescription" v-if="pageDescriptionVisible">
-      <h2>Sugerir uma ação</h2>
+      <h2>Cadastrar uma ação</h2>
       <p>
-        Se você deseja sugerir uma ação, clique no botão
+        Se você deseja cadastrar uma ação, clique no botão
         <strong>ADICIONAR AÇÃO</strong> e preencha o formulário com as
-        informações necessárias. Sua requisição será a avaliada e poderá ser
-        adicionada ao mapa.
+        informações necessárias. Sua requisição será apreciada, para posterior
+        publicação no mapa.
       </p>
       <h2>Saiba mais sobre a ação</h2>
       <p>
         Para visualizar as informações essenciais acerca de alguma ação, basta
         clicar no ícone do ODS marcado no mapa. Para informações mais
-        detalhadas, após selecionar a ação clique no botão
-        <strong>SAIBA MAIS</strong> que se habilitará.
+        detalhadas, clique em <strong>SAIBA MAIS</strong>.
       </p>
     </div>
 
