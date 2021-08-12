@@ -6,7 +6,7 @@
       comissão, ela poderá ser incluída no mapa.
     </p>
     <p>
-      <strong>Ação: </strong>
+      <strong>Ação*: </strong>
       <v-text-field
         label="Título ou nome da ação"
         :rules="rules"
@@ -14,9 +14,9 @@
       ></v-text-field>
     </p>
     <p>
-      <strong>ODS relacionado: </strong>
+      <strong>ODS relacionado*: </strong>
 
-      <v-btn-toggle group id="ods-btn-toggle" v-model="odsSelected">
+      <v-btn-toggle group id="ods-btn-toggle" v-model="odsSelectedIndex">
         <v-btn
           v-for="ods in objectives"
           v-bind:key="ods.id"
@@ -28,28 +28,33 @@
       </v-btn-toggle>
     </p>
 
-    <p><strong>Metas Nacionais por ODS: </strong></p>
-    <p v-if="odsSelected == null" style="color: #60646a">
+    <p><strong>Metas Nacionais por ODS*: </strong></p>
+
+    <p v-if="odsSelectedIndex == null" style="color: #60646a">
       Clique em uma ODS para exibição das metas relacionadas.
     </p>
-    <div v-if="odsSelected != null" id="ods-selected">
+
+    <div v-if="odsSelectedIndex != null" id="ods-selected">
       <div>
         <v-img
-          :src="getODSImage(odsSelected + 1)"
+          :src="getODSImage(odsSelectedIndex + 1)"
           width="50px"
           height="50px"
           contain
         ></v-img>
       </div>
       <p id="ods-selected-text">
-        <strong>{{ getODS(odsSelected + 1) }}</strong>
+        <strong>{{ getODS(odsSelectedIndex + 1) }}</strong>
       </p>
     </div>
 
-    <v-list-item-group v-if="odsSelected != null">
+    <v-list-item-group
+      v-if="odsSelectedIndex != null"
+      v-model="metaSelectedIndex"
+    >
       <v-list-item
         two-line
-        v-for="item in getMetas(odsSelected)"
+        v-for="item in getMetas(odsSelectedIndex + 1)"
         v-bind:key="item.meta"
       >
         <template v-slot:default="{ active }">
@@ -68,7 +73,7 @@
     </v-list-item-group>
 
     <p>
-      <strong>Descrição/Objetivo: </strong>
+      <strong>Descrição/Objetivo*: </strong>
       <v-textarea
         label="Descrição e objetivos da sua ação"
         :rules="rules"
@@ -76,7 +81,7 @@
       ></v-textarea>
     </p>
     <p>
-      <strong>Departamento: </strong>
+      <strong>Departamento*: </strong>
       <v-text-field
         label="Departamento da UFES onde a ação é desenvolvida"
         :rules="rules"
@@ -84,7 +89,7 @@
       ></v-text-field>
     </p>
     <p>
-      <strong>Coordenador:</strong>
+      <strong>Coordenador*: </strong>
       <v-text-field
         label="Nome do coordenador da ação"
         :rules="rules"
@@ -92,7 +97,7 @@
       ></v-text-field>
     </p>
     <p>
-      <strong>Vínculo com a UFES:</strong>
+      <strong>Vínculo com a UFES*: </strong>
       <v-text-field
         label="Vínculo do coordenador com a UFES, por exemplo, professor"
         :rules="rules"
@@ -100,26 +105,51 @@
       ></v-text-field>
     </p>
     <p>
-      <strong>E-mail: </strong>
+      <strong>E-mail*: </strong>
       <v-text-field
         label="E-mail do coordenador da ação"
         :rules="rules"
         v-model="email"
       ></v-text-field>
     </p>
-    <p>
-      <v-dialog v-model="dialog" width="200">
-        <template v-slot:activator="{ on, attrs }">
-          <v-btn v-bind="attrs" v-on="on"> Enviar proposta de ação </v-btn>
-        </template>
 
+    <p>
+      <v-btn v-on:click="sendForm"> Enviar proposta de ação </v-btn>
+      <v-btn v-on:click="hideForm"> Voltar </v-btn>
+    </p>
+
+    <p>
+      <v-dialog v-model="dialogSuccess" width="500">
         <v-card>
-          <v-card-title>Sucesso</v-card-title>
-          <v-card-text>Dados enviados !!!</v-card-text>
+          <v-card-title>Sucesso!</v-card-title>
+          <v-card-text>
+            Sua ação foi enviada para contemplação pela comissão avaliadora.
+          </v-card-text>
+
+          <v-divider></v-divider>
+
+          <v-card-actions>
+            <v-spacer></v-spacer>
+            <v-btn color="primary" @click="dialogSuccess = false"> OK </v-btn>
+          </v-card-actions>
         </v-card>
       </v-dialog>
+      <v-dialog v-model="dialogError" width="500">
+        <v-card>
+          <v-card-title>Erro!</v-card-title>
+          <v-card-text>
+            Existem campos que não foram informados. <br />
+            Por favor, verifique-os e tente novamente!
+          </v-card-text>
 
-      <v-btn v-on:click="hideForm"> Voltar </v-btn>
+          <v-divider></v-divider>
+
+          <v-card-actions>
+            <v-spacer></v-spacer>
+            <v-btn color="error" @click="dialogError = false">Voltar</v-btn>
+          </v-card-actions>
+        </v-card>
+      </v-dialog>
     </p>
   </div>
 </template>
@@ -131,20 +161,21 @@ export default {
   data() {
     return {
       acao: "",
-      meta: "",
       descricao: "",
       departamento: "",
       coordenador: "",
       vinculo: "",
       email: "",
-      dialog: false,
+      dialogSuccess: false,
+      dialogError: false,
       rules: [
         //fixme: validar as entradas informadas
         (value) => !!value || "Este campo é obrigatório.",
       ],
       objectives: metasODS.objetivos,
       submetas: metasODS.submetas,
-      odsSelected: null,
+      odsSelectedIndex: null,
+      metaSelectedIndex: null,
     };
   },
   methods: {
@@ -168,11 +199,35 @@ export default {
 
       let metas = [];
       for (let item of this.submetas) {
-        if (item.meta.split(".")[0] == ods_number + 1) {
+        if (item.meta.split(".")[0] == ods_number) {
           metas.push(item);
         }
       }
       return metas;
+    },
+    sendForm() {
+      let campos = [
+        this.acao,
+        this.descricao,
+        this.departamento,
+        this.coordenador,
+        this.vinculo,
+        this.email,
+      ];
+
+      for (let campo of campos) {
+        if (campo.trim() === "") {
+          this.dialogError = true;
+          return;
+        }
+      }
+
+      if (this.odsSelectedIndex == null || this.metaSelectedIndex == null) {
+        this.dialogError = true;
+        return;
+      }
+
+      this.dialogSuccess = true;
     },
   },
 };
