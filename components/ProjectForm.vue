@@ -228,6 +228,23 @@ export default {
       }
 
       this.dialogSuccess = true;
+
+      this.$store.commit("projects/add", {
+        id: 2,
+        acao: "TESTE",
+        meta_ods: "2.2",
+        descricao: "this.descricao",
+        local: {
+          centro: "this.centro",
+          departamento: "this.departamento",
+        },
+        coordenador: {
+          nome: "this.coordenador",
+          vinculo: "this.vinculo",
+          email: "this.email",
+        },
+        coord: [-20.76241, -41.53553],
+      });
     },
   },
 };

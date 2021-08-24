@@ -86,12 +86,17 @@ export default {
         [-20.76464, -41.53211],
       ],
       geojson: featuresAlegre,
-      projects: projectsAlegre,
+      projects: this.$store.state.projects.list,
       project: {},
       projectImage: "",
       projectODS: [],
       objectives: metasODS.objetivos,
     };
+  },
+  computed: {
+    allProjects() {
+      return this.$store.state.projects.list;
+    },
   },
   methods: {
     getBackgroundColor(color_code) {
