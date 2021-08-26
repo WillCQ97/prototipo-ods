@@ -7,4 +7,3 @@ export const mutations = {
         state.counter++
     }
 }
-

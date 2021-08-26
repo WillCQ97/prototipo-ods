@@ -70,7 +70,6 @@
 
 <script>
 import featuresAlegre from "assets/features_alegre.js";
-import projectsAlegre from "assets/projects_alegre.json";
 import metasODS from "assets/metas_ods.json";
 
 export default {
@@ -92,11 +91,6 @@ export default {
       projectODS: [],
       objectives: metasODS.objetivos,
     };
-  },
-  computed: {
-    allProjects() {
-      return this.$store.state.projects.list;
-    },
   },
   methods: {
     getBackgroundColor(color_code) {
