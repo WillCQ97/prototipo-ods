@@ -16,46 +16,46 @@
     <p>
       <strong>ODS relacionado*: </strong>
 
-      <v-btn-toggle group id="ods-btn-toggle" v-model="odsSelectedIndex">
+      <v-btn-toggle group id="ods-btn-toggle" v-model="goalSelectedIndex">
         <v-btn
-          v-for="ods in objectives"
-          v-bind:key="ods.id"
+          v-for="goal in odsGoals"
+          v-bind:key="goal.id"
           height="100px"
           width="100px"
         >
-          <v-img :src="getODSImage(ods.id)"></v-img>
+          <v-img :src="getODSImage(goal.id)"></v-img>
         </v-btn>
       </v-btn-toggle>
     </p>
 
     <p><strong>Metas Nacionais por ODS*: </strong></p>
 
-    <p v-if="odsSelectedIndex == null" style="color: #60646a">
+    <p v-if="goalSelectedIndex == null" style="color: #60646a">
       Clique em uma ODS para exibição das metas relacionadas.
     </p>
 
-    <div v-if="odsSelectedIndex != null" id="ods-selected">
+    <div v-if="goalSelectedIndex != null" id="ods-selected">
       <div>
         <v-img
-          :src="getODSImage(odsSelectedIndex + 1)"
+          :src="getODSImage(goalSelectedIndex + 1)"
           width="50px"
           height="50px"
           contain
         ></v-img>
       </div>
       <p id="ods-selected-text">
-        <strong>{{ getODS(odsSelectedIndex + 1) }}</strong>
+        <strong>{{ getGoalDescription(goalSelectedIndex + 1) }}</strong>
       </p>
     </div>
 
     <v-list-item-group
-      v-if="odsSelectedIndex != null"
-      v-model="metaSelectedIndex"
+      v-if="goalSelectedIndex != null"
+      v-model="targetSelectedIndex"
     >
       <v-list-item
         two-line
-        v-for="item in getMetas(odsSelectedIndex + 1)"
-        v-bind:key="item.meta"
+        v-for="target in getTargetsODS(goalSelectedIndex + 1)"
+        v-bind:key="target.id"
       >
         <template v-slot:default="{ active }">
           <v-list-item-action>
@@ -64,9 +64,9 @@
 
           <v-list-item-content>
             <v-list-item-title>
-              <strong>Meta {{ item.meta }} </strong>
+              <strong>Meta {{ target.id }} </strong>
             </v-list-item-title>
-            <v-list-item-subtitle>{{ item.descricao }}</v-list-item-subtitle>
+            <v-list-item-subtitle>{{ target.description }}</v-list-item-subtitle>
           </v-list-item-content>
         </template>
       </v-list-item>
@@ -155,7 +155,7 @@
 </template>
 
 <script>
-import metasODS from "assets/metas_ods.json";
+import odsData from "assets/ods_goals.json";
 
 export default {
   data() {
@@ -172,38 +172,38 @@ export default {
         //fixme: validar as entradas informadas
         (value) => !!value || "Este campo é obrigatório.",
       ],
-      objectives: metasODS.objetivos,
-      submetas: metasODS.submetas,
-      odsSelectedIndex: null,
-      metaSelectedIndex: null,
+      odsGoals: odsData.goals,
+      odsTargets: odsData.targets,
+      goalSelectedIndex: null,
+      targetSelectedIndex: null,
     };
   },
   methods: {
     hideForm() {
       this.$emit("hide-form");
     },
-    getODSImage(ods_number) {
-      return "/img/ods_icons/" + ods_number + ".png";
+    getODSImage(odsNumber) {
+      return "/img/ods_icons/" + odsNumber + ".png";
     },
-    getODS(ods_number) {
-      for (let objetivo of this.objectives) {
-        if (objetivo.id == ods_number) {
-          return objetivo.descricao;
+    getGoalDescription(odsNumber) {
+      for (let goal of this.odsGoals) {
+        if (goal.id == odsNumber) {
+          return goal.description;
         }
       }
     },
-    getMetas(ods_number) {
-      if (ods_number == null) {
+    getTargetsODS(odsNumber) {
+      if (odsNumber == null) {
         return;
       }
 
-      let metas = [];
-      for (let item of this.submetas) {
-        if (item.meta.split(".")[0] == ods_number) {
-          metas.push(item);
+      let targets = [];
+      for (let target of this.odsTargets) {
+        if (target.id.split(".")[0] == odsNumber) {
+          targets.push(target);
         }
       }
-      return metas;
+      return targets;
     },
     sendForm() {
       let campos = [
@@ -222,7 +222,7 @@ export default {
         }
       }
 
-      if (this.odsSelectedIndex == null || this.metaSelectedIndex == null) {
+      if (this.goalSelectedIndex == null || this.targetSelectedIndex == null) {
         this.dialogError = true;
         return;
       }
@@ -230,7 +230,7 @@ export default {
       this.dialogSuccess = true;
 
       this.$store.commit("projects/add", {
-        id: 2,
+        id: this.$store.state.nextIndex,
         acao: "TESTE",
         meta_ods: "2.2",
         descricao: "this.descricao",
