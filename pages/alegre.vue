@@ -48,7 +48,7 @@
 
       <p>
         <strong>Ação:</strong> {{ project.name }} <br />
-        <strong>Meta ODS relacionada: </strong> {{ project.meta_ods }} <br />
+        <strong>Meta ODS relacionada: </strong> {{ project.targetId }} <br />
         <strong>Descrição/Objetivo: </strong> {{ project.description }} <br />
         <strong>Departamento: </strong> {{ project.departament }} <br />
         <strong>Coordenador:</strong> {{ project.coordinator }} <br />
@@ -109,8 +109,8 @@ export default {
     showProjectInformation(projectData) {
       this.pageDescriptionVisible = false;
       this.project = projectData;
-      this.projectGoal = this.getGoal(projectData.ods);
-      this.projectGoalImage = "/img/ods_icons/" + projectData.ods + ".png";
+      this.projectGoal = this.getGoal(projectData.goalId);
+      this.projectGoalImage = "/img/ods_icons/" + projectData.goalId + ".png";
       this.projectInformationVisible = true;
       this.submissionFormVisible = false;
     },
