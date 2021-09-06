@@ -1,19 +1,21 @@
 [
   {
-    "id": 5,
-    "action": "GEOCOVID-ES: MONITORAMENTO DA COVID-19 ATRAVÉS DE MAPAS DIÁRIOS AUTOMATIZADOS",
-    "target_id": "2.2",
-    "description": "Geração de Mapas Diários de Risco de Contaminação por COVID-19 para o Espírito Santo e a Incerteza Associada ao Risco",
-    "location": {
-      "center": "Centro de Ciências Exatas, Naturais e da Saúde – CCENS",
-      "departament": "Geologia",
-      "coord": [-20.76233, -41.53548]
-    },
-    "coordinator": {
-      "name": "Fabricia Benda de Oliveira",
-      "role": "Professor",
-      "email": "fulandodetal@ufes.br"
-    },
-    "date": "2021-09-06"
+    "date": "2021-09-06",
+    "project": {
+      "id": 5,
+      "action": "GEOCOVID-ES: Monitoramento da Covid-19 através de mapas diários automatizados",
+      "target_id": "3.3",
+      "description": "Geração de Mapas Diários de Risco de Contaminação por COVID-19 para o Espírito Santo e a Incerteza Associada ao Risco",
+      "location": {
+        "center": "Centro de Ciências Exatas, Naturais e da Saúde – CCENS",
+        "departament": "Geologia",
+        "coord": [-20.76050,-41.53655]
+      },
+      "coordinator": {
+        "name": "Fabricia Benda de Oliveira",
+        "role": "Professor",
+        "email": "fulandodetal@ufes.br"
+      }
+    }
   }
 ]
