@@ -10,13 +10,13 @@
         >
           <v-list-item-content>
             <v-list-item-title
-              ><strong>Ação: </strong>{{ project.acao }}</v-list-item-title
+              ><strong>Ação: </strong>{{ project.action }}</v-list-item-title
             >
             <v-list-item-subtitle>
-              <strong>Descrição: </strong>{{ project.descricao }}
+              <strong>Descrição: </strong>{{ project.description }}
             </v-list-item-subtitle>
             <v-list-item-subtitle>
-              <strong>Coordenador: </strong>{{ project.coordenador.nome }}
+              <strong>Coordenador: </strong>{{ project.coordinator.name }}
             </v-list-item-subtitle>
           </v-list-item-content>
 
@@ -38,13 +38,11 @@
 </template>
 
 <script>
-import submissions from "assets/submissions.json";
-
 export default {
   name: "PageSubmissions",
   data() {
     return {
-      projects: submissions,
+      projects: this.$store.state.submissions.list,
       selectedItem: -1,
     };
   },
