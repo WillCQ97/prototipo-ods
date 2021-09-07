@@ -169,6 +169,12 @@
 import odsData from "assets/ods_goals.json";
 
 export default {
+  props: {
+    submissionLocation: {
+      type: Object,
+      required: true,
+    },
+  },
   data() {
     return {
       fieldAction: "",
@@ -277,7 +283,7 @@ export default {
           location: {
             center: this.fieldCenter,
             departament: this.fieldDepartament,
-            coord: [-20.76241, -41.53553],
+            coord: [this.submissionLocation.lng, this.submissionLocation.lat],
           },
           coordinator: {
             name: this.fieldCoordinator,

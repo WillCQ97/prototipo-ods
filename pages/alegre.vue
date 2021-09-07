@@ -7,6 +7,7 @@
       :center="mapCenter"
       :geojson="geojson"
       :projects="projects"
+      :submissionMarker="submissionMarker"
       v-on:project-selected="showProjectInformation"
       v-on:show-form="showSubmissionForm"
     />
@@ -32,7 +33,12 @@
 
       <div id="metaods-project">
         <div>
-          <v-img contain :src="projectGoalImage" height="100" width="100"></v-img>
+          <v-img
+            contain
+            :src="projectGoalImage"
+            height="100"
+            width="100"
+          ></v-img>
         </div>
         <p
           id="metaods-project-text"
@@ -60,6 +66,7 @@
 
     <div>
       <ProjectForm
+        :submissionLocation="submissionMarker.position"
         v-if="submissionFormVisible"
         v-on:hide-form="btnVoltarAction"
       />
@@ -93,6 +100,12 @@ export default {
       projectGoal: {},
       projectGoalImage: "",
       submissionFormVisible: false,
+      submissionInitialPosition: { lat: -20.76161, lng: -41.536 },
+      submissionMarker: {
+        position: { lat: -20.76161, lng: -41.536 },
+        draggable: true,
+        visible: false,
+      },
     };
   },
   methods: {
@@ -123,6 +136,8 @@ export default {
       this.pageDescriptionVisible = true;
       this.projectInformationVisible = false;
       this.submissionFormVisible = false;
+      this.submissionMarker.visible = false;
+      this.submissionMarker.position = this.submissionInitialPosition;
     },
   },
 };

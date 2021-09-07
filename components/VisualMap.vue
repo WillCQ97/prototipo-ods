@@ -28,6 +28,16 @@
             :options="popupOptions"
           ></l-popup>
         </l-marker>
+        <l-marker
+          :lat-lng.sync="submissionMarker.position"
+          :draggable="submissionMarker.draggable"
+          :visible="submissionMarker.visible"
+        >
+          <l-popup
+            content="Mova este marcador para o local onde a ação é realizada!"
+            :options="popupOptions"
+          ></l-popup>
+        </l-marker>
       </l-map>
     </client-only>
     <div id="botoes">
@@ -63,6 +73,10 @@ export default {
     },
     projects: {
       type: Array,
+      required: true,
+    },
+    submissionMarker: {
+      type: Object,
       required: true,
     },
   },
@@ -168,6 +182,7 @@ export default {
     },
     emitShowProjectForm() {
       this.btnInfoDisabled = true;
+      this.submissionMarker.visible = true;
       this.$emit("show-form");
     },
   },
