@@ -125,6 +125,7 @@
 
     <p>
       <v-btn v-on:click="sendForm"> Enviar proposta de ação </v-btn>
+      <v-btn v-on:click="cleanFormFields"> Limpar campos </v-btn>
       <v-btn v-on:click="hideForm"> Voltar </v-btn>
     </p>
 
@@ -195,6 +196,17 @@ export default {
         return "0" + number;
       }
       return number;
+    },
+    cleanFormFields() {
+      this.fieldAction = "";
+      this.fieldCenter = "";
+      this.fieldCoordinator = "";
+      this.fieldDepartament = "";
+      this.fieldDescription = "";
+      this.fieldEmail = "";
+      this.fieldRole = "";
+      this.goalSelectedIndex = null;
+      this.targetSelectedIndex = null;
     },
     dateFormatted() {
       let date = new Date();
