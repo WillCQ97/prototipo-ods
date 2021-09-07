@@ -66,7 +66,9 @@
             <v-list-item-title>
               <strong>Meta {{ target.id }} </strong>
             </v-list-item-title>
-            <v-list-item-subtitle>{{ target.description }}</v-list-item-subtitle>
+            <v-list-item-subtitle>{{
+              target.description
+            }}</v-list-item-subtitle>
           </v-list-item-content>
         </template>
       </v-list-item>
@@ -179,6 +181,22 @@ export default {
     };
   },
   methods: {
+    addZeroToDate(number) {
+      if (number <= 9) {
+        return "0" + number;
+      }
+      return number;
+    },
+    dateFormatted() {
+      let date = new Date();
+      return (
+        date.getFullYear() +
+        "-" +
+        this.addZeroToDate(date.getMonth() + 1) +
+        "-" +
+        this.addZeroToDate(date.getDate())
+      );
+    },
     hideForm() {
       this.$emit("hide-form");
     },
@@ -229,21 +247,24 @@ export default {
 
       this.dialogSuccess = true;
 
-      this.$store.commit("projects/add", {
-        id: this.$store.state.nextIndex,
-        fieldAction: "TESTE",
-        meta_ods: "2.2",
-        fieldDescription: "asdasd",
-        local: {
-          centro: "asdsad",
-          fieldDepartament: "asdsasd",
+      this.$store.commit("submissions/add", {
+        date: this.dateFormatted(),
+        project: {
+          id: this.$store.state.nextIndex,
+          fieldAction: "TESTE",
+          meta_ods: "2.2",
+          fieldDescription: "asdasd",
+          local: {
+            centro: "asdsad",
+            fieldDepartament: "asdsasd",
+          },
+          fieldCoordinator: {
+            nome: "this.ssss",
+            fieldRole: "this.sss",
+            fieldEmail: "this.ssss",
+          },
+          coord: [-20.76241, -41.53553],
         },
-        fieldCoordinator: {
-          nome: "this.ssss",
-          fieldRole: "this.sss",
-          fieldEmail: "this.ssss",
-        },
-        coord: [-20.76241, -41.53553],
       });
     },
   },
