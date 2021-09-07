@@ -66,9 +66,9 @@
             <v-list-item-title>
               <strong>Meta {{ target.id }} </strong>
             </v-list-item-title>
-            <v-list-item-subtitle>{{
-              target.description
-            }}</v-list-item-subtitle>
+            <v-list-item-subtitle>
+              {{ target.description }}
+            </v-list-item-subtitle>
           </v-list-item-content>
         </template>
       </v-list-item>
@@ -81,6 +81,14 @@
         :rules="rules"
         v-model="fieldDescription"
       ></v-textarea>
+    </p>
+    <p>
+      <strong>Centro*: </strong>
+      <v-text-field
+        label="Centro onde a ação é desenvolvida"
+        :rules="rules"
+        v-model="fieldCenter"
+      ></v-text-field>
     </p>
     <p>
       <strong>Departamento*: </strong>
@@ -163,11 +171,12 @@ export default {
   data() {
     return {
       fieldAction: "",
-      fieldDescription: "",
-      fieldDepartament: "",
+      fieldCenter: "",
       fieldCoordinator: "",
-      fieldRole: "",
+      fieldDepartament: "",
+      fieldDescription: "",
       fieldEmail: "",
+      fieldRole: "",
       dialogSuccess: false,
       dialogError: false,
       rules: [
@@ -226,11 +235,12 @@ export default {
     sendForm() {
       let campos = [
         this.fieldAction,
-        this.fieldDescription,
-        this.fieldDepartament,
+        this.fieldCenter,
         this.fieldCoordinator,
-        this.fieldRole,
+        this.fieldDepartament,
+        this.fieldDescription,
         this.fieldEmail,
+        this.fieldRole,
       ];
 
       for (let campo of campos) {
@@ -245,27 +255,27 @@ export default {
         return;
       }
 
-      this.dialogSuccess = true;
-
       this.$store.commit("submissions/add", {
         date: this.dateFormatted(),
         project: {
           id: this.$store.state.nextIndex,
-          fieldAction: "TESTE",
-          meta_ods: "2.2",
-          fieldDescription: "asdasd",
-          local: {
-            centro: "asdsad",
-            fieldDepartament: "asdsasd",
+          action: this.fieldAction,
+          target_id: this.odsTargets[this.targetSelectedIndex],
+          description: this.fieldDescription,
+          location: {
+            center: this.fieldCenter,
+            departament: this.fieldDepartament,
+            coord: [-20.76241, -41.53553],
           },
-          fieldCoordinator: {
-            nome: "this.ssss",
-            fieldRole: "this.sss",
-            fieldEmail: "this.ssss",
+          coordinator: {
+            name: this.fieldCoordinator,
+            role: this.fieldRole,
+            email: this.fieldEmail,
           },
-          coord: [-20.76241, -41.53553],
         },
       });
+
+      this.dialogSuccess = true;
     },
   },
 };
