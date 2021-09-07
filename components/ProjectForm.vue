@@ -10,7 +10,7 @@
       <v-text-field
         label="Título ou nome da ação"
         :rules="rules"
-        v-model="acao"
+        v-model="fieldAction"
       ></v-text-field>
     </p>
     <p>
@@ -77,7 +77,7 @@
       <v-textarea
         label="Descrição e objetivos da sua ação"
         :rules="rules"
-        v-model="descricao"
+        v-model="fieldDescription"
       ></v-textarea>
     </p>
     <p>
@@ -85,7 +85,7 @@
       <v-text-field
         label="Departamento da UFES onde a ação é desenvolvida"
         :rules="rules"
-        v-model="departamento"
+        v-model="fieldDepartament"
       ></v-text-field>
     </p>
     <p>
@@ -93,7 +93,7 @@
       <v-text-field
         label="Nome do coordenador da ação"
         :rules="rules"
-        v-model="coordenador"
+        v-model="fieldCoordinator"
       ></v-text-field>
     </p>
     <p>
@@ -101,7 +101,7 @@
       <v-text-field
         label="Vínculo do coordenador com a UFES, por exemplo, professor"
         :rules="rules"
-        v-model="vinculo"
+        v-model="fieldRole"
       ></v-text-field>
     </p>
     <p>
@@ -109,7 +109,7 @@
       <v-text-field
         label="E-mail do coordenador da ação"
         :rules="rules"
-        v-model="email"
+        v-model="fieldEmail"
       ></v-text-field>
     </p>
 
@@ -160,12 +160,12 @@ import odsData from "assets/ods_goals.json";
 export default {
   data() {
     return {
-      acao: "",
-      descricao: "",
-      departamento: "",
-      coordenador: "",
-      vinculo: "",
-      email: "",
+      fieldAction: "",
+      fieldDescription: "",
+      fieldDepartament: "",
+      fieldCoordinator: "",
+      fieldRole: "",
+      fieldEmail: "",
       dialogSuccess: false,
       dialogError: false,
       rules: [
@@ -207,12 +207,12 @@ export default {
     },
     sendForm() {
       let campos = [
-        this.acao,
-        this.descricao,
-        this.departamento,
-        this.coordenador,
-        this.vinculo,
-        this.email,
+        this.fieldAction,
+        this.fieldDescription,
+        this.fieldDepartament,
+        this.fieldCoordinator,
+        this.fieldRole,
+        this.fieldEmail,
       ];
 
       for (let campo of campos) {
@@ -231,17 +231,17 @@ export default {
 
       this.$store.commit("projects/add", {
         id: this.$store.state.nextIndex,
-        acao: "TESTE",
+        fieldAction: "TESTE",
         meta_ods: "2.2",
-        descricao: "this.descricao",
+        fieldDescription: "asdasd",
         local: {
-          centro: "this.centro",
-          departamento: "this.departamento",
+          centro: "asdsad",
+          fieldDepartament: "asdsasd",
         },
-        coordenador: {
-          nome: "this.coordenador",
-          vinculo: "this.vinculo",
-          email: "this.email",
+        fieldCoordinator: {
+          nome: "this.ssss",
+          fieldRole: "this.sss",
+          fieldEmail: "this.ssss",
         },
         coord: [-20.76241, -41.53553],
       });
