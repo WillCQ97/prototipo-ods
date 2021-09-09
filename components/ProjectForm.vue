@@ -274,7 +274,7 @@ export default {
     sendForm() {
       let campos = [
         this.fieldAction,
-        this.fieldCenter,
+        this.fieldCenterValue,
         this.fieldCoordinator,
         this.fieldDepartament,
         this.fieldDescription,
@@ -297,14 +297,14 @@ export default {
       this.$store.commit("submissions/add", {
         date: this.dateFormatted(),
         project: {
-          id: this.$store.state.nextIndex,
+          id: this.$store.state.submissions.nextIndex,
           action: this.fieldAction,
-          target_id: this.odsTargets[this.targetSelectedIndex],
+          target_id: this.odsTargets[this.targetSelectedIndex].id,
           description: this.fieldDescription,
           location: {
-            center: this.fieldCenter,
+            center: this.fieldCenterValue,
             departament: this.fieldDepartament,
-            coord: [this.submissionLocation.lng, this.submissionLocation.lat],
+            coord: [this.submissionLocation.lat, this.submissionLocation.lng],
           },
           coordinator: {
             name: this.fieldCoordinator,
