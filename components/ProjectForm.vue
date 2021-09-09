@@ -114,11 +114,12 @@
     </p>
     <p>
       <strong>Vínculo com a UFES*: </strong>
-      <v-text-field
+      <v-combobox
         label="Vínculo do coordenador com a UFES, por exemplo, professor"
+        :items="fieldRoleItems"
         :rules="rules"
-        v-model="fieldRole"
-      ></v-text-field>
+        v-model="fieldRoleValue"
+      ></v-combobox>
     </p>
     <p>
       <strong>E-mail*: </strong>
@@ -204,7 +205,13 @@ export default {
       fieldDepartament: "",
       fieldDescription: "",
       fieldEmail: "",
-      fieldRole: "",
+      fieldRoleItems: [
+        "Professor",
+        "Servidor técnico-administrativo",
+        "Aluno de pós-graduação",
+        "Aluno de graduação",
+      ],
+      fieldRoleValue: "",
       dialogSuccess: false,
       dialogError: false,
       rules: [
@@ -231,7 +238,7 @@ export default {
       this.fieldDepartament = "";
       this.fieldDescription = "";
       this.fieldEmail = "";
-      this.fieldRole = "";
+      this.fieldRoleValue = "";
       this.goalSelectedIndex = null;
       this.targetSelectedIndex = null;
     },
@@ -279,7 +286,7 @@ export default {
         this.fieldDepartament,
         this.fieldDescription,
         this.fieldEmail,
-        this.fieldRole,
+        this.fieldRoleValue,
       ];
 
       for (let campo of campos) {
@@ -308,7 +315,7 @@ export default {
           },
           coordinator: {
             name: this.fieldCoordinator,
-            role: this.fieldRole,
+            role: this.fieldRoleValue,
             email: this.fieldEmail,
           },
         },
