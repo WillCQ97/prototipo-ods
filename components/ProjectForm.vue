@@ -6,6 +6,11 @@
       comissão, ela poderá ser incluída no mapa.
     </p>
     <p>
+      <strong>Atenção:</strong> você deve mover o marcador azul que surgiu no
+      mapa para selecionar o local onde o projeto é desenvolvido. Se possível,
+      evite colocá-lo imediatamente acima de outros projetos.
+    </p>
+    <p>
       <strong>Ação*: </strong>
       <v-text-field
         label="Título ou nome da ação"
