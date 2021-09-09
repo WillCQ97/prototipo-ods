@@ -3,15 +3,16 @@
     <h1>Mapa Colaborativo</h1>
     <h1><em>Campus</em> de Alegre - Sede</h1>
     <VisualMap
+      :bounds="bounds"
       :center="mapCenter"
       :geojson="geojson"
       :projects="projects"
-      :bounds="bounds"
+      :submissionMarker="submissionMarker"
       v-on:project-selected="showProjectInformation"
       v-on:show-form="showSubmissionForm"
     />
 
-    <div id="pageDescription" v-if="pageDescriptionVisible">
+    <div id="page-description" v-if="pageDescriptionVisible">
       <h2>Cadastrar uma ação</h2>
       <p>
         Se você deseja cadastrar uma ação, clique no botão
@@ -27,36 +28,49 @@
       </p>
     </div>
 
-    <div v-if="projectInfoVisible">
+    <div v-if="projectInformationVisible">
       <h2>Saiba mais sobre a ação</h2>
 
       <div id="metaods-project">
         <div>
-          <v-img contain :src="projectImage" height="100" width="100"></v-img>
+          <v-img
+            contain
+            :src="projectGoalImage"
+            height="100"
+            width="100"
+          ></v-img>
         </div>
-        <p id="metaods-project-text" :style="getBackgroundColor(projectODS[2])">
+        <p
+          id="metaods-project-text"
+          :style="styleBackgroundColor(projectGoal.color)"
+        >
           <strong>
-            ODS {{ project.ods }}: {{ projectODS[0].toUpperCase() }}
+            ODS {{ projectGoal.id }}: {{ projectGoal.name.toUpperCase() }}
             <br />
-            {{ projectODS[1] }}
+            {{ projectGoal.description }}
           </strong>
         </p>
       </div>
 
       <p>
-        <strong>Ação:</strong> {{ project.name }} <br />
-        <strong>Meta ODS relacionada: </strong> {{ project.meta_ods }} <br />
-        <strong>Descrição/Objetivo: </strong> {{ project.description }} <br />
-        <strong>Departamento: </strong> {{ project.departament }} <br />
-        <strong>Coordenador:</strong> {{ project.coordinator }} <br />
-        <strong>Vínculo com a UFES:</strong> {{ project.role }} <br />
-        <strong>E-mail: </strong> {{ project.email }}
+        <br />
+        <strong>Ação:</strong> {{ project.name }} <br /><br />
+        <strong>Meta ODS relacionada: </strong> <br />
+        <strong>{{ projectTarget.id }}</strong> -
+        {{ projectTarget.description }} <br /><br />
+        <strong>Descrição/Objetivo: </strong> {{ project.description }}
+        <br /><br />
+        <strong>Departamento: </strong> {{ project.departament }} <br /><br />
+        <strong>Coordenador:</strong> {{ project.coordinator }} <br /><br />
+        <strong>Vínculo com a UFES:</strong> {{ project.role }} <br /><br />
+        <strong>E-mail: </strong> {{ project.email }}<br />
       </p>
       <p><v-btn v-on:click="btnVoltarAction">Voltar</v-btn></p>
     </div>
 
     <div>
       <ProjectForm
+        :submissionLocation="submissionMarker.position"
         v-if="submissionFormVisible"
         v-on:hide-form="btnVoltarAction"
       />
@@ -70,57 +84,74 @@
 
 <script>
 import featuresAlegre from "assets/features_alegre.js";
-import projectsAlegre from "assets/projects_alegre.json";
-import metasODS from "assets/metas_ods.json";
+import odsData from "assets/ods_goals.json";
 
 export default {
   name: "Alegre",
   data() {
     return {
-      pageDescriptionVisible: true,
-      submissionFormVisible: false,
-      projectInfoVisible: false,
-      mapCenter: [-20.76161, -41.536],
       bounds: [
         [-20.75885, -41.5391],
         [-20.76464, -41.53211],
       ],
       geojson: featuresAlegre,
-      projects: projectsAlegre,
+      mapCenter: [-20.76161, -41.536],
+      odsGoals: odsData.goals,
+      odsTargets: odsData.targets,
+      pageDescriptionVisible: true,
       project: {},
-      projectImage: "",
-      projectODS: [],
-      objectives: metasODS.objetivos,
+      projects: this.$store.state.projects.list,
+      projectInformationVisible: false,
+      projectGoal: {},
+      projectGoalImage: "",
+      projectTarget: {},
+      submissionFormVisible: false,
+      submissionInitialPosition: { lat: -20.76274, lng: -41.537 },
+      submissionMarker: {
+        position: { lat: -20.76274, lng: -41.537 },
+        draggable: true,
+        visible: false,
+      },
     };
   },
   methods: {
-    getBackgroundColor(color_code) {
-      return "backgroundColor: " + color_code + ";";
+    styleBackgroundColor(colorCode) {
+      return "backgroundColor: " + colorCode + ";";
     },
-    getODS(ods_number) {
-      for (let objetivo of this.objectives) {
-        if (objetivo.id == ods_number) {
-          return [objetivo.nome, objetivo.descricao, objetivo.cor];
+    getGoal(odsNumber) {
+      for (let goal of this.odsGoals) {
+        if (goal.id == odsNumber) {
+          return goal;
+        }
+      }
+    },
+    getTarget(targetID) {
+      for (let target of this.odsTargets) {
+        if (target.id == targetID) {
+          return target;
         }
       }
     },
     showProjectInformation(projectData) {
       this.pageDescriptionVisible = false;
-      this.submissionFormVisible = false;
       this.project = projectData;
-      this.projectInfoVisible = true;
-      this.projectImage = "/img/ods_icons/" + projectData.ods + ".png";
-      this.projectODS = this.getODS(projectData.ods);
+      this.projectGoal = this.getGoal(projectData.goalId);
+      this.projectTarget = this.getTarget(projectData.targetId);
+      this.projectGoalImage = "/img/ods_icons/" + projectData.goalId + ".png";
+      this.projectInformationVisible = true;
+      this.submissionFormVisible = false;
     },
     showSubmissionForm() {
       this.pageDescriptionVisible = false;
-      this.projectInfoVisible = false;
+      this.projectInformationVisible = false;
       this.submissionFormVisible = true;
     },
     btnVoltarAction() {
       this.pageDescriptionVisible = true;
-      this.projectInfoVisible = false;
+      this.projectInformationVisible = false;
       this.submissionFormVisible = false;
+      this.submissionMarker.visible = false;
+      this.submissionMarker.position = this.submissionInitialPosition;
     },
   },
 };

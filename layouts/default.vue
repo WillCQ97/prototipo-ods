@@ -91,6 +91,11 @@ export default {
           title: "Sobre o mapa",
           to: "/about",
         },
+        {
+          icon: "mdi-format-list-bulleted-type",
+          title: "Submissões",
+          to: "/submissions",
+        },
       ],
       miniVariant: false,
       right: true,

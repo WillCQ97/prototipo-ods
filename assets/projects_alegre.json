@@ -1,66 +1,66 @@
 [
   {
     "id": 1,
-    "acao": "GESAN – Grupo de Estudos em Segurança Alimentar e Nutricional Professor Pedro Kitoko",
-    "meta_ods": "2.2",
-    "descricao": "Desenvolver programas e projetos no campo da segurança alimentar e nutricional e do direito humano à alimentação.",
-    "local": {
-      "centro": "Centro de Ciências Exatas, Naturais e da Saúde – CCENS",
-      "departamento": "Farmácia e Nutrição"
+    "action": "GESAN – Grupo de Estudos em Segurança Alimentar e Nutricional Professor Pedro Kitoko",
+    "target_id": "2.2",
+    "description": "Desenvolver programas e projetos no campo da segurança alimentar e nutricional e do direito humano à alimentação.",
+    "location": {
+      "center": "Centro de Ciências Exatas, Naturais e da Saúde – CCENS",
+      "departament": "Farmácia e Nutrição",
+      "coord": [-20.76233, -41.53548]
     },
-    "coordenador": {
-      "nome": "Alcemi Almeida de Barros",
-      "vinculo": "Professor",
-      "email": "fulandodetal@ufes.br"
-    },
-    "coord": [-20.76233, -41.53548]
+    "coordinator": {
+      "name": "Alcemi Almeida de Barros",
+      "role": "Professor",
+      "email": "indisponível"
+    }
   },
   {
     "id": 2,
-    "acao": "Promovendo a Comercialização Solidária dos Agricultores Familiares de Alegre",
-    "meta_ods": "2.3",
-    "descricao": "Apoiar os agricultores familiares, visando melhorar sua inserção nos mercados locais de alimentos, com base nos princípios da economia solidária e da agroecologia; incentivar a transição agroecológica na produção familiar e contribuir com a formação profissional dos estudantes universitários.",
-    "local": {
-      "centro": "Centro de Ciências Agrárias e Engenharias – CCAE",
-      "departamento": "Medicina Veterinária"
+    "action": "Promovendo a Comercialização Solidária dos Agricultores Familiares de Alegre",
+    "target_id": "2.3",
+    "description": "Apoiar os agricultores familiares, visando melhorar sua inserção nos mercados locais de alimentos, com base nos princípios da economia solidária e da agroecologia; incentivar a transição agroecológica na produção familiar e contribuir com a formação profissional dos estudantes universitários.",
+    "location": {
+      "center": "Centro de Ciências Agrárias e Engenharias – CCAE",
+      "departament": "Medicina Veterinária",
+      "coord": [-20.76241, -41.53553]
     },
-    "coordenador": {
-      "nome": "Haloysio Miguel de Siqueira",
-      "vinculo": "Professor",
-      "email": "fulandodetal@ufes.br"
-    },
-    "coord": [-20.76241, -41.53553]
+    "coordinator": {
+      "name": "Haloysio Miguel de Siqueira",
+      "role": "Professor",
+      "email": "indisponível"
+    }
   },
   {
     "id": 3,
-    "acao": "Laboratório de Solos Raphael M. Bloise",
-    "meta_ods": "2.4",
-    "descricao": "Realizar análises de fertilidade dos solos com menor custo e alta qualidade, visando à recomendação das doses de adubação e calagem para os produtores rurais.",
-    "local": {
-      "centro": "Centro de Ciências Agrárias e Engenharias – CCAE",
-      "departamento": "Agronomia"
+    "action": "Laboratório de Solos Raphael M. Bloise",
+    "target_id": "2.4",
+    "description": "Realizar análises de fertilidade dos solos com menor custo e alta qualidade, visando à recomendação das doses de adubação e calagem para os produtores rurais.",
+    "location": {
+      "center": "Centro de Ciências Agrárias e Engenharias – CCAE",
+      "departament": "Agronomia",
+      "coord": [-20.76214, -41.53536]
     },
-    "coordenador": {
-      "nome": "Diego Lang Burak",
-      "vinculo": "Professor",
-      "email": "fulandodetal@ufes.br"
-    },
-    "coord": [-20.76214, -41.53536]
+    "coordinator": {
+      "name": "Diego Lang Burak",
+      "role": "Professor",
+      "email": "indisponível"
+    }
   },
   {
     "id": 4,
-    "acao": "Soluções de Baixo Custo para Construção de Vias de Drenagem na Comunidade do Morro do Querosene",
-    "meta_ods": "11.1",
-    "descricao": "Realizar um estudo detalhado das cavas realizadas pela comunidade, o que permitiu indicar os pontos mais críticos para o plantio do capim que deverá conter significativamente a enxurrada que corre para as casas da comunidade.",
-    "local": {
-      "centro": "Centro de Ciências Exatas, Naturais e da Saúde – CCENS",
-      "departamento": "Geologia"
+    "action": "Soluções de Baixo Custo para Construção de Vias de Drenagem na Comunidade do Morro do Querosene",
+    "target_id": "11.1",
+    "description": "Realizar um estudo detalhado das cavas realizadas pela comunidade, o que permitiu indicar os pontos mais críticos para o plantio do capim que deverá conter significativamente a enxurrada que corre para as casas da comunidade.",
+    "location": {
+      "center": "Centro de Ciências Exatas, Naturais e da Saúde – CCENS",
+      "departament": "Geologia",
+      "coord": [-20.76046, -41.53663]
     },
-    "coordenador": {
-      "nome": "Eder Carlos Moreira",
-      "vinculo": "Professor",
-      "email": "fulandodetal@ufes.br"
-    },
-    "coord": [-20.76046, -41.53663]
+    "coordinator": {
+      "name": "Eder Carlos Moreira",
+      "role": "Professor",
+      "email": "indisponível"
+    }
   }
 ]

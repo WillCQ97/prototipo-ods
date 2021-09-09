@@ -2,16 +2,16 @@
   <div id="map-wrap">
     <client-only>
       <l-map
-        :zoom="zoom"
-        :options="mapOptions"
         :center="center"
+        :options="mapOptions"
         style="height: 525px; z-index: 1"
+        :zoom="zoom"
       >
-        <l-tile-layer :url="url" :attribution="attribution"></l-tile-layer>
+        <l-tile-layer :attribution="attribution" :url="url"></l-tile-layer>
         <l-geo-json
-          v-if="showGeoJson"
           :geojson="geojson"
           :options="jsonOptions"
+          v-if="showGeoJson"
         />
         <l-marker
           v-for="marker in createProjectMarkers"
@@ -20,11 +20,21 @@
           v-on:click="enableInfoButton(marker.projectData)"
         >
           <l-icon
-            :icon-url="markerIconUrl"
             :icon-size="merkerIconSize"
+            :icon-url="markerIconUrl"
           ></l-icon>
           <l-popup
             :content="marker.popupContent"
+            :options="popupOptions"
+          ></l-popup>
+        </l-marker>
+        <l-marker
+          :lat-lng.sync="submissionMarker.position"
+          :draggable="submissionMarker.draggable"
+          :visible="submissionMarker.visible"
+        >
+          <l-popup
+            content="Mova este marcador para o local onde a ação é realizada!"
             :options="popupOptions"
           ></l-popup>
         </l-marker>
@@ -36,8 +46,8 @@
       </v-btn>
       <v-btn
         class="btn"
-        v-on:click="showProjectInformation"
         :disabled="btnInfoDisabled"
+        v-on:click="showProjectInformation"
       >
         Saiba mais
       </v-btn>
@@ -49,6 +59,10 @@
 export default {
   name: "VisualMap",
   props: {
+    bounds: {
+      type: Array,
+      required: true,
+    },
     center: {
       type: Array,
       required: true,
@@ -61,10 +75,10 @@ export default {
       type: Array,
       required: true,
     },
-    bounds: {
-      type: Array,
+    submissionMarker: {
+      type: Object,
       required: true,
-    }
+    },
   },
   data() {
     return {
@@ -105,28 +119,28 @@ export default {
       return this.projects.map((project) => ({
         ...project,
         id: project.id,
-        coord: project.coord,
+        coord: project.location.coord,
         projectData: {
-          name: project.acao,
-          ods: project.meta_ods.split(".")[0],
-          meta_ods: project.meta_ods,
-          description: project.descricao,
-          departament: project.local.departamento,
-          coordinator: project.coordenador.nome,
-          role: project.coordenador.vinculo,
-          email: project.coordenador.email,
+          name: project.action,
+          goalId: project.target_id.split(".")[0],
+          targetId: project.target_id,
+          description: project.description,
+          departament: project.location.departament,
+          coordinator: project.coordinator.name,
+          role: project.coordinator.role,
+          email: project.coordinator.email,
         },
         popupContent:
           '<div class="popup">' +
           '<img class="popup_img" src="/img/ods_icons/' +
-          project.meta_ods.split(".")[0] +
+          project.target_id.split(".")[0] +
           '.png"><br>' +
           '<div class="popup_text"><strong>Ação:</strong> ' +
-          project.acao +
+          project.action +
           "<br><strong>Departamento: </strong>" +
-          project.local.departamento +
+          project.location.departament +
           "<br><strong>Coordenador:</strong> " +
-          project.coordenador.nome +
+          project.coordinator.name +
           "</div></div>",
       }));
     },
@@ -168,6 +182,7 @@ export default {
     },
     emitShowProjectForm() {
       this.btnInfoDisabled = true;
+      this.submissionMarker.visible = true;
       this.$emit("show-form");
     },
   },
