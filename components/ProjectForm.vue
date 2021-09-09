@@ -89,11 +89,12 @@
     </p>
     <p>
       <strong>Centro*: </strong>
-      <v-text-field
+      <v-combobox
         label="Centro onde a ação é desenvolvida"
+        :items="fieldCenterItems"
         :rules="rules"
-        v-model="fieldCenter"
-      ></v-text-field>
+        v-model="fieldCenterValue"
+      ></v-combobox>
     </p>
     <p>
       <strong>Departamento*: </strong>
@@ -183,7 +184,22 @@ export default {
   data() {
     return {
       fieldAction: "",
-      fieldCenter: "",
+      fieldCenterItems: [
+        "Centro de Artes (CAr)",
+        "Centro de Ciências Agrárias e Engenharias (CCAE)",
+        "Centro de Ciências Exatas (CCE)",
+        "Centro de Ciências Exatas, Naturais e da Saúde (CCENS)",
+        "Centro de Ciências Humanas e Naturais (CCHN)",
+        "Centro de Ciências Jurídicas e Econômicas (CCJE)",
+        "Centro de Ciências da Saúde (CCS)",
+        "Centro de Educação (CE)",
+        "Centro de Educação Física e Desportos (CEFD)",
+        "Centro Tecnológico (CT)",
+        "Centro Universitário Norte do Espírito Santo (Ceunes)",
+        "Hospital Universitário Cassiano Antônio Moraes (Hucam)",
+        "Reitoria (incluindo Pró-Reitorias, Secretarias, Superintendências, Institutos, Bibliotecas, etc.)",
+      ],
+      fieldCenterValue: "",
       fieldCoordinator: "",
       fieldDepartament: "",
       fieldDescription: "",
