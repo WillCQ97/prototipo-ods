@@ -21,20 +21,20 @@
             <v-list-item-subtitle>
               <strong>Descrição: </strong>{{ submission.project.description }}
               <br />
-              <strong>Coordenador: </strong
-              >{{ submission.project.coordinator.name }}<br />
+              <strong>Coordenador: </strong>
+              {{ submission.project.coordinator.name }}<br />
               <strong>Data de envio: </strong>{{ submission.date }}<br />
             </v-list-item-subtitle>
           </v-list-item-content>
 
           <v-list-item-action>
-            <v-btn icon v-on:click="acceptSubmission(index)">
+            <v-btn icon color="green" v-on:click="acceptSubmission(index)">
               <v-icon>mdi-check</v-icon>
             </v-btn>
           </v-list-item-action>
 
           <v-list-item-action>
-            <v-btn icon v-on:click="rejectSubmission(index)">
+            <v-btn icon color="red" v-on:click="rejectSubmission(index)">
               <v-icon>mdi-close</v-icon>
             </v-btn>
           </v-list-item-action>
