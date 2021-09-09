@@ -218,8 +218,10 @@ export default {
         //fixme: validar as entradas informadas
         (value) => !!value || "Este campo é obrigatório.",
       ],
+      //fixme: gerenciar melhor as listas de targets e ods
       odsGoals: odsData.goals,
       odsTargets: odsData.targets,
+      targetsSelected: [],
       goalSelectedIndex: null,
       targetSelectedIndex: null,
     };
@@ -276,6 +278,7 @@ export default {
           targets.push(target);
         }
       }
+      this.targetsSelected = targets;
       return targets;
     },
     sendForm() {
@@ -306,7 +309,7 @@ export default {
         project: {
           id: this.$store.state.submissions.nextIndex,
           action: this.fieldAction,
-          target_id: this.odsTargets[this.targetSelectedIndex].id,
+          target_id: this.targetsSelected[this.targetSelectedIndex].id,
           description: this.fieldDescription,
           location: {
             center: this.fieldCenterValue,
