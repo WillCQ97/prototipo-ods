@@ -53,13 +53,17 @@
       </div>
 
       <p>
-        <strong>Ação:</strong> {{ project.name }} <br />
-        <strong>Meta ODS relacionada: </strong> {{ project.targetId }} <br />
-        <strong>Descrição/Objetivo: </strong> {{ project.description }} <br />
-        <strong>Departamento: </strong> {{ project.departament }} <br />
-        <strong>Coordenador:</strong> {{ project.coordinator }} <br />
-        <strong>Vínculo com a UFES:</strong> {{ project.role }} <br />
-        <strong>E-mail: </strong> {{ project.email }}
+        <br />
+        <strong>Ação:</strong> {{ project.name }} <br /><br />
+        <strong>Meta ODS relacionada: </strong> <br />
+        <strong>{{ projectTarget.id }}</strong> -
+        {{ projectTarget.description }} <br /><br />
+        <strong>Descrição/Objetivo: </strong> {{ project.description }}
+        <br /><br />
+        <strong>Departamento: </strong> {{ project.departament }} <br /><br />
+        <strong>Coordenador:</strong> {{ project.coordinator }} <br /><br />
+        <strong>Vínculo com a UFES:</strong> {{ project.role }} <br /><br />
+        <strong>E-mail: </strong> {{ project.email }}<br />
       </p>
       <p><v-btn v-on:click="btnVoltarAction">Voltar</v-btn></p>
     </div>
@@ -93,12 +97,14 @@ export default {
       geojson: featuresAlegre,
       mapCenter: [-20.76161, -41.536],
       odsGoals: odsData.goals,
+      odsTargets: odsData.targets,
       pageDescriptionVisible: true,
       project: {},
       projects: this.$store.state.projects.list,
       projectInformationVisible: false,
       projectGoal: {},
       projectGoalImage: "",
+      projectTarget: {},
       submissionFormVisible: false,
       submissionInitialPosition: { lat: -20.76274, lng: -41.537 },
       submissionMarker: {
@@ -119,10 +125,18 @@ export default {
         }
       }
     },
+    getTarget(targetID) {
+      for (let target of this.odsTargets) {
+        if (target.id == targetID) {
+          return target;
+        }
+      }
+    },
     showProjectInformation(projectData) {
       this.pageDescriptionVisible = false;
       this.project = projectData;
       this.projectGoal = this.getGoal(projectData.goalId);
+      this.projectTarget = this.getTarget(projectData.targetId);
       this.projectGoalImage = "/img/ods_icons/" + projectData.goalId + ".png";
       this.projectInformationVisible = true;
       this.submissionFormVisible = false;
