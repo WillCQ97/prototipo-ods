@@ -100,9 +100,9 @@ export default {
       projectGoal: {},
       projectGoalImage: "",
       submissionFormVisible: false,
-      submissionInitialPosition: { lat: -20.76161, lng: -41.536 },
+      submissionInitialPosition: { lat: -20.76274, lng: -41.537 },
       submissionMarker: {
-        position: { lat: -20.76161, lng: -41.536 },
+        position: { lat: -20.76274, lng: -41.537 },
         draggable: true,
         visible: false,
       },
