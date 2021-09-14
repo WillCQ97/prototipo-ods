@@ -82,14 +82,14 @@ export default {
           to: "/",
         },
         {
-          icon: "mdi-map",
-          title: "Ações campus Alegre",
-          to: "/alegre",
-        },
-        {
           icon: "mdi-text",
           title: "Sobre o mapa",
           to: "/about",
+        },
+        {
+          icon: "mdi-map",
+          title: "Ações campus Alegre",
+          to: "/alegre",
         },
         {
           icon: "mdi-format-list-bulleted-type",

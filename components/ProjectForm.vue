@@ -197,8 +197,6 @@ export default {
         "Centro de Educação Física e Desportos (CEFD)",
         "Centro Tecnológico (CT)",
         "Centro Universitário Norte do Espírito Santo (Ceunes)",
-        "Hospital Universitário Cassiano Antônio Moraes (Hucam)",
-        "Reitoria (incluindo Pró-Reitorias, Secretarias, Superintendências, Institutos, Bibliotecas, etc.)",
       ],
       fieldCenterValue: "",
       fieldCoordinator: "",

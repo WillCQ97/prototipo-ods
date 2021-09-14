@@ -19,10 +19,23 @@
               <strong>Ação: </strong>{{ submission.project.action }}
             </v-list-item-title>
             <v-list-item-subtitle>
+              <strong>Meta ODS relacionada: </strong>
+              {{ submission.project.target_id }} <br />
               <strong>Descrição: </strong>{{ submission.project.description }}
+              <br />
+              <strong>Centro: </strong>
+              {{ submission.project.location.center }}
+              <br />
+              <strong>Departamento: </strong>
+              {{ submission.project.location.departament }}
               <br />
               <strong>Coordenador: </strong>
               {{ submission.project.coordinator.name }}<br />
+              <strong>Vínculo com a UFES: </strong>
+              {{ submission.project.coordinator.role }} <br />
+              <strong>E-mail: </strong>
+              {{ submission.project.coordinator.email }}
+              <br />
               <strong>Data de envio: </strong>{{ submission.date }}<br />
             </v-list-item-subtitle>
           </v-list-item-content>
