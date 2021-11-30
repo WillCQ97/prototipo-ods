@@ -83,7 +83,7 @@
 </template>
 
 <script>
-import featuresAlegre from "assets/features_alegre.js";
+import allFeatures from "assets/all_features.js";
 import odsData from "assets/ods_goals.json";
 
 export default {
@@ -94,7 +94,7 @@ export default {
         [-20.75885, -41.5391],
         [-20.76464, -41.53211],
       ],
-      geojson: featuresAlegre,
+      geojson: allFeatures.alegre,
       mapCenter: [-20.76161, -41.536],
       odsGoals: odsData.goals,
       odsTargets: odsData.targets,
