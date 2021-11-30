@@ -128,7 +128,6 @@ export default {
           departament: project.location.departament,
           coordinator: project.coordinator.name,
           role: project.coordinator.role,
-          email: project.coordinator.email,
         },
         popupContent:
           '<div class="popup">' +
