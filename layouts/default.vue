@@ -93,6 +93,11 @@ export default {
         },
         {
           icon: "mdi-map",
+          title: "Ações em Goiabeiras",
+          to: "/goiabeiras",
+        },
+        {
+          icon: "mdi-map",
           title: "Ações em São Mateus",
           to: "/sao-mateus",
         },

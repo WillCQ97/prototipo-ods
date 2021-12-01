@@ -1,0 +1,20 @@
+[
+    {
+        "id": 1,
+        "action": "Plataforma digital 'Informa Hanseníase'",
+        "target_id": "3.b",
+        "description": "Na plataforma, são disponibilizadas informações atualizadas sobre a hanseníase, suas causas, sintomas, tratamento, diagnóstico e prevenção.",
+        "location": {
+            "center": "Ciências da Saúde (CCS)",
+            "departament": "Departamento de Medicina Social",
+            "coord": [
+                "",
+                ""
+            ]
+        },
+        "coordinator": {
+            "name": "Patrícia Deps",
+            "role": "Professora"
+        }
+    }
+]

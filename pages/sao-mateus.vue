@@ -61,7 +61,7 @@
         <strong>Descrição/Objetivo: </strong> {{ project.description }}
         <br /><br />
         <strong>Departamento: </strong> {{ project.departament }} <br /><br />
-        <strong>Coordenador:</strong> {{ project.coordinator }} <br /><br />
+        <strong>Coordenação:</strong> {{ project.coordinator }} <br /><br />
         <strong>Vínculo com a UFES:</strong> {{ project.role }} <br /><br />
         <!--<strong>E-mail: </strong> {{ project.email }}<br />-->
       </p>

@@ -146,7 +146,7 @@ export default {
           project.action +
           "<br><strong>Departamento: </strong>" +
           project.location.departament +
-          "<br><strong>Coordenador(a):</strong> " +
+          "<br><strong>Coordenação:</strong> " +
           project.coordinator.name +
           "</div></div>",
       }));
