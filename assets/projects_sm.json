@@ -1,0 +1,74 @@
+[
+  {
+    "id": 1,
+    "action": "Ceunes em Ação: combate à COVID-19",
+    "target_id": "3.3",
+    "description": "É uma iniciativa do campus de São Mateus que conta com três frentes de trabalho: conscientização por meio de uma cartilha informativa; ação solidária com doação de antissépticos e alimentos; e a criação de um canal de atendimento remoto para a comunidade acadêmica",
+    "location": {
+      "center": "Centro Universitário Norte do Espírito Santo (Ceunes)",
+      "departament": "",
+      "coord": [
+        -18.675195,
+        -39.86196
+      ]
+    },
+    "coordinator": {
+      "name": "Christie Trancoso Zon",
+      "role": "Servidora Técnica Administrativa"
+    }
+  },
+  {
+    "id": 2,
+    "action": "Semana da Conscientização Ambiental",
+    "target_id": "13.3",
+    "description": "Evento realizado em comemoração ao Dia Mundial do Meio Ambiente, celebrado no dia 5 de junho. O foco das discussões durante a semana foram as mudanças climáticas e como se comporta este fenômeno durante a pandemia",
+    "location": {
+      "center": "Centro Universitário Norte do Espírito Santo (Ceunes)",
+      "departament": "",
+      "coord": [
+        -18.674661,
+        -39.861719
+      ]
+    },
+    "coordinator": {
+      "name": "PET ProdBio",
+      "role": ""
+    }
+  },
+  {
+    "id": 3,
+    "action": "Herbário SAMES",
+    "target_id": "15.a",
+    "description": "O desafio do herbário é, além de registrar e conhecer a flora regional, educar cidadãos conscientes de seu papel na conservação da biodiversidade.",
+    "location": {
+      "center": "Centro Universitário Norte do Espírito Santo (Ceunes)",
+      "departament": "",
+      "coord": [
+        -18.673421,
+        -39.856634
+      ]
+    },
+    "coordinator": {
+      "name": "Luis Fernando Tavares de Menezes",
+      "role": "Professor"
+    }
+  },
+  {
+    "id": 4,
+    "action": "Programa UFES Sustentável",
+    "target_id": "17.16",
+    "description": "Desenvolve grupos de estudo para discussões sobre o conceito de sustentabilidade e suas aplicações, estimula a produção de conhecimento na área da sustentabilidade, apoia e fomenta a promoção de iniciativas voltadas para a sustentabilidade, estimula a incorporação de valores, atitudes e comportamentos socioambientais mais sustentáveis e colabora para o estabelecimento de políticas de conservação, recuperação e melhoria do meio ambiente e da qualidade de vida no campus da UFES em São Mateus, no seu entorno e interfaces.",
+    "location": {
+      "center": " Centro Universitário Norte do Espírito Santo (Ceunes)",
+      "departament": "Departamento de Ciências Agrárias e Biológicas - DCAB",
+      "coord": [
+        -18.674239,
+        -39.862985
+      ]
+    },
+    "coordinator": {
+      "name": "Rogerio Oliveira Faleiros",
+      "role": "Professor"
+    }
+  }
+]

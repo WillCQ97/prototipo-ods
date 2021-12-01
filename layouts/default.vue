@@ -92,6 +92,11 @@ export default {
           to: "/alegre",
         },
         {
+          icon: "mdi-map",
+          title: "Ações campus São Mateus",
+          to: "/sao-mateus",
+        },
+        {
           icon: "mdi-format-list-bulleted-type",
           title: "Submissões",
           to: "/submissions",
