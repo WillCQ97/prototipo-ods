@@ -88,12 +88,12 @@ export default {
         },
         {
           icon: "mdi-map",
-          title: "Ações campus Alegre",
+          title: "Ações em Alegre",
           to: "/alegre",
         },
         {
           icon: "mdi-map",
-          title: "Ações campus São Mateus",
+          title: "Ações em São Mateus",
           to: "/sao-mateus",
         },
         {

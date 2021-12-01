@@ -93,7 +93,7 @@ export default {
       url: "http://{s}.tile.osm.org/{z}/{x}/{y}.png",
       zoom: 18,
       attribution:
-        '&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors',
+        '<a href="https://mapa.prodesignufes.org">Prodesing UFES</a> | &copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors',
       showGeoJson: true,
       fillColor: "#e4ce7f",
       enableTooltip: true,
