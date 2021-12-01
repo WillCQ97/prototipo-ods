@@ -1,10 +1,10 @@
 <template>
   <div>
-    <h1>Mapa Colaborativo</h1>
-    <h1><em>Campus</em> de Alegre - Sede</h1>
+    <h1><em>Campus</em> de São Mateus</h1>
     <VisualMap
       :bounds="bounds"
       :center="mapCenter"
+      :formButtonDisabled="true"
       :geojson="geojson"
       :projects="projects"
       :submissionMarker="submissionMarker"

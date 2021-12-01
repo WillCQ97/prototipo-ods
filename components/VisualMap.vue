@@ -41,7 +41,11 @@
       </l-map>
     </client-only>
     <div id="botoes">
-      <v-btn class="btn" v-on:click="emitShowProjectForm">
+      <v-btn
+        class="btn"
+        v-on:click="emitShowProjectForm"
+        :disabled="formButtonDisabled"
+      >
         Adicionar Ação
       </v-btn>
       <v-btn
@@ -65,6 +69,10 @@ export default {
     },
     center: {
       type: Array,
+      required: true,
+    },
+    formButtonDisabled: {
+      type: Boolean,
       required: true,
     },
     geojson: {

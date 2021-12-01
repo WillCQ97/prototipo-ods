@@ -105,7 +105,7 @@ export default {
       miniVariant: false,
       right: true,
       rightDrawer: false,
-      title: "Protótipo Mapa Colaborativo",
+      title: "Mapa Colaborativo ODS na UFES",
       srcIcon: "/img/ods-na-ufes-selo.png",
       iconHeight: 40,
       iconWidth: 40,
