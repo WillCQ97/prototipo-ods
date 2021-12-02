@@ -1,66 +1,74 @@
 [
   {
     "id": 1,
-    "action": "GESAN – Grupo de Estudos em Segurança Alimentar e Nutricional Professor Pedro Kitoko",
-    "target_id": "2.2",
-    "description": "Desenvolver programas e projetos no campo da segurança alimentar e nutricional e do direito humano à alimentação.",
+    "action": "Produção de Mudas de Cana-de-açúcar",
+    "target_id": "2.4",
+    "description": "Promove a distribuição dessas mudas para auxiliar pequenos produtores rurais da região sul do Espírito Santo. Os pesquisadores testam as variedades por, pelo menos, três anos e depois fazem a distribuição das melhores unidades, que são as consideradas como mais produtivas, resistentes e fáceis de manipular.",
     "location": {
-      "center": "Centro de Ciências Exatas, Naturais e da Saúde – CCENS",
-      "departament": "Farmácia e Nutrição",
-      "coord": [-20.76233, -41.53548]
+      "center": "Ciências Agrárias e Engenharias (CCAE)",
+      "departament": "Agronomia",
+      "coord": [
+        -20.761913,
+        -41.536721
+      ]
     },
     "coordinator": {
-      "name": "Alcemi Almeida de Barros",
-      "role": "Professor",
-      "email": "indisponível"
+      "name": "Leandro Pin",
+      "role": "Professor"
     }
   },
   {
     "id": 2,
-    "action": "Promovendo a Comercialização Solidária dos Agricultores Familiares de Alegre",
-    "target_id": "2.3",
-    "description": "Apoiar os agricultores familiares, visando melhorar sua inserção nos mercados locais de alimentos, com base nos princípios da economia solidária e da agroecologia; incentivar a transição agroecológica na produção familiar e contribuir com a formação profissional dos estudantes universitários.",
+    "action": "Produção de álcool 70 em solução e gel para o campus de Alegre da UFES e para a secretaria municipal de saúde",
+    "target_id": "3.3",
+    "description": "Realiza a produção e doação de álcool para o combate a pandemia de COVID-19 na universidade e no município.",
     "location": {
-      "center": "Centro de Ciências Agrárias e Engenharias – CCAE",
-      "departament": "Medicina Veterinária",
-      "coord": [-20.76241, -41.53553]
+      "center": "Ciências Exatas, Naturais e da Saúde (CCENS)",
+      "departament": "Farmácia",
+      "coord": [
+        -20.762294,
+        -41.535509
+      ]
     },
     "coordinator": {
-      "name": "Haloysio Miguel de Siqueira",
-      "role": "Professor",
-      "email": "indisponível"
+      "name": "Janaina Cecília Oliveira Villanova",
+      "role": "Professora"
     }
   },
   {
     "id": 3,
-    "action": "Laboratório de Solos Raphael M. Bloise",
-    "target_id": "2.4",
-    "description": "Realizar análises de fertilidade dos solos com menor custo e alta qualidade, visando à recomendação das doses de adubação e calagem para os produtores rurais.",
+    "action": "Máscaras Solidárias em Alegre",
+    "target_id": "3.3",
+    "description": "Produção de aproximadamente 5 mil máscaras a partir de materiais recomendados pelo Ministério da Saúde para posterior distribuição no município.",
     "location": {
-      "center": "Centro de Ciências Agrárias e Engenharias – CCAE",
-      "departament": "Agronomia",
-      "coord": [-20.76214, -41.53536]
+      "center": "Ciências Exatas, Naturais e da Saúde (CCENS)",
+      "departament": "Farmácia",
+      "coord": [
+        -20.762364,
+        -41.53546
+      ]
     },
     "coordinator": {
-      "name": "Diego Lang Burak",
-      "role": "Professor",
-      "email": "indisponível"
+      "name": "Juliana Severi",
+      "role": "Professora"
     }
   },
   {
     "id": 4,
-    "action": "Soluções de Baixo Custo para Construção de Vias de Drenagem na Comunidade do Morro do Querosene",
-    "target_id": "11.1",
-    "description": "Realizar um estudo detalhado das cavas realizadas pela comunidade, o que permitiu indicar os pontos mais críticos para o plantio do capim que deverá conter significativamente a enxurrada que corre para as casas da comunidade.",
+    "action": "Desenvolvimento do Polo de Fruticultura da Região do Caparaó",
+    "target_id": "8.2",
+    "description": "Visa contribuir para a diversificação da produção agrícola gerando novas fontes de renda, e consequentemente, melhoria socioeconômica da população envolvida.",
     "location": {
-      "center": "Centro de Ciências Exatas, Naturais e da Saúde – CCENS",
-      "departament": "Geologia",
-      "coord": [-20.76046, -41.53663]
+      "center": "Ciências Agrárias e Engenharias (CCAE)",
+      "departament": "",
+      "coord": [
+        -20.762148,
+        -41.535375
+      ]
     },
     "coordinator": {
-      "name": "Eder Carlos Moreira",
-      "role": "Professor",
-      "email": "indisponível"
+      "name": "Dirceu Pratissoli",
+      "role": "Professor"
     }
   }
 ]
