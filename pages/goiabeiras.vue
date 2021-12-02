@@ -1,16 +1,24 @@
 <template>
   <div>
-    <h1><em>Campus</em> de Alegre - Sede</h1>
+    <h1><em>Campus</em> de Goiabeiras</h1>
     <VisualMap
       :bounds="bounds"
       :center="mapCenter"
-      :formButtonDisabled="false"
+      :formButtonDisabled="true"
       :geojson="geojson"
       :projects="projects"
       :submissionMarker="submissionMarker"
       v-on:project-selected="showProjectInformation"
       v-on:show-form="showSubmissionForm"
     />
+
+    <!--------------- fixme: remover a seguinte div -------------->
+    <!--
+    <div id="temp">
+      <p>{{ submissionMarker.position }}</p>
+    </div>
+    -->
+    <!------------------------------------------------------------>
 
     <div id="page-description" v-if="pageDescriptionVisible">
       <h2>Cadastrar uma ação</h2>
@@ -63,6 +71,7 @@
         <strong>Departamento: </strong> {{ project.departament }} <br /><br />
         <strong>Coordenação:</strong> {{ project.coordinator }} <br /><br />
         <strong>Vínculo com a UFES:</strong> {{ project.role }} <br /><br />
+        <!--<strong>E-mail: </strong> {{ project.email }}<br />-->
       </p>
       <p><v-btn v-on:click="btnVoltarAction">Voltar</v-btn></p>
     </div>
@@ -84,30 +93,32 @@
 <script>
 import allFeatures from "assets/all_features.js";
 import odsData from "assets/ods_goals.json";
+// fixme: tratar os projetos usando store ao invés do json diretamente
+import projects from "assets/projects_goiabeiras.json";
 
 export default {
-  name: "Alegre",
+  name: "Goiabeiras",
   data() {
     return {
       bounds: [
-        [-20.75885, -41.5391],
-        [-20.76464, -41.53211],
+        [-20.2696, -40.308],
+        [-20.284, -40.3009],
       ],
-      geojson: allFeatures.alegre,
-      mapCenter: [-20.76161, -41.536],
+      geojson: allFeatures.goiabeiras,
+      mapCenter: [-20.2764, -40.3037],
       odsGoals: odsData.goals,
       odsTargets: odsData.targets,
       pageDescriptionVisible: true,
       project: {},
-      projects: this.$store.state.projects.list,
+      projects: projects,
       projectInformationVisible: false,
       projectGoal: {},
       projectGoalImage: "",
       projectTarget: {},
       submissionFormVisible: false,
-      submissionInitialPosition: { lat: -20.76274, lng: -41.537 },
+      submissionInitialPosition: { lat: -20.2764, lng: -40.3037 },
       submissionMarker: {
-        position: { lat: -20.76274, lng: -41.537 },
+        position: { lat: -20.2764, lng: -40.3037 },
         draggable: true,
         visible: false,
       },

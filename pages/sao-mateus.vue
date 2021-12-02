@@ -1,10 +1,10 @@
 <template>
   <div>
-    <h1><em>Campus</em> de Alegre - Sede</h1>
+    <h1><em>Campus</em> de São Mateus</h1>
     <VisualMap
       :bounds="bounds"
       :center="mapCenter"
-      :formButtonDisabled="false"
+      :formButtonDisabled="true"
       :geojson="geojson"
       :projects="projects"
       :submissionMarker="submissionMarker"
@@ -63,6 +63,7 @@
         <strong>Departamento: </strong> {{ project.departament }} <br /><br />
         <strong>Coordenação:</strong> {{ project.coordinator }} <br /><br />
         <strong>Vínculo com a UFES:</strong> {{ project.role }} <br /><br />
+        <!--<strong>E-mail: </strong> {{ project.email }}<br />-->
       </p>
       <p><v-btn v-on:click="btnVoltarAction">Voltar</v-btn></p>
     </div>
@@ -84,30 +85,32 @@
 <script>
 import allFeatures from "assets/all_features.js";
 import odsData from "assets/ods_goals.json";
+// fixme: tratar os projetos usando store ao invés do json diretamente
+import projects from "assets/projects_sm.json";
 
 export default {
-  name: "Alegre",
+  name: "SaoMateus",
   data() {
     return {
       bounds: [
-        [-20.75885, -41.5391],
-        [-20.76464, -41.53211],
+        [-18.67119, -39.86451],
+        [-18.67869, -39.85459],
       ],
-      geojson: allFeatures.alegre,
-      mapCenter: [-20.76161, -41.536],
+      geojson: allFeatures.sao_mateus,
+      mapCenter: [-18.6752, -39.86186],
       odsGoals: odsData.goals,
       odsTargets: odsData.targets,
       pageDescriptionVisible: true,
       project: {},
-      projects: this.$store.state.projects.list,
+      projects: projects,
       projectInformationVisible: false,
       projectGoal: {},
       projectGoalImage: "",
       projectTarget: {},
       submissionFormVisible: false,
-      submissionInitialPosition: { lat: -20.76274, lng: -41.537 },
+      submissionInitialPosition: { lat: -18.675281, lng: -39.862261 },
       submissionMarker: {
-        position: { lat: -20.76274, lng: -41.537 },
+        position: { lat: -18.675281, lng: -39.862261 },
         draggable: true,
         visible: false,
       },

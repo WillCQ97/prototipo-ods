@@ -88,8 +88,18 @@ export default {
         },
         {
           icon: "mdi-map",
-          title: "Ações campus Alegre",
+          title: "Ações em Alegre",
           to: "/alegre",
+        },
+        {
+          icon: "mdi-map",
+          title: "Ações em Goiabeiras",
+          to: "/goiabeiras",
+        },
+        {
+          icon: "mdi-map",
+          title: "Ações em São Mateus",
+          to: "/sao-mateus",
         },
         {
           icon: "mdi-format-list-bulleted-type",
@@ -100,7 +110,7 @@ export default {
       miniVariant: false,
       right: true,
       rightDrawer: false,
-      title: "Protótipo Mapa Colaborativo",
+      title: "Mapa Colaborativo ODS na UFES",
       srcIcon: "/img/ods-na-ufes-selo.png",
       iconHeight: 40,
       iconWidth: 40,
