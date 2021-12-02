@@ -112,8 +112,9 @@ export default {
     },
     mapOptions() {
       return {
-        minZoom: 18,
-        zoomControl: false,
+        minZoom: 16,
+        maxZoom: 18,
+        zoomControl: true,
         scrollWheelZoom: false,
         maxBounds: this.bounds,
       };

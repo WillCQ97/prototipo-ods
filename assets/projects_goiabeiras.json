@@ -60,7 +60,7 @@
     "description": "Em 2020, o Laboratório de Gestão do Saneamento Ambiental da UFES iniciou uma ação de extensão para a revisão do Plano Municipal de Água e Esgoto do Município de Cachoeiro de Itapemirim, bem como a elaboração do Plano Municipal do eixo Resíduos Sólidos.",
     "location": {
       "center": "Tecnológico 5",
-      "departament": "Departamento de Engenharia Ambiental",
+      "departament": "Engenharia Ambiental",
       "coord": [
         -20.272352,
         -40.305362
@@ -68,6 +68,60 @@
     },
     "coordinator": {
       "name": "Laboratório de Gestão do Saneamento Ambiental",
+      "role": ""
+    }
+  },
+  {
+    "id": 5,
+    "action": "Projeto de extensão 'Eólica'",
+    "target_id": "7.b",
+    "description": "Objetiva difundir o uso da energia eólica através de eventos educativos, nos aspectos tecnológico, econômico e social. É constituído por alunos professores de variados cursos que se aprofundam na área de energia eólica e na pesquisa de suas tecnologias e aplicações com fins de extensão.",
+    "location": {
+      "center": "Tecnológico 3",
+      "departament": "Engenharia Mecânica",
+      "coord": [
+        -20.273379,
+        -40.305179
+      ]
+    },
+    "coordinator": {
+      "name": "",
+      "role": ""
+    }
+  },
+  {
+    "id": 6,
+    "action": "Auxílio aos estudantes de baixa renda",
+    "target_id": "10.2",
+    "description": "Foram lançados dois editais para o cadastro de estudantes de graduação e de pós-graduação stricto sensu que possuam renda familiar bruta mensal de até 1,5 salário mínimo per capita e que não disponham de acesso a equipamento de informática (notebook ou desktop) e/ou serviço de internet.",
+    "location": {
+      "center": "",
+      "departament": "Pró-Reitoria de Assuntos Estudantis e Cidadania (Proaeci)",
+      "coord": [
+        -20.277495,
+        -40.302519
+      ]
+    },
+    "coordinator": {
+      "name": "",
+      "role": ""
+    }
+  },
+  {
+    "id": 7,
+    "action": "Grupo de Tabalho do Programa de Edificações e Comunidades Sustentáveis da Agência Internacional de Energia",
+    "target_id": "11.3",
+    "description": "A UFES, representada por uma professora do Departamento de Engenharia Civil, integrou a equipe brasileira em um grupo de trabalho, que trata dos impactos ambientais de edificações e comunidades sustentáveis. A participação do Brasil, por meio do Ministério de Minas e Energia, no IEA Energy in Buildings and Communities Programme (IEA EBC Programme) contribui não só para o desenvolvimento tecnológico e para maior eficiência energética das edificações, como também para o intercâmbio de experiências na implementação prática dessas tecnologias e de normas e regulamentos a elas relacionados.",
+    "location": {
+      "center": "Tecnológico 1",
+      "departament": "Engenharia Civil",
+      "coord": [
+        -20.277495,
+        -40.302519
+      ]
+    },
+    "coordinator": {
+      "name": "",
       "role": ""
     }
   }
