@@ -91,3 +91,12 @@ sw.*
 
 # dev
 _readmes/
+
+# Yarn ignore if you're not using Zero-Installs:
+.pnp.*
+.yarn/*
+!.yarn/patches
+!.yarn/plugins
+!.yarn/releases
+!.yarn/sdks
+!.yarn/versions
