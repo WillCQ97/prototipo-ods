@@ -1,0 +1,4 @@
+# to prevent using local dependencies and builds
+node_modules
+npm-debug*
+.nuxt
